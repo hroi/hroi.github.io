@@ -110,20 +110,20 @@
 </g>
 <!-- result0 -->
 <g id="node8" class="node"><title>result0</title>
-<polygon fill="none" stroke="black" points="271.667,-429.961 271.667,-469.242 365.933,-469.242 365.933,-429.961 271.667,-429.961"/>
-<text text-anchor="middle" x="318.8" y="-457.242" font-family="Menlo" font-size="10.00">Result @ 0x0</text>
-<polyline fill="none" stroke="black" points="271.667,-449.602 365.933,-449.602 "/>
+<polygon fill="none" stroke="black" points="268.656,-429.961 268.656,-469.242 368.943,-469.242 368.943,-429.961 268.656,-429.961"/>
+<text text-anchor="middle" x="318.8" y="-457.242" font-family="Menlo" font-size="10.00">Result @ 0x0+0</text>
+<polyline fill="none" stroke="black" points="268.656,-449.602 368.943,-449.602 "/>
 <text text-anchor="middle" x="318.8" y="-437.602" font-family="Menlo" font-size="10.00">0.0.0.0/0 foo</text>
 </g>
 <!-- node0&#45;&gt;result0 -->
 <g id="edge7" class="edge"><title>node0:internal&#45;&gt;result0</title>
-<path fill="none" stroke="black" d="M188.533,-361.602C219.251,-361.602 200.308,-401.714 224.533,-420.602 235.296,-428.993 248.51,-434.974 261.571,-439.232"/>
-<polygon fill="black" stroke="black" points="260.903,-442.684 271.485,-442.163 262.887,-435.971 260.903,-442.684"/>
+<path fill="none" stroke="black" d="M188.533,-361.602C219.251,-361.602 200.308,-401.714 224.533,-420.602 234.558,-428.417 246.708,-434.142 258.88,-438.33"/>
+<polygon fill="black" stroke="black" points="258.018,-441.728 268.607,-441.371 260.106,-435.047 258.018,-441.728"/>
 </g>
 <!-- result1 -->
 <g id="node9" class="node"><title>result1</title>
 <polygon fill="none" stroke="black" points="493.189,-341.961 493.189,-381.242 593.477,-381.242 593.477,-341.961 493.189,-341.961"/>
-<text text-anchor="middle" x="543.333" y="-369.242" font-family="Menlo" font-size="10.00">Result @ 0x1</text>
+<text text-anchor="middle" x="543.333" y="-369.242" font-family="Menlo" font-size="10.00">Result @ 0x1+0</text>
 <polyline fill="none" stroke="black" points="493.189,-361.602 593.477,-361.602 "/>
 <text text-anchor="middle" x="543.333" y="-349.602" font-family="Menlo" font-size="10.00">10.0.0.0/8 bar</text>
 </g>
@@ -187,7 +187,7 @@
 <!-- result2 -->
 <g id="node10" class="node"><title>result2</title>
 <polygon fill="none" stroke="black" points="708.692,-185.961 708.692,-225.242 827.041,-225.242 827.041,-185.961 708.692,-185.961"/>
-<text text-anchor="middle" x="767.866" y="-213.242" font-family="Menlo" font-size="10.00">Result @ 0x2</text>
+<text text-anchor="middle" x="767.866" y="-213.242" font-family="Menlo" font-size="10.00">Result @ 0x2+0</text>
 <polyline fill="none" stroke="black" points="708.692,-205.602 827.041,-205.602 "/>
 <text text-anchor="middle" x="767.866" y="-193.602" font-family="Menlo" font-size="10.00">172.16.0.0/12 baz</text>
 </g>
@@ -225,7 +225,7 @@
 <!-- result3 -->
 <g id="node11" class="node"><title>result3</title>
 <polygon fill="none" stroke="black" points="898.133,-29.9609 898.133,-69.2422 1028.52,-69.2422 1028.52,-29.9609 898.133,-29.9609"/>
-<text text-anchor="middle" x="963.328" y="-57.2422" font-family="Menlo" font-size="10.00">Result @ 0x3</text>
+<text text-anchor="middle" x="963.328" y="-57.2422" font-family="Menlo" font-size="10.00">Result @ 0x3+0</text>
 <polyline fill="none" stroke="black" points="898.133,-49.6016 1028.52,-49.6016 "/>
 <text text-anchor="middle" x="963.328" y="-37.6016" font-family="Menlo" font-size="10.00">192.168.0.0/16 quux</text>
 </g>
