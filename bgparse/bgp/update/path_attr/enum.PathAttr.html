@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `PathAttr` enum in crate `bgparse`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, PathAttr">
+
+    <title>bgparse::bgp::update::path_attr::PathAttr - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>bgparse</a>::<wbr><a href='../../index.html'>bgp</a>::<wbr><a href='../index.html'>update</a>::<wbr><a href='index.html'>path_attr</a></p><script>window.sidebarCurrent = {name: 'PathAttr', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../../../index.html'>bgparse</a>::<wbr><a href='../../index.html'>bgp</a>::<wbr><a href='../index.html'>update</a>::<wbr><a href='index.html'>path_attr</a>::<wbr><a class='enum' href=''>PathAttr</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-482' class='srclink' href='../../../../src/bgparse/bgp/update/path_attr/mod.rs.html#18-43' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum PathAttr&lt;'a&gt; {
+    Origin(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.Origin.html' title='bgparse::bgp::update::path_attr::Origin'>Origin</a>&lt;'a&gt;),
+    AsPath(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.AsPath.html' title='bgparse::bgp::update::path_attr::AsPath'>AsPath</a>&lt;'a&gt;),
+    NextHop(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.NextHop.html' title='bgparse::bgp::update::path_attr::NextHop'>NextHop</a>&lt;'a&gt;),
+    MultiExitDisc(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.MultiExitDisc.html' title='bgparse::bgp::update::path_attr::MultiExitDisc'>MultiExitDisc</a>&lt;'a&gt;),
+    LocalPreference(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.LocalPreference.html' title='bgparse::bgp::update::path_attr::LocalPreference'>LocalPreference</a>&lt;'a&gt;),
+    AtomicAggregate(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.AtomicAggregate.html' title='bgparse::bgp::update::path_attr::AtomicAggregate'>AtomicAggregate</a>&lt;'a&gt;),
+    Aggregator(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.Aggregator.html' title='bgparse::bgp::update::path_attr::Aggregator'>Aggregator</a>&lt;'a&gt;),
+    Communities(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.Communities.html' title='bgparse::bgp::update::path_attr::Communities'>Communities</a>&lt;'a&gt;),
+    OriginatorId(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.OriginatorId.html' title='bgparse::bgp::update::path_attr::OriginatorId'>OriginatorId</a>&lt;'a&gt;),
+    ClusterList(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.ClusterList.html' title='bgparse::bgp::update::path_attr::ClusterList'>ClusterList</a>&lt;'a&gt;),
+    MpReachNlri(<a class='enum' href='../../../../bgparse/bgp/update/path_attr/enum.MpReachNlri.html' title='bgparse::bgp::update::path_attr::MpReachNlri'>MpReachNlri</a>&lt;'a&gt;),
+    MpUnreachNlri(<a class='enum' href='../../../../bgparse/bgp/update/path_attr/enum.MpUnreachNlri.html' title='bgparse::bgp::update::path_attr::MpUnreachNlri'>MpUnreachNlri</a>&lt;'a&gt;),
+    ExtendedCommunities(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.ExtendedCommunities.html' title='bgparse::bgp::update::path_attr::ExtendedCommunities'>ExtendedCommunities</a>&lt;'a&gt;),
+    As4Path(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.As4Path.html' title='bgparse::bgp::update::path_attr::As4Path'>As4Path</a>&lt;'a&gt;),
+    As4Aggregator(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.As4Aggregator.html' title='bgparse::bgp::update::path_attr::As4Aggregator'>As4Aggregator</a>&lt;'a&gt;),
+    PmsiTunnel(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.PmsiTunnel.html' title='bgparse::bgp::update::path_attr::PmsiTunnel'>PmsiTunnel</a>&lt;'a&gt;),
+    TunnelEncapAttr(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.TunnelEncapAttr.html' title='bgparse::bgp::update::path_attr::TunnelEncapAttr'>TunnelEncapAttr</a>&lt;'a&gt;),
+    TrafficEngineering(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.TrafficEngineering.html' title='bgparse::bgp::update::path_attr::TrafficEngineering'>TrafficEngineering</a>&lt;'a&gt;),
+    Ipv6AddrSpecificExtCommunity(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.Ipv6AddrSpecificExtCommunity.html' title='bgparse::bgp::update::path_attr::Ipv6AddrSpecificExtCommunity'>Ipv6AddrSpecificExtCommunity</a>&lt;'a&gt;),
+    Aigp(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.Aigp.html' title='bgparse::bgp::update::path_attr::Aigp'>Aigp</a>&lt;'a&gt;),
+    PeDistinguisherLabels(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.PeDistinguisherLabels.html' title='bgparse::bgp::update::path_attr::PeDistinguisherLabels'>PeDistinguisherLabels</a>&lt;'a&gt;),
+    BgpLs(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.BgpLs.html' title='bgparse::bgp::update::path_attr::BgpLs'>BgpLs</a>&lt;'a&gt;),
+    AttrSet(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.AttrSet.html' title='bgparse::bgp::update::path_attr::AttrSet'>AttrSet</a>&lt;'a&gt;),
+    Other(<a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.Other.html' title='bgparse::bgp::update::path_attr::Other'>Other</a>&lt;'a&gt;),
+}</pre><h2 class='variants'>Variants</h2>
+<table class='variants_table'><tr><td id='variant.Origin'><code>Origin</code></td><td></td><td></td></tr><tr><td id='variant.AsPath'><code>AsPath</code></td><td></td><td></td></tr><tr><td id='variant.NextHop'><code>NextHop</code></td><td></td><td></td></tr><tr><td id='variant.MultiExitDisc'><code>MultiExitDisc</code></td><td></td><td></td></tr><tr><td id='variant.LocalPreference'><code>LocalPreference</code></td><td></td><td></td></tr><tr><td id='variant.AtomicAggregate'><code>AtomicAggregate</code></td><td></td><td></td></tr><tr><td id='variant.Aggregator'><code>Aggregator</code></td><td></td><td></td></tr><tr><td id='variant.Communities'><code>Communities</code></td><td></td><td></td></tr><tr><td id='variant.OriginatorId'><code>OriginatorId</code></td><td></td><td></td></tr><tr><td id='variant.ClusterList'><code>ClusterList</code></td><td></td><td></td></tr><tr><td id='variant.MpReachNlri'><code>MpReachNlri</code></td><td></td><td></td></tr><tr><td id='variant.MpUnreachNlri'><code>MpUnreachNlri</code></td><td></td><td></td></tr><tr><td id='variant.ExtendedCommunities'><code>ExtendedCommunities</code></td><td></td><td></td></tr><tr><td id='variant.As4Path'><code>As4Path</code></td><td></td><td></td></tr><tr><td id='variant.As4Aggregator'><code>As4Aggregator</code></td><td></td><td></td></tr><tr><td id='variant.PmsiTunnel'><code>PmsiTunnel</code></td><td></td><td></td></tr><tr><td id='variant.TunnelEncapAttr'><code>TunnelEncapAttr</code></td><td></td><td></td></tr><tr><td id='variant.TrafficEngineering'><code>TrafficEngineering</code></td><td></td><td></td></tr><tr><td id='variant.Ipv6AddrSpecificExtCommunity'><code>Ipv6AddrSpecificExtCommunity</code></td><td></td><td></td></tr><tr><td id='variant.Aigp'><code>Aigp</code></td><td></td><td></td></tr><tr><td id='variant.PeDistinguisherLabels'><code>PeDistinguisherLabels</code></td><td></td><td></td></tr><tr><td id='variant.BgpLs'><code>BgpLs</code></td><td></td><td></td></tr><tr><td id='variant.AttrSet'><code>AttrSet</code></td><td></td><td></td></tr><tr><td id='variant.Other'><code>Other</code></td><td></td><td></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='enum' href='../../../../bgparse/bgp/update/path_attr/enum.PathAttr.html' title='bgparse::bgp::update::path_attr::PathAttr'>PathAttr</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-585' class='srclink' href='../../../../src/bgparse/bgp/update/path_attr/mod.rs.html#45-101' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from_bytes' class='method'><code>fn <a href='#method.from_bytes' class='fnname'>from_bytes</a>(bytes: &amp;'a [u8], four_byte_asn: bool) -&gt; <a class='type' href='../../../../bgparse/types/type.Result.html' title='bgparse::types::Result'>Result</a>&lt;<a class='enum' href='../../../../bgparse/bgp/update/path_attr/enum.PathAttr.html' title='bgparse::bgp::update::path_attr::PathAttr'>PathAttr</a>&lt;'a&gt;&gt;</code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../../../bgparse/bgp/update/path_attr/enum.PathAttr.html' title='bgparse::bgp::update::path_attr::PathAttr'>PathAttr</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-532' class='srclink' href='../../../../src/bgparse/bgp/update/path_attr/mod.rs.html#17' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "bgparse";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

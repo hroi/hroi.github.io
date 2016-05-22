@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["WithdrawnRoutes","This is a variable-length field that contains a list of IP address prefixes for the routes that are being withdrawn from service."]]});

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `path_attr` mod in crate `bgparse`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, path_attr">
+
+    <title>bgparse::bgp::update::path_attr - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>bgparse</a>::<wbr><a href='../../index.html'>bgp</a>::<wbr><a href='../index.html'>update</a></p><script>window.sidebarCurrent = {name: 'path_attr', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../../../index.html'>bgparse</a>::<wbr><a href='../../index.html'>bgp</a>::<wbr><a href='../index.html'>update</a>::<wbr><a class='mod' href=''>path_attr</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-474' class='srclink' href='../../../../src/bgparse/bgp/update/path_attr/mod.rs.html#1-842' title='goto source code'>[src]</a></span></h1>
+<h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Aggregator.html'
+                                  title='bgparse::bgp::update::path_attr::Aggregator'>Aggregator</a></td>
+                           <td class='docblock short'>
+                                <p>AGGREGATOR is an optional transitive attribute, which MAY be included
+in updates that are formed by aggregation (see Section 9.2.2.2).  A
+BGP speaker that performs route aggregation MAY add the AGGREGATOR
+attribute, which SHALL contain its own AS number and IP address.  The
+IP address SHOULD be the same as the BGP Identifier of he speaker.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Aigp.html'
+                                  title='bgparse::bgp::update::path_attr::Aigp'>Aigp</a></td>
+                           <td class='docblock short'>
+                                <p>The Accumulated IGP Metric Attribute</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.As4Aggregator.html'
+                                  title='bgparse::bgp::update::path_attr::As4Aggregator'>As4Aggregator</a></td>
+                           <td class='docblock short'>
+                                <p>Four-byte ASN version of Aggregator</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.As4Path.html'
+                                  title='bgparse::bgp::update::path_attr::As4Path'>As4Path</a></td>
+                           <td class='docblock short'>
+                                <p>AsPath with four-byte-asns</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AsPath.html'
+                                  title='bgparse::bgp::update::path_attr::AsPath'>AsPath</a></td>
+                           <td class='docblock short'>
+                                <p>This attribute identifies the autonomous systems through which routing information
+carried in this UPDATE message has passed.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AsPathIter.html'
+                                  title='bgparse::bgp::update::path_attr::AsPathIter'>AsPathIter</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AsSequence.html'
+                                  title='bgparse::bgp::update::path_attr::AsSequence'>AsSequence</a></td>
+                           <td class='docblock short'>
+                                <p>AS_SEQUENCE: ordered set of ASes a route in the UPDATE message has traversed</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AsSequenceIter.html'
+                                  title='bgparse::bgp::update::path_attr::AsSequenceIter'>AsSequenceIter</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AsSet.html'
+                                  title='bgparse::bgp::update::path_attr::AsSet'>AsSet</a></td>
+                           <td class='docblock short'>
+                                <p>AS_SET: unordered set of ASes a route in the UPDATE message has traversed</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AsSetIter.html'
+                                  title='bgparse::bgp::update::path_attr::AsSetIter'>AsSetIter</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AtomicAggregate.html'
+                                  title='bgparse::bgp::update::path_attr::AtomicAggregate'>AtomicAggregate</a></td>
+                           <td class='docblock short'>
+                                <p>ATOMIC_AGGREGATE is a well-known discretionary
+attribute.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AttrSet.html'
+                                  title='bgparse::bgp::update::path_attr::AttrSet'>AttrSet</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.BgpLs.html'
+                                  title='bgparse::bgp::update::path_attr::BgpLs'>BgpLs</a></td>
+                           <td class='docblock short'>
+                                <p>North-Bound Distribution of Link-State and TE Information</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ClusterList.html'
+                                  title='bgparse::bgp::update::path_attr::ClusterList'>ClusterList</a></td>
+                           <td class='docblock short'>
+                                <p>BGP Route Reflection</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ClusterListIter.html'
+                                  title='bgparse::bgp::update::path_attr::ClusterListIter'>ClusterListIter</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Communities.html'
+                                  title='bgparse::bgp::update::path_attr::Communities'>Communities</a></td>
+                           <td class='docblock short'>
+                                <p>BGP Community Attribute.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Community.html'
+                                  title='bgparse::bgp::update::path_attr::Community'>Community</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.CommunityIter.html'
+                                  title='bgparse::bgp::update::path_attr::CommunityIter'>CommunityIter</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ExtCommCosCapability.html'
+                                  title='bgparse::bgp::update::path_attr::ExtCommCosCapability'>ExtCommCosCapability</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ExtCommEvpn.html'
+                                  title='bgparse::bgp::update::path_attr::ExtCommEvpn'>ExtCommEvpn</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ExtCommExperimental.html'
+                                  title='bgparse::bgp::update::path_attr::ExtCommExperimental'>ExtCommExperimental</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ExtCommFlowSpec.html'
+                                  title='bgparse::bgp::update::path_attr::ExtCommFlowSpec'>ExtCommFlowSpec</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ExtCommFourOctetAsSpecific.html'
+                                  title='bgparse::bgp::update::path_attr::ExtCommFourOctetAsSpecific'>ExtCommFourOctetAsSpecific</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ExtCommIpv4AddrSpecific.html'
+                                  title='bgparse::bgp::update::path_attr::ExtCommIpv4AddrSpecific'>ExtCommIpv4AddrSpecific</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ExtCommOpaque.html'
+                                  title='bgparse::bgp::update::path_attr::ExtCommOpaque'>ExtCommOpaque</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ExtCommOther.html'
+                                  title='bgparse::bgp::update::path_attr::ExtCommOther'>ExtCommOther</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ExtCommQosMarking.html'
+                                  title='bgparse::bgp::update::path_attr::ExtCommQosMarking'>ExtCommQosMarking</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ExtCommRouteOrigin.html'
+                                  title='bgparse::bgp::update::path_attr::ExtCommRouteOrigin'>ExtCommRouteOrigin</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ExtCommRouteTarget.html'
+                                  title='bgparse::bgp::update::path_attr::ExtCommRouteTarget'>ExtCommRouteTarget</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ExtCommTwoOctetAsSpecific.html'
+                                  title='bgparse::bgp::update::path_attr::ExtCommTwoOctetAsSpecific'>ExtCommTwoOctetAsSpecific</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ExtendedCommunities.html'
+                                  title='bgparse::bgp::update::path_attr::ExtendedCommunities'>ExtendedCommunities</a></td>
+                           <td class='docblock short'>
+                                <p>Extended Communities Attribute</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ExtendedCommunityIter.html'
+                                  title='bgparse::bgp::update::path_attr::ExtendedCommunityIter'>ExtendedCommunityIter</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Ipv4Nexthop.html'
+                                  title='bgparse::bgp::update::path_attr::Ipv4Nexthop'>Ipv4Nexthop</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Ipv4Nlri.html'
+                                  title='bgparse::bgp::update::path_attr::Ipv4Nlri'>Ipv4Nlri</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Ipv4NlriIter.html'
+                                  title='bgparse::bgp::update::path_attr::Ipv4NlriIter'>Ipv4NlriIter</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Ipv4ReachNlri.html'
+                                  title='bgparse::bgp::update::path_attr::Ipv4ReachNlri'>Ipv4ReachNlri</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Ipv4UnreachNlri.html'
+                                  title='bgparse::bgp::update::path_attr::Ipv4UnreachNlri'>Ipv4UnreachNlri</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Ipv6AddrSpecificExtCommunity.html'
+                                  title='bgparse::bgp::update::path_attr::Ipv6AddrSpecificExtCommunity'>Ipv6AddrSpecificExtCommunity</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Ipv6Nexthop.html'
+                                  title='bgparse::bgp::update::path_attr::Ipv6Nexthop'>Ipv6Nexthop</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Ipv6Nlri.html'
+                                  title='bgparse::bgp::update::path_attr::Ipv6Nlri'>Ipv6Nlri</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Ipv6NlriIter.html'
+                                  title='bgparse::bgp::update::path_attr::Ipv6NlriIter'>Ipv6NlriIter</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Ipv6ReachNlri.html'
+                                  title='bgparse::bgp::update::path_attr::Ipv6ReachNlri'>Ipv6ReachNlri</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Ipv6UnreachNlri.html'
+                                  title='bgparse::bgp::update::path_attr::Ipv6UnreachNlri'>Ipv6UnreachNlri</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.LocalPreference.html'
+                                  title='bgparse::bgp::update::path_attr::LocalPreference'>LocalPreference</a></td>
+                           <td class='docblock short'>
+                                <p>LOCAL_PREF is a well-known attribute that SHALL be included in all
+UPDATE messages that a given BGP speaker sends to other internal
+peers.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.MultiExitDisc.html'
+                                  title='bgparse::bgp::update::path_attr::MultiExitDisc'>MultiExitDisc</a></td>
+                           <td class='docblock short'>
+                                <p>The MULTI_EXIT_DISC is an optional non-transitive attribute that is
+intended to be used on external (inter-AS) links to discriminate
+among multiple exit or entry points to the same neighboring AS.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.NextHop.html'
+                                  title='bgparse::bgp::update::path_attr::NextHop'>NextHop</a></td>
+                           <td class='docblock short'>
+                                <p>The NEXT_HOP is a well-known mandatory attribute that defines the IP
+address of the router that SHOULD be used as the next hop to the
+destinations listed in the UPDATE message.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Origin.html'
+                                  title='bgparse::bgp::update::path_attr::Origin'>Origin</a></td>
+                           <td class='docblock short'>
+                                <p>The ORIGIN attribute is generated by the speaker that originates the associated routing information.
+ORIGIN is a well-known mandatory attribute.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.OriginatorId.html'
+                                  title='bgparse::bgp::update::path_attr::OriginatorId'>OriginatorId</a></td>
+                           <td class='docblock short'>
+                                <p>BGP Route Reflection</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Other.html'
+                                  title='bgparse::bgp::update::path_attr::Other'>Other</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.OtherReachNlri.html'
+                                  title='bgparse::bgp::update::path_attr::OtherReachNlri'>OtherReachNlri</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.OtherUnreachNlri.html'
+                                  title='bgparse::bgp::update::path_attr::OtherUnreachNlri'>OtherUnreachNlri</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.PathAttrIter.html'
+                                  title='bgparse::bgp::update::path_attr::PathAttrIter'>PathAttrIter</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.PeDistinguisherLabels.html'
+                                  title='bgparse::bgp::update::path_attr::PeDistinguisherLabels'>PeDistinguisherLabels</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.PmsiTunnel.html'
+                                  title='bgparse::bgp::update::path_attr::PmsiTunnel'>PmsiTunnel</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TrafficEngineering.html'
+                                  title='bgparse::bgp::update::path_attr::TrafficEngineering'>TrafficEngineering</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TunnelEncapAttr.html'
+                                  title='bgparse::bgp::update::path_attr::TunnelEncapAttr'>TunnelEncapAttr</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.AsPathSegment.html'
+                                  title='bgparse::bgp::update::path_attr::AsPathSegment'>AsPathSegment</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ExtendedCommunity.html'
+                                  title='bgparse::bgp::update::path_attr::ExtendedCommunity'>ExtendedCommunity</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.MpReachNlri.html'
+                                  title='bgparse::bgp::update::path_attr::MpReachNlri'>MpReachNlri</a></td>
+                           <td class='docblock short'>
+                                <p>Multi Protocol Network Layer Reachability Information</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.MpUnreachNlri.html'
+                                  title='bgparse::bgp::update::path_attr::MpUnreachNlri'>MpUnreachNlri</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.OriginType.html'
+                                  title='bgparse::bgp::update::path_attr::OriginType'>OriginType</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.PathAttr.html'
+                                  title='bgparse::bgp::update::path_attr::PathAttr'>PathAttr</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.FLAG_EXT_LEN.html'
+                                  title='bgparse::bgp::update::path_attr::FLAG_EXT_LEN'>FLAG_EXT_LEN</a></td>
+                           <td class='docblock short'>
+                                <p>Defines whether the Attribute Length is one octet (if set to 0) or two octets (if set to 1).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.FLAG_OPTIONAL.html'
+                                  title='bgparse::bgp::update::path_attr::FLAG_OPTIONAL'>FLAG_OPTIONAL</a></td>
+                           <td class='docblock short'>
+                                <p>Defines whether the attribute is optional (if set to 1) or well-known (if set to 0)</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.FLAG_PARTIAL.html'
+                                  title='bgparse::bgp::update::path_attr::FLAG_PARTIAL'>FLAG_PARTIAL</a></td>
+                           <td class='docblock short'>
+                                <p>Defines whether the information contained in the optional transitive attribute is partial (if
+set to 1) or complete (if set to 0).  For well-known attributes
+and for optional non-transitive attributes, the Partial bit
+MUST be set to 0.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.FLAG_TRANSITIVE.html'
+                                  title='bgparse::bgp::update::path_attr::FLAG_TRANSITIVE'>FLAG_TRANSITIVE</a></td>
+                           <td class='docblock short'>
+                                <p>Defines whether an optional attribute is transitive (if set to 1) or non-transitive (if set to 0).
+For well-known attributes, the Transitive bit MUST be set to 1.</p>
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='trait' href='trait.Attr.html'
+                                  title='bgparse::bgp::update::path_attr::Attr'>Attr</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='trait' href='trait.ExtendedComm.html'
+                                  title='bgparse::bgp::update::path_attr::ExtendedComm'>ExtendedComm</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "bgparse";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

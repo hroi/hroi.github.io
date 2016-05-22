@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["AFI_BGP_LS","BGP Link-State and TE Information"],["AFI_IPV4","IP version 4"],["AFI_IPV6","IP version 6"],["AFI_L2VPN","L2VPN"],["AFI_MT_IPV4","Multi-Topology IPv4"],["AFI_MT_IPV6","Multi-Topology IPv6"]],"struct":[["Afi",""]]});

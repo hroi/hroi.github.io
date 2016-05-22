@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `SnmpError` enum in crate `netsnmp`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, SnmpError">
+
+    <title>netsnmp::SnmpError - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>netsnmp</a></p><script>window.sidebarCurrent = {name: 'SnmpError', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>netsnmp</a>::<wbr><a class='enum' href=''>SnmpError</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-15' class='srclink' href='../src/netsnmp/lib.rs.html#16-115' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum SnmpError {
+    NoError,
+    TooBig,
+    NoSuchName,
+    BadValue,
+    ReadOnly,
+    GenErr,
+    NoAccess,
+    WrongType,
+    WrongLength,
+    WrongEncoding,
+    WrongValue,
+    NoCreation,
+    InconsistentValue,
+    ResourceUnavailable,
+    CommitFailed,
+    UndoFailed,
+    AuthorizationError,
+    NotWritable,
+    InconsistentName,
+    Success,
+    BadLocalPort,
+    BadAddress,
+    BadSession,
+    TooLong,
+    NoSocket,
+    V2InV1,
+    V1InV2,
+    BadRepeaters,
+    BadRepetitions,
+    BadAsn1Build,
+    BadSendTo,
+    BadParse,
+    BadVersion,
+    BadSrcParty,
+    BadDstParty,
+    BadContext,
+    BadCommunity,
+    NoAuthDesPriv,
+    BadAcl,
+    BadParty,
+    Abort,
+    UnknownPdu,
+    Timeout,
+    BadRecvFrom,
+    BadEngId,
+    BadSecName,
+    BadSecLevel,
+    AsnParseErr,
+    UnknownSecModel,
+    InvalidMsg,
+    UnknownEngId,
+    UnknownUserName,
+    UnsupportedSecLevel,
+    AuthenticationFailure,
+    NotInTimeWindow,
+    DecryptionErr,
+    ScGeneralFailure,
+    ScNotConfigured,
+    KtNotAvailable,
+    UnknownReport,
+    UsmGenericError,
+    UsmUnknownSecurityName,
+    UsmUnsupportedSecurityLevel,
+    UsmEncryptionError,
+    UsmAuthenticationFailure,
+    UsmParseError,
+    UsmUnknownEngineId,
+    UsmNotInTimeWindow,
+    UsmDecryptionError,
+    NoMib,
+    Range,
+    MaxSubId,
+    BadSubId,
+    LongOid,
+    BadName,
+    Value,
+    UnknownObjId,
+    NullPdu,
+    NoVars,
+    VarType,
+    Malloc,
+    Krb5,
+    Protocol,
+    OidNonIncreasing,
+    JustAContextProbe,
+    TransportNoConfig,
+    TransportConfigError,
+    TlsNoCertificate,
+    OidParseError,
+    InvalidParameters,
+    Unknown,
+}</pre><h2 class='variants'>Variants</h2>
+<table class='variants_table'><tr><td id='variant.NoError'><code>NoError</code></td><td></td><td></td></tr><tr><td id='variant.TooBig'><code>TooBig</code></td><td></td><td></td></tr><tr><td id='variant.NoSuchName'><code>NoSuchName</code></td><td></td><td></td></tr><tr><td id='variant.BadValue'><code>BadValue</code></td><td></td><td></td></tr><tr><td id='variant.ReadOnly'><code>ReadOnly</code></td><td></td><td></td></tr><tr><td id='variant.GenErr'><code>GenErr</code></td><td></td><td></td></tr><tr><td id='variant.NoAccess'><code>NoAccess</code></td><td></td><td></td></tr><tr><td id='variant.WrongType'><code>WrongType</code></td><td></td><td></td></tr><tr><td id='variant.WrongLength'><code>WrongLength</code></td><td></td><td></td></tr><tr><td id='variant.WrongEncoding'><code>WrongEncoding</code></td><td></td><td></td></tr><tr><td id='variant.WrongValue'><code>WrongValue</code></td><td></td><td></td></tr><tr><td id='variant.NoCreation'><code>NoCreation</code></td><td></td><td></td></tr><tr><td id='variant.InconsistentValue'><code>InconsistentValue</code></td><td></td><td></td></tr><tr><td id='variant.ResourceUnavailable'><code>ResourceUnavailable</code></td><td></td><td></td></tr><tr><td id='variant.CommitFailed'><code>CommitFailed</code></td><td></td><td></td></tr><tr><td id='variant.UndoFailed'><code>UndoFailed</code></td><td></td><td></td></tr><tr><td id='variant.AuthorizationError'><code>AuthorizationError</code></td><td></td><td></td></tr><tr><td id='variant.NotWritable'><code>NotWritable</code></td><td></td><td></td></tr><tr><td id='variant.InconsistentName'><code>InconsistentName</code></td><td></td><td></td></tr><tr><td id='variant.Success'><code>Success</code></td><td></td><td></td></tr><tr><td id='variant.BadLocalPort'><code>BadLocalPort</code></td><td></td><td></td></tr><tr><td id='variant.BadAddress'><code>BadAddress</code></td><td></td><td></td></tr><tr><td id='variant.BadSession'><code>BadSession</code></td><td></td><td></td></tr><tr><td id='variant.TooLong'><code>TooLong</code></td><td></td><td></td></tr><tr><td id='variant.NoSocket'><code>NoSocket</code></td><td></td><td></td></tr><tr><td id='variant.V2InV1'><code>V2InV1</code></td><td></td><td></td></tr><tr><td id='variant.V1InV2'><code>V1InV2</code></td><td></td><td></td></tr><tr><td id='variant.BadRepeaters'><code>BadRepeaters</code></td><td></td><td></td></tr><tr><td id='variant.BadRepetitions'><code>BadRepetitions</code></td><td></td><td></td></tr><tr><td id='variant.BadAsn1Build'><code>BadAsn1Build</code></td><td></td><td></td></tr><tr><td id='variant.BadSendTo'><code>BadSendTo</code></td><td></td><td></td></tr><tr><td id='variant.BadParse'><code>BadParse</code></td><td></td><td></td></tr><tr><td id='variant.BadVersion'><code>BadVersion</code></td><td></td><td></td></tr><tr><td id='variant.BadSrcParty'><code>BadSrcParty</code></td><td></td><td></td></tr><tr><td id='variant.BadDstParty'><code>BadDstParty</code></td><td></td><td></td></tr><tr><td id='variant.BadContext'><code>BadContext</code></td><td></td><td></td></tr><tr><td id='variant.BadCommunity'><code>BadCommunity</code></td><td></td><td></td></tr><tr><td id='variant.NoAuthDesPriv'><code>NoAuthDesPriv</code></td><td></td><td></td></tr><tr><td id='variant.BadAcl'><code>BadAcl</code></td><td></td><td></td></tr><tr><td id='variant.BadParty'><code>BadParty</code></td><td></td><td></td></tr><tr><td id='variant.Abort'><code>Abort</code></td><td></td><td></td></tr><tr><td id='variant.UnknownPdu'><code>UnknownPdu</code></td><td></td><td></td></tr><tr><td id='variant.Timeout'><code>Timeout</code></td><td></td><td></td></tr><tr><td id='variant.BadRecvFrom'><code>BadRecvFrom</code></td><td></td><td></td></tr><tr><td id='variant.BadEngId'><code>BadEngId</code></td><td></td><td></td></tr><tr><td id='variant.BadSecName'><code>BadSecName</code></td><td></td><td></td></tr><tr><td id='variant.BadSecLevel'><code>BadSecLevel</code></td><td></td><td></td></tr><tr><td id='variant.AsnParseErr'><code>AsnParseErr</code></td><td></td><td></td></tr><tr><td id='variant.UnknownSecModel'><code>UnknownSecModel</code></td><td></td><td></td></tr><tr><td id='variant.InvalidMsg'><code>InvalidMsg</code></td><td></td><td></td></tr><tr><td id='variant.UnknownEngId'><code>UnknownEngId</code></td><td></td><td></td></tr><tr><td id='variant.UnknownUserName'><code>UnknownUserName</code></td><td></td><td></td></tr><tr><td id='variant.UnsupportedSecLevel'><code>UnsupportedSecLevel</code></td><td></td><td></td></tr><tr><td id='variant.AuthenticationFailure'><code>AuthenticationFailure</code></td><td></td><td></td></tr><tr><td id='variant.NotInTimeWindow'><code>NotInTimeWindow</code></td><td></td><td></td></tr><tr><td id='variant.DecryptionErr'><code>DecryptionErr</code></td><td></td><td></td></tr><tr><td id='variant.ScGeneralFailure'><code>ScGeneralFailure</code></td><td></td><td></td></tr><tr><td id='variant.ScNotConfigured'><code>ScNotConfigured</code></td><td></td><td></td></tr><tr><td id='variant.KtNotAvailable'><code>KtNotAvailable</code></td><td></td><td></td></tr><tr><td id='variant.UnknownReport'><code>UnknownReport</code></td><td></td><td></td></tr><tr><td id='variant.UsmGenericError'><code>UsmGenericError</code></td><td></td><td></td></tr><tr><td id='variant.UsmUnknownSecurityName'><code>UsmUnknownSecurityName</code></td><td></td><td></td></tr><tr><td id='variant.UsmUnsupportedSecurityLevel'><code>UsmUnsupportedSecurityLevel</code></td><td></td><td></td></tr><tr><td id='variant.UsmEncryptionError'><code>UsmEncryptionError</code></td><td></td><td></td></tr><tr><td id='variant.UsmAuthenticationFailure'><code>UsmAuthenticationFailure</code></td><td></td><td></td></tr><tr><td id='variant.UsmParseError'><code>UsmParseError</code></td><td></td><td></td></tr><tr><td id='variant.UsmUnknownEngineId'><code>UsmUnknownEngineId</code></td><td></td><td></td></tr><tr><td id='variant.UsmNotInTimeWindow'><code>UsmNotInTimeWindow</code></td><td></td><td></td></tr><tr><td id='variant.UsmDecryptionError'><code>UsmDecryptionError</code></td><td></td><td></td></tr><tr><td id='variant.NoMib'><code>NoMib</code></td><td></td><td></td></tr><tr><td id='variant.Range'><code>Range</code></td><td></td><td></td></tr><tr><td id='variant.MaxSubId'><code>MaxSubId</code></td><td></td><td></td></tr><tr><td id='variant.BadSubId'><code>BadSubId</code></td><td></td><td></td></tr><tr><td id='variant.LongOid'><code>LongOid</code></td><td></td><td></td></tr><tr><td id='variant.BadName'><code>BadName</code></td><td></td><td></td></tr><tr><td id='variant.Value'><code>Value</code></td><td></td><td></td></tr><tr><td id='variant.UnknownObjId'><code>UnknownObjId</code></td><td></td><td></td></tr><tr><td id='variant.NullPdu'><code>NullPdu</code></td><td></td><td></td></tr><tr><td id='variant.NoVars'><code>NoVars</code></td><td></td><td></td></tr><tr><td id='variant.VarType'><code>VarType</code></td><td></td><td></td></tr><tr><td id='variant.Malloc'><code>Malloc</code></td><td></td><td></td></tr><tr><td id='variant.Krb5'><code>Krb5</code></td><td></td><td></td></tr><tr><td id='variant.Protocol'><code>Protocol</code></td><td></td><td></td></tr><tr><td id='variant.OidNonIncreasing'><code>OidNonIncreasing</code></td><td></td><td></td></tr><tr><td id='variant.JustAContextProbe'><code>JustAContextProbe</code></td><td></td><td></td></tr><tr><td id='variant.TransportNoConfig'><code>TransportNoConfig</code></td><td></td><td></td></tr><tr><td id='variant.TransportConfigError'><code>TransportConfigError</code></td><td></td><td></td></tr><tr><td id='variant.TlsNoCertificate'><code>TlsNoCertificate</code></td><td></td><td></td></tr><tr><td id='variant.OidParseError'><code>OidParseError</code></td><td></td><td></td></tr><tr><td id='variant.InvalidParameters'><code>InvalidParameters</code></td><td></td><td></td></tr><tr><td id='variant.Unknown'><code>Unknown</code></td><td></td><td></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='enum' href='../netsnmp/enum.SnmpError.html' title='netsnmp::SnmpError'>SnmpError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-202' class='srclink' href='../src/netsnmp/lib.rs.html#117-220' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from_snmp_err' class='method'><code>fn <a href='#method.from_snmp_err' class='fnname'>from_snmp_err</a>(code: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_long.html' title='std::os::raw::c_long'>c_long</a>) -&gt; <a class='enum' href='../netsnmp/enum.SnmpError.html' title='netsnmp::SnmpError'>SnmpError</a></code></h4>
+<h4 id='method.from_snmperr' class='method'><code>fn <a href='#method.from_snmperr' class='fnname'>from_snmperr</a>(code: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a>) -&gt; <a class='enum' href='../netsnmp/enum.SnmpError.html' title='netsnmp::SnmpError'>SnmpError</a></code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../netsnmp/enum.SnmpError.html' title='netsnmp::SnmpError'>SnmpError</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-107' class='srclink' href='../src/netsnmp/lib.rs.html#15' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "netsnmp";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

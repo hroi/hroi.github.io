@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["MpReachNlri","Multi Protocol Network Layer Reachability Information"],["MpUnreachNlri",""]],"struct":[["Ipv4Nexthop",""],["Ipv4Nlri",""],["Ipv4NlriIter",""],["Ipv4ReachNlri",""],["Ipv4UnreachNlri",""],["Ipv6Nexthop",""],["Ipv6Nlri",""],["Ipv6NlriIter",""],["Ipv6ReachNlri",""],["Ipv6UnreachNlri",""],["OtherReachNlri",""],["OtherUnreachNlri",""]]});

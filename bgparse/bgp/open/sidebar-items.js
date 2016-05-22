@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["OptionalParam",""]],"mod":[["capability","When a BGP speaker [RFC4271] that supports capabilities advertisement sends an OPEN message to its BGP peer, the message MAY include an Optional Parameter, called Capabilities.  The parameter lists the capabilities supported by the speaker."]],"struct":[["Open",""],["OptionalParams",""]]});

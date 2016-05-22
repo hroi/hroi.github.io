@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../main.css">
+    
 
     
     
@@ -43,10 +44,10 @@
 
     <section id='main' class="content mod">
 <h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>treebitmap</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-0' class='srclink' href='../src/treebitmap/lib.rs.html#6-250' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-0' class='srclink' href='../src/treebitmap/lib.rs.html#6-250' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'>
 <h1 id='fast-ip-lookup-table-for-ipv4ipv6-prefixes' class='section-header'><a href='#fast-ip-lookup-table-for-ipv4ipv6-prefixes'>Fast IP lookup table for IPv4/IPv6 prefixes</a></h1>
 <p>This crate provides a datastructure for fast IP address lookups.
@@ -58,43 +59,35 @@ A full IPv4 BGP table of more than 600k entries fits in less than 5 MB. A full I
 <p>The internal datastructure is based on the Tree-bitmap algorithm described by W. Eatherton, Z. Dittia, G. Varghes.</p>
 </div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.IntoIter.html'
-                               title='treebitmap::IntoIter'>IntoIter</a></td>
-                        <td class='docblock short'>
-                             <p>Converts <code>IpLookupTable</code> into an iterator. The prefixes are returned in &quot;tree&quot;-order.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.IpLookupTable.html'
-                               title='treebitmap::IpLookupTable'>IpLookupTable</a></td>
-                        <td class='docblock short'>
-                             <p>A fast, compressed IP lookup table.</p>
-
-                        </td>
-                    </tr>
-                
-                    <tr class=' module-item'>
-                        <td><a class='struct' href='struct.Iter.html'
-                               title='treebitmap::Iter'>Iter</a></td>
-                        <td class='docblock short'>
-                             <p>Iterates over prefixes and associated values. The prefixes are returned in &quot;tree&quot;-order.</p>
-
-                        </td>
-                    </tr>
-                </table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.IntoIter.html'
+                                  title='treebitmap::IntoIter'>IntoIter</a></td>
+                           <td class='docblock short'>
+                                <p>Converts <code>IpLookupTable</code> into an iterator. The prefixes are returned in &quot;tree&quot;-order.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.IpLookupTable.html'
+                                  title='treebitmap::IpLookupTable'>IpLookupTable</a></td>
+                           <td class='docblock short'>
+                                <p>A fast, compressed IP lookup table.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Iter.html'
+                                  title='treebitmap::Iter'>Iter</a></td>
+                           <td class='docblock short'>
+                                <p>Iterates over prefixes and associated values. The prefixes are returned in &quot;tree&quot;-order.</p>
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
 <table>
-                    <tr class=' module-item'>
-                        <td><a class='trait' href='trait.IpLookupTableOps.html'
-                               title='treebitmap::IpLookupTableOps'>IpLookupTableOps</a></td>
-                        <td class='docblock short'>
-                             <p>The operations defined on the lookup table.</p>
-
-                        </td>
-                    </tr>
-                </table></section>
+                       <tr class=' module-item'>
+                           <td><a class='trait' href='trait.IpLookupTableOps.html'
+                                  title='treebitmap::IpLookupTableOps'>IpLookupTableOps</a></td>
+                           <td class='docblock short'>
+                                <p>The operations defined on the lookup table.</p>
+                           </td>
+                       </tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -137,7 +130,7 @@ A full IPv4 BGP table of more than 600k entries fits in less than 5 MB. A full I
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

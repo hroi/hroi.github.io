@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="../rustdoc.css">
     <link rel="stylesheet" type="text/css" href="../main.css">
+    
 
     
     
@@ -43,10 +44,10 @@
 
     <section id='main' class="content trait">
 <h1 class='fqn'><span class='in-band'>Trait <a href='index.html'>treebitmap</a>::<wbr><a class='trait' href=''>IpLookupTableOps</a></span><span class='out-of-band'><span id='render-detail'>
-            <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
-                [<span class='inner'>&#x2212;</span>]
-            </a>
-        </span><a id='src-618' class='srclink' href='../src/treebitmap/lib.rs.html#38-129' title='goto source code'>[src]</a></span></h1>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-609' class='srclink' href='../src/treebitmap/lib.rs.html#38-129' title='goto source code'>[src]</a></span></h1>
 <pre class='rust trait'>pub trait IpLookupTableOps&lt;Addr, T&gt; {
     fn <a href='#tymethod.insert' class='fnname'>insert</a>(&amp;mut self, ip: Addr, masklen: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, value: T) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;T&gt;;
     fn <a href='#tymethod.remove' class='fnname'>remove</a>(&amp;mut self, ip: Addr, masklen: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;T&gt;;
@@ -59,7 +60,8 @@
             <div class='methods'>
         <h3 id='tymethod.insert' class='method stab '><code>fn <a href='#tymethod.insert' class='fnname'>insert</a>(&amp;mut self, ip: Addr, masklen: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, value: T) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;T&gt;</code></h3><div class='docblock'><p>Insert a value for the prefix designated by ip and masklen. If prefix existed previously, the old value is returned.</p>
 
-<h1 id='example' class='section-header'><a href='#example'>Example</a></h1><pre class='rust rust-example-rendered'>
+<h1 id='example' class='section-header'><a href='#example'>Example</a></h1>
+<pre class='rust rust-example-rendered'>
 <span class='kw'>use</span> <span class='ident'>treebitmap</span>::{<span class='ident'>IpLookupTable</span>, <span class='ident'>IpLookupTableOps</span>};
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>net</span>::<span class='ident'>Ipv6Addr</span>;
 
@@ -72,7 +74,8 @@
 <span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>table</span>.<span class='ident'>insert</span>(<span class='ident'>prefix</span>, <span class='ident'>masklen</span>, <span class='string'>&quot;bar&quot;</span>), <span class='prelude-val'>Some</span>(<span class='string'>&quot;foo&quot;</span>));</pre>
 </div><h3 id='tymethod.remove' class='method stab '><code>fn <a href='#tymethod.remove' class='fnname'>remove</a>(&amp;mut self, ip: Addr, masklen: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;T&gt;</code></h3><div class='docblock'><p>Remove an entry from the lookup table. If the prefix existed previously, the value is returned.</p>
 
-<h1 id='example-1' class='section-header'><a href='#example-1'>Example</a></h1><pre class='rust rust-example-rendered'>
+<h1 id='example-1' class='section-header'><a href='#example-1'>Example</a></h1>
+<pre class='rust rust-example-rendered'>
 <span class='kw'>use</span> <span class='ident'>treebitmap</span>::{<span class='ident'>IpLookupTable</span>, <span class='ident'>IpLookupTableOps</span>};
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>net</span>::<span class='ident'>Ipv6Addr</span>;
 
@@ -86,7 +89,8 @@
 <span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>table</span>.<span class='ident'>remove</span>(<span class='ident'>prefix</span>, <span class='ident'>masklen</span>), <span class='prelude-val'>None</span>);</pre>
 </div><h3 id='tymethod.exact_match' class='method stab '><code>fn <a href='#tymethod.exact_match' class='fnname'>exact_match</a>(&amp;self, ip: Addr, masklen: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;T&gt;</code></h3><div class='docblock'><p>Perform exact match lookup of <code>ip</code>/<code>masklen</code> and return the value.</p>
 
-<h1 id='example-2' class='section-header'><a href='#example-2'>Example</a></h1><pre class='rust rust-example-rendered'>
+<h1 id='example-2' class='section-header'><a href='#example-2'>Example</a></h1>
+<pre class='rust rust-example-rendered'>
 <span class='kw'>use</span> <span class='ident'>treebitmap</span>::{<span class='ident'>IpLookupTable</span>, <span class='ident'>IpLookupTableOps</span>};
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>net</span>::<span class='ident'>Ipv6Addr</span>;
 
@@ -100,7 +104,8 @@
 <span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>table</span>.<span class='ident'>exact_match</span>(<span class='ident'>prefix</span>, <span class='number'>48</span>), <span class='prelude-val'>None</span>);</pre>
 </div><h3 id='tymethod.longest_match' class='method stab '><code>fn <a href='#tymethod.longest_match' class='fnname'>longest_match</a>(&amp;self, ip: Addr) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a>Addr, <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>, &amp;T<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;</code></h3><div class='docblock'><p>Perform longest match lookup of <code>ip</code> and return the best matching prefix, designated by ip, masklen, along with its value.</p>
 
-<h1 id='example-3' class='section-header'><a href='#example-3'>Example</a></h1><pre class='rust rust-example-rendered'>
+<h1 id='example-3' class='section-header'><a href='#example-3'>Example</a></h1>
+<pre class='rust rust-example-rendered'>
 <span class='kw'>use</span> <span class='ident'>treebitmap</span>::{<span class='ident'>IpLookupTable</span>, <span class='ident'>IpLookupTableOps</span>};
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>net</span>::<span class='ident'>Ipv6Addr</span>;
 
@@ -119,7 +124,8 @@
 <span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>result</span>, <span class='prelude-val'>Some</span>((<span class='ident'>less_specific</span>, <span class='number'>32</span>, <span class='kw-2'>&amp;</span><span class='string'>&quot;foo&quot;</span>)));</pre>
 </div><h3 id='tymethod.iter' class='method stab '><code>fn <a href='#tymethod.iter' class='fnname'>iter</a>(&amp;self) -&gt; <a class='struct' href='../treebitmap/struct.Iter.html' title='treebitmap::Iter'>Iter</a>&lt;Addr, T&gt;</code></h3><div class='docblock'><p>Returns iterator over prefixes and values.</p>
 
-<h1 id='example-4' class='section-header'><a href='#example-4'>Example</a></h1><pre class='rust rust-example-rendered'>
+<h1 id='example-4' class='section-header'><a href='#example-4'>Example</a></h1>
+<pre class='rust rust-example-rendered'>
 <span class='kw'>use</span> <span class='ident'>treebitmap</span>::{<span class='ident'>IpLookupTable</span>, <span class='ident'>IpLookupTableOps</span>};
 <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>net</span>::<span class='ident'>Ipv6Addr</span>;
 
@@ -136,11 +142,11 @@
 </div></div>
         <h2 id='implementors'>Implementors</h2>
         <ul class='item-list' id='implementors-list'>
-    <li><code>impl&lt;T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>&gt; <a class='trait' href='../treebitmap/trait.IpLookupTableOps.html' title='treebitmap::IpLookupTableOps'>IpLookupTableOps</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/net/ip/struct.Ipv4Addr.html' title='std::net::ip::Ipv4Addr'>Ipv4Addr</a>, T&gt; for <a class='struct' href='../treebitmap/struct.IpLookupTable.html' title='treebitmap::IpLookupTable'>IpLookupTable</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/net/ip/struct.Ipv4Addr.html' title='std::net::ip::Ipv4Addr'>Ipv4Addr</a>, T&gt;</code></li>
-<li><code>impl&lt;T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>&gt; <a class='trait' href='../treebitmap/trait.IpLookupTableOps.html' title='treebitmap::IpLookupTableOps'>IpLookupTableOps</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/net/ip/struct.Ipv6Addr.html' title='std::net::ip::Ipv6Addr'>Ipv6Addr</a>, T&gt; for <a class='struct' href='../treebitmap/struct.IpLookupTable.html' title='treebitmap::IpLookupTable'>IpLookupTable</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/net/ip/struct.Ipv6Addr.html' title='std::net::ip::Ipv6Addr'>Ipv6Addr</a>, T&gt;</code></li>
+    <li><code>impl&lt;T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>&gt; IpLookupTableOps&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/net/ip/struct.Ipv4Addr.html' title='std::net::ip::Ipv4Addr'>Ipv4Addr</a>, T&gt; for <a class='struct' href='../treebitmap/struct.IpLookupTable.html' title='treebitmap::IpLookupTable'>IpLookupTable</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/net/ip/struct.Ipv4Addr.html' title='std::net::ip::Ipv4Addr'>Ipv4Addr</a>, T&gt;</code></li>
+<li><code>impl&lt;T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a>&gt; IpLookupTableOps&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/net/ip/struct.Ipv6Addr.html' title='std::net::ip::Ipv6Addr'>Ipv6Addr</a>, T&gt; for <a class='struct' href='../treebitmap/struct.IpLookupTable.html' title='treebitmap::IpLookupTable'>IpLookupTable</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/net/ip/struct.Ipv6Addr.html' title='std::net::ip::Ipv6Addr'>Ipv6Addr</a>, T&gt;</code></li>
 </ul><script type="text/javascript" async
-                              src="../implementors/treebitmap/trait.IpLookupTableOps.js">
-                      </script></section>
+                         src="../implementors/treebitmap/trait.IpLookupTableOps.js">
+                 </script></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -183,7 +189,7 @@
 
                 <p>
                     Search functions by type signature (e.g.
-                    <code>vec -> usize</code>)
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
                 </p>
             </div>
         </div>

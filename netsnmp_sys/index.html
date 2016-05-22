@@ -47,7 +47,7 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-0' class='srclink' href='../src/netsnmp_sys/src/lib.rs.html#1-169' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-0' class='srclink' href='../src/netsnmp_sys/lib.rs.html#1-176' title='goto source code'>[src]</a></span></h1>
 <h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
 <table>
                        <tr class=' module-item'>
@@ -135,6 +135,13 @@
                            </td>
                        </tr>
                        <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Struct_netsnmp_container_s.html'
+                                  title='netsnmp_sys::Struct_netsnmp_container_s'>Struct_netsnmp_container_s</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
                            <td><a class='struct' href='struct.Struct_netsnmp_index_s.html'
                                   title='netsnmp_sys::Struct_netsnmp_index_s'>Struct_netsnmp_index_s</a></td>
                            <td class='docblock short'>
@@ -144,6 +151,13 @@
                        <tr class=' module-item'>
                            <td><a class='struct' href='struct.Struct_netsnmp_indexed_addr_pair_s.html'
                                   title='netsnmp_sys::Struct_netsnmp_indexed_addr_pair_s'>Struct_netsnmp_indexed_addr_pair_s</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Struct_netsnmp_iterator_s.html'
+                                  title='netsnmp_sys::Struct_netsnmp_iterator_s'>Struct_netsnmp_iterator_s</a></td>
                            <td class='docblock short'>
                                 
                            </td>
@@ -408,13 +422,6 @@
                            </td>
                        </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
 <table>
-                       <tr class=' module-item'>
-                           <td><a class='enum' href='enum.Struct_netsnmp_container_s.html'
-                                  title='netsnmp_sys::Struct_netsnmp_container_s'>Struct_netsnmp_container_s</a></td>
-                           <td class='docblock short'>
-                                
-                           </td>
-                       </tr>
                        <tr class=' module-item'>
                            <td><a class='enum' href='enum.Struct_vacm_securityEntry.html'
                                   title='netsnmp_sys::Struct_vacm_securityEntry'>Struct_vacm_securityEntry</a></td>
@@ -1334,6 +1341,27 @@
                            </td>
                        </tr>
                        <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SNMP_SEC_LEVEL_AUTHNOPRIV.html'
+                                  title='netsnmp_sys::SNMP_SEC_LEVEL_AUTHNOPRIV'>SNMP_SEC_LEVEL_AUTHNOPRIV</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SNMP_SEC_LEVEL_AUTHPRIV.html'
+                                  title='netsnmp_sys::SNMP_SEC_LEVEL_AUTHPRIV'>SNMP_SEC_LEVEL_AUTHPRIV</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SNMP_SEC_LEVEL_NOAUTH.html'
+                                  title='netsnmp_sys::SNMP_SEC_LEVEL_NOAUTH'>SNMP_SEC_LEVEL_NOAUTH</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
                            <td><a class='constant' href='constant.SNMP_VERSION_1.html'
                                   title='netsnmp_sys::SNMP_VERSION_1'>SNMP_VERSION_1</a></td>
                            <td class='docblock short'>
@@ -1371,6 +1399,20 @@
                        <tr class=' module-item'>
                            <td><a class='constant' href='constant.STAT_TIMEOUT.html'
                                   title='netsnmp_sys::STAT_TIMEOUT'>STAT_TIMEOUT</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.USM_AUTH_KU_LEN.html'
+                                  title='netsnmp_sys::USM_AUTH_KU_LEN'>USM_AUTH_KU_LEN</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.USM_PRIV_KU_LEN.html'
+                                  title='netsnmp_sys::USM_PRIV_KU_LEN'>USM_PRIV_KU_LEN</a></td>
                            <td class='docblock short'>
                                 
                            </td>
@@ -6601,6 +6643,90 @@
                            </td>
                        </tr>
                        <tr class=' module-item'>
+                           <td><a class='type' href='type.netsnmp_container.html'
+                                  title='netsnmp_sys::netsnmp_container'>netsnmp_container</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.netsnmp_container_compare.html'
+                                  title='netsnmp_sys::netsnmp_container_compare'>netsnmp_container_compare</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.netsnmp_container_func.html'
+                                  title='netsnmp_sys::netsnmp_container_func'>netsnmp_container_func</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.netsnmp_container_it.html'
+                                  title='netsnmp_sys::netsnmp_container_it'>netsnmp_container_it</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.netsnmp_container_mod_op.html'
+                                  title='netsnmp_sys::netsnmp_container_mod_op'>netsnmp_container_mod_op</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.netsnmp_container_obj_func.html'
+                                  title='netsnmp_sys::netsnmp_container_obj_func'>netsnmp_container_obj_func</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.netsnmp_container_op.html'
+                                  title='netsnmp_sys::netsnmp_container_op'>netsnmp_container_op</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.netsnmp_container_option.html'
+                                  title='netsnmp_sys::netsnmp_container_option'>netsnmp_container_option</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.netsnmp_container_rc.html'
+                                  title='netsnmp_sys::netsnmp_container_rc'>netsnmp_container_rc</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.netsnmp_container_rtn.html'
+                                  title='netsnmp_sys::netsnmp_container_rtn'>netsnmp_container_rtn</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.netsnmp_container_set.html'
+                                  title='netsnmp_sys::netsnmp_container_set'>netsnmp_container_set</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.netsnmp_container_size.html'
+                                  title='netsnmp_sys::netsnmp_container_size'>netsnmp_container_size</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
                            <td><a class='type' href='type.netsnmp_cvalue.html'
                                   title='netsnmp_sys::netsnmp_cvalue'>netsnmp_cvalue</a></td>
                            <td class='docblock short'>
@@ -6617,6 +6743,27 @@
                        <tr class=' module-item'>
                            <td><a class='type' href='type.netsnmp_indexed_addr_pair.html'
                                   title='netsnmp_sys::netsnmp_indexed_addr_pair'>netsnmp_indexed_addr_pair</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.netsnmp_iterator.html'
+                                  title='netsnmp_sys::netsnmp_iterator'>netsnmp_iterator</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.netsnmp_iterator_rc.html'
+                                  title='netsnmp_sys::netsnmp_iterator_rc'>netsnmp_iterator_rc</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.netsnmp_iterator_rtn.html'
+                                  title='netsnmp_sys::netsnmp_iterator_rtn'>netsnmp_iterator_rtn</a></td>
                            <td class='docblock short'>
                                 
                            </td>

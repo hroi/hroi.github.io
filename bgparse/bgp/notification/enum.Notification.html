@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Notification` enum in crate `bgparse`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Notification">
+
+    <title>bgparse::bgp::notification::Notification - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../index.html'>bgparse</a>::<wbr><a href='../index.html'>bgp</a>::<wbr><a href='index.html'>notification</a></p><script>window.sidebarCurrent = {name: 'Notification', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../../index.html'>bgparse</a>::<wbr><a href='../index.html'>bgp</a>::<wbr><a href='index.html'>notification</a>::<wbr><a class='enum' href=''>Notification</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-2079' class='srclink' href='../../../src/bgparse/bgp/notification.rs.html#7-189' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum Notification&lt;'a&gt; {
+    ConnectionNotSynchronised(&amp;'a [u8]),
+    BadMessageLength(&amp;'a [u8]),
+    BadMessageType(&amp;'a [u8]),
+    UnsupportedVersionNumber(&amp;'a [u8]),
+    BadPeerAs(&amp;'a [u8]),
+    BadBgpIdentifier(&amp;'a [u8]),
+    UnsupportedOptionalParameter(&amp;'a [u8]),
+    AuthenticationFailure(&amp;'a [u8]),
+    UnacceptableHoldTime(&amp;'a [u8]),
+    MalformedAttributeList(&amp;'a [u8]),
+    UnrecognizedWellKnownAttribute(&amp;'a [u8]),
+    MissingWellKnownAttribute(&amp;'a [u8]),
+    AttributeFlagsError(&amp;'a [u8]),
+    AttributeLengthError(&amp;'a [u8]),
+    InvalidOriginAttribute(&amp;'a [u8]),
+    AsRoutingLoop(&amp;'a [u8]),
+    InvalidNextHopAttribute(&amp;'a [u8]),
+    OptionalAttributeError(&amp;'a [u8]),
+    InvalidNetworkField(&amp;'a [u8]),
+    MalformedAsPath(&amp;'a [u8]),
+    HoldTimerExpired(&amp;'a [u8]),
+    FiniteStateMachineError(&amp;'a [u8]),
+    Cease(&amp;'a [u8]),
+}</pre><h2 class='variants'>Variants</h2>
+<table class='variants_table'><tr><td id='variant.ConnectionNotSynchronised'><code>ConnectionNotSynchronised</code></td><td><div class='docblock'><p>The expected value of the Marker field of the message header is all
+ones.  If the Marker field of the message header is not as expected,
+then a synchronization error has occurred and the Error Subcode MUST
+be set to Connection Not Synchronized.</p>
+</div></td><td></td></tr><tr><td id='variant.BadMessageLength'><code>BadMessageLength</code></td><td><div class='docblock'><p>If at least one of the following is true:</p>
+
+<ul>
+<li><p>if the Length field of the message header is less than 19 or
+greater than 4096, or</p></li>
+<li><p>if the Length field of an OPEN message is less than the minimum
+length of the OPEN message, or</p></li>
+<li><p>if the Length field of an UPDATE message is less than the
+minimum length of the UPDATE message, or</p></li>
+<li><p>if the Length field of a KEEPALIVE message is not equal to 19, or</p></li>
+<li><p>if the Length field of a NOTIFICATION message is less than the
+minimum length of the NOTIFICATION message,</p></li>
+</ul>
+
+<p>then the Error Subcode MUST be set to Bad Message Length.  The Data
+field MUST contain the erroneous Length field.</p>
+</div></td><td></td></tr><tr><td id='variant.BadMessageType'><code>BadMessageType</code></td><td><div class='docblock'><p>If the Type field of the message header is not recognized, then the
+Error Subcode MUST be set to Bad Message Type.  The Data field MUST
+contain the erroneous Type field.</p>
+</div></td><td></td></tr><tr><td id='variant.UnsupportedVersionNumber'><code>UnsupportedVersionNumber</code></td><td><div class='docblock'><p>If the version number in the Version field of the received OPEN
+message is not supported, then the Error Subcode MUST be set to
+Unsupported Version Number.  The Data field is a 2-octet unsigned
+integer, which indicates the largest, locally-supported version
+number less than the version the remote BGP peer bid (as indicated in
+the received OPEN message), or if the smallest, locally-supported
+version number is greater than the version the remote BGP peer bid,
+then the smallest, locally-supported version number.</p>
+</div></td><td></td></tr><tr><td id='variant.BadPeerAs'><code>BadPeerAs</code></td><td><div class='docblock'><p>If the Autonomous System field of the OPEN message is unacceptable,
+then the Error Subcode MUST be set to Bad Peer AS.  The determination
+of acceptable Autonomous System numbers is outside the scope of this
+protocol.</p>
+</div></td><td></td></tr><tr><td id='variant.BadBgpIdentifier'><code>BadBgpIdentifier</code></td><td><div class='docblock'><p>If the BGP Identifier field of the OPEN message is syntactically
+incorrect, then the Error Subcode MUST be set to Bad BGP Identifier.
+Syntactic correctness means that the BGP Identifier field represents
+a valid unicast IP host address.</p>
+</div></td><td></td></tr><tr><td id='variant.UnsupportedOptionalParameter'><code>UnsupportedOptionalParameter</code></td><td><div class='docblock'><p>If one of the Optional Parameters in the OPEN message is not
+recognized, then the Error Subcode MUST be set to Unsupported
+Optional Parameters.</p>
+</div></td><td></td></tr><tr><td id='variant.AuthenticationFailure'><code>AuthenticationFailure</code></td><td><div class='docblock'><p>Deprecated</p>
+</div></td><td></td></tr><tr><td id='variant.UnacceptableHoldTime'><code>UnacceptableHoldTime</code></td><td><div class='docblock'><p>If the Hold Time field of the OPEN message is unacceptable, then the
+Error Subcode MUST be set to Unacceptable Hold Time.  An
+implementation MUST reject Hold Time values of one or two seconds.
+An implementation MAY reject any proposed Hold Time.  An
+implementation that accepts a Hold Time MUST use the negotiated value
+for the Hold Time.</p>
+</div></td><td></td></tr><tr><td id='variant.MalformedAttributeList'><code>MalformedAttributeList</code></td><td><div class='docblock'><p>Error checking of an UPDATE message begins by examining the path
+attributes.  If the Withdrawn Routes Length or Total Attribute Length
+is too large (i.e., if Withdrawn Routes Length + Total Attribute
+Length + 23 exceeds the message Length), then the Error Subcode MUST
+be set to Malformed Attribute List.</p>
+
+<p>If an optional attribute is recognized, then the value of this
+attribute MUST be checked.  If an error is detected, the attribute
+MUST be discarded, and the Error Subcode MUST be set to Optional
+Attribute Error.  The Data field MUST contain the attribute (type,
+                                                             length, and value).</p>
+
+<p>If any attribute appears more than once in the UPDATE message, then
+the Error Subcode MUST be set to Malformed Attribute List.</p>
+</div></td><td></td></tr><tr><td id='variant.UnrecognizedWellKnownAttribute'><code>UnrecognizedWellKnownAttribute</code></td><td><div class='docblock'><p>If any of the well-known mandatory attributes are not recognized,
+then the Error Subcode MUST be set to Unrecognized Well-known
+Attribute.  The Data field MUST contain the unrecognized attribute
+(type, length, and value).</p>
+</div></td><td></td></tr><tr><td id='variant.MissingWellKnownAttribute'><code>MissingWellKnownAttribute</code></td><td><div class='docblock'><p>If any of the well-known mandatory attributes are not present, then
+the Error Subcode MUST be set to Missing Well-known Attribute.  The
+Data field MUST contain the Attribute Type Code of the missing,
+well-known attribute.</p>
+</div></td><td></td></tr><tr><td id='variant.AttributeFlagsError'><code>AttributeFlagsError</code></td><td><div class='docblock'><p>If any recognized attribute has Attribute Flags that conflict with
+the Attribute Type Code, then the Error Subcode MUST be set to
+Attribute Flags Error.  The Data field MUST contain the erroneous
+attribute (type, length, and value).</p>
+</div></td><td></td></tr><tr><td id='variant.AttributeLengthError'><code>AttributeLengthError</code></td><td><div class='docblock'><p>If any recognized attribute has an Attribute Length that conflicts
+with the expected length (based on the attribute type code), then the
+Error Subcode MUST be set to Attribute Length Error.  The Data field
+MUST contain the erroneous attribute (type, length, and value).</p>
+</div></td><td></td></tr><tr><td id='variant.InvalidOriginAttribute'><code>InvalidOriginAttribute</code></td><td><div class='docblock'><p>If the ORIGIN attribute has an undefined value, then the Error Sub-
+code MUST be set to Invalid Origin Attribute.  The Data field MUST
+contain the unrecognized attribute (type, length, and value).</p>
+</div></td><td></td></tr><tr><td id='variant.AsRoutingLoop'><code>AsRoutingLoop</code></td><td><div class='docblock'><p>Deprecated</p>
+</div></td><td></td></tr><tr><td id='variant.InvalidNextHopAttribute'><code>InvalidNextHopAttribute</code></td><td><div class='docblock'><p>If the NEXT_HOP attribute field is syntactically incorrect, then the
+Error Subcode MUST be set to Invalid NEXT_HOP Attribute.  The Data
+field MUST contain the incorrect attribute (type, length, and value).
+Syntactic correctness means that the NEXT_HOP attribute represents a
+valid IP host address.</p>
+
+<p>The IP address in the NEXT_HOP MUST meet the following criteria to be
+considered semantically correct:</p>
+
+<p>a) It MUST NOT be the IP address of the receiving speaker.</p>
+
+<p>b) In the case of an EBGP, where the sender and receiver are one
+    IP hop away from each other, either the IP address in the
+    NEXT_HOP MUST be the sender&#39;s IP address that is used to
+    establish the BGP connection, or the interface associated with
+    the NEXT_HOP IP address MUST share a common subnet with the
+    receiving BGP speaker.</p>
+
+<p>If the NEXT_HOP attribute is semantically incorrect, the error SHOULD
+be logged, and the route SHOULD be ignored.  In this case, a
+NOTIFICATION message SHOULD NOT be sent, and the connection SHOULD
+NOT be closed.</p>
+</div></td><td></td></tr><tr><td id='variant.OptionalAttributeError'><code>OptionalAttributeError</code></td><td><div class='docblock'><p>If an optional attribute is recognized, then the value of this
+attribute MUST be checked.  If an error is detected, the attribute
+MUST be discarded, and the Error Subcode MUST be set to Optional
+Attribute Error.  The Data field MUST contain the attribute (type,
+length, and value).</p>
+</div></td><td></td></tr><tr><td id='variant.InvalidNetworkField'><code>InvalidNetworkField</code></td><td><div class='docblock'><p>The NLRI field in the UPDATE message is checked for syntactic
+validity.  If the field is syntactically incorrect, then the Error
+Subcode MUST be set to Invalid Network Field.</p>
+
+<p>If a prefix in the NLRI field is semantically incorrect (e.g., an
+unexpected multicast IP address), an error SHOULD be logged locally,
+and the prefix SHOULD be ignored.</p>
+</div></td><td></td></tr><tr><td id='variant.MalformedAsPath'><code>MalformedAsPath</code></td><td><div class='docblock'><p>The AS_PATH attribute is checked for syntactic correctness.  If the
+path is syntactically incorrect, then the Error Subcode MUST be set
+to Malformed AS_PATH.
+If the UPDATE message is received from an external peer, the local
+system MAY check whether the leftmost (with respect to the position
+of octets in the protocol message) AS in the AS_PATH attribute is
+equal to the autonomous system number of the peer that sent the
+message.  If the check determines this is not the case, the Error
+Subcode MUST be set to Malformed AS_PATH.</p>
+</div></td><td></td></tr><tr><td id='variant.HoldTimerExpired'><code>HoldTimerExpired</code></td><td><div class='docblock'><p>If a system does not receive successive KEEPALIVE, UPDATE, and/or
+NOTIFICATION messages within the period specified in the Hold Time
+field of the OPEN message, then the NOTIFICATION message with the
+Hold Timer Expired Error Code is sent and the BGP connection is
+closed.</p>
+</div></td><td></td></tr><tr><td id='variant.FiniteStateMachineError'><code>FiniteStateMachineError</code></td><td><div class='docblock'><p>Any error detected by the BGP Finite State Machine (e.g., receipt of
+an unexpected event) is indicated by sending the NOTIFICATION message
+with the Error Code Finite State Machine Error.</p>
+</div></td><td></td></tr><tr><td id='variant.Cease'><code>Cease</code></td><td><div class='docblock'><p>In the absence of any fatal errors (that are indicated in this
+section), a BGP peer MAY choose, at any given time, to close its BGP
+connection by sending the NOTIFICATION message with the Error Code
+Cease.  However, the Cease NOTIFICATION message MUST NOT be used when
+a fatal error indicated by this section does exist.</p>
+
+<p>A BGP speaker MAY support the ability to impose a locally-configured,
+upper bound on the number of address prefixes the speaker is willing
+to accept from a neighbor.  When the upper bound is reached, the
+speaker, under control of local configuration, either (a) discards
+new address prefixes from the neighbor (while maintaining the BGP
+connection with the neighbor), or (b) terminates the BGP connection
+with the neighbor.  If the BGP speaker decides to terminate its BGP
+connection with a neighbor because the number of address prefixes
+received from the neighbor exceeds the locally-configured, upper
+bound, then the speaker MUST send the neighbor a NOTIFICATION message
+with the Error Code Cease.  The speaker MAY also log this locally.</p>
+</div></td><td></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='enum' href='../../../bgparse/bgp/notification/enum.Notification.html' title='bgparse::bgp::notification::Notification'>Notification</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2178' class='srclink' href='../../../src/bgparse/bgp/notification.rs.html#191-233' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from_bytes' class='method'><code>fn <a href='#method.from_bytes' class='fnname'>from_bytes</a>(bytes: &amp;'a [u8]) -&gt; <a class='type' href='../../../bgparse/types/type.Result.html' title='bgparse::types::Result'>Result</a>&lt;<a class='enum' href='../../../bgparse/bgp/notification/enum.Notification.html' title='bgparse::bgp::notification::Notification'>Notification</a>&lt;'a&gt;&gt;</code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../../bgparse/bgp/notification/enum.Notification.html' title='bgparse::bgp::notification::Notification'>Notification</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2127' class='srclink' href='../../../src/bgparse/bgp/notification.rs.html#6' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "bgparse";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../../jquery.js"></script>
+    <script src="../../../main.js"></script>
+    
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>
