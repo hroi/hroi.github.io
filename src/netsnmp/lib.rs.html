@@ -1085,6 +1085,14 @@
 <span id="1041">1041</span>
 <span id="1042">1042</span>
 <span id="1043">1043</span>
+<span id="1044">1044</span>
+<span id="1045">1045</span>
+<span id="1046">1046</span>
+<span id="1047">1047</span>
+<span id="1048">1048</span>
+<span id="1049">1049</span>
+<span id="1050">1050</span>
+<span id="1051">1051</span>
 </pre><pre class='rust '>
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>netsnmp_sys</span>;
 
@@ -1122,7 +1130,6 @@
     <span class='ident'>AuthorizationError</span>,
     <span class='ident'>NotWritable</span>,
     <span class='ident'>InconsistentName</span>,
-
 
     <span class='comment'>// SNMPERR_*</span>
     <span class='ident'>Success</span>,
@@ -1673,16 +1680,16 @@
 }
 
 <span class='kw'>impl</span> <span class='ident'>Pdu</span> {
-    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>variables</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span> <span class='op'>&gt;</span>(<span class='kw-2'>&amp;</span><span class='lifetime'>&#39;a</span> <span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>VariableIter</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> {
+    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>variables</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span> <span class='op'>&gt;</span>(<span class='kw-2'>&amp;</span><span class='lifetime'>&#39;a</span> <span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>VariableList</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> {
         <span class='kw'>unsafe</span> {
-            <span class='ident'>VariableIter</span>{<span class='ident'>head_ptr</span>: <span class='ident'>ptr</span>::<span class='ident'>null_mut</span>(), <span class='ident'>cur_ptr</span>: <span class='ident'>ptr</span>::<span class='ident'>null</span>(),
+            <span class='ident'>VariableList</span>{<span class='ident'>head_ptr</span>: <span class='ident'>ptr</span>::<span class='ident'>null_mut</span>(), <span class='ident'>cur_ptr</span>: <span class='ident'>ptr</span>::<span class='ident'>null</span>(),
                          <span class='ident'>next_ptr</span>: (<span class='op'>*</span><span class='self'>self</span>.<span class='ident'>inner</span>).<span class='ident'>variables</span>, <span class='ident'>marker</span>: <span class='ident'>marker</span>::<span class='ident'>PhantomData</span>}
         }
     }
 
-    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>cloned_variables</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>VariableIter</span> {
+    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>cloned_variables</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>VariableList</span> {
         <span class='kw'>let</span> <span class='ident'>clone_ptr</span> <span class='op'>=</span> <span class='kw'>unsafe</span> { <span class='ident'>snmp_clone_varbind</span>((<span class='op'>*</span><span class='self'>self</span>.<span class='ident'>inner</span>).<span class='ident'>variables</span>) };
-        <span class='ident'>VariableIter</span>{<span class='ident'>head_ptr</span>: <span class='ident'>clone_ptr</span>, <span class='ident'>cur_ptr</span>: <span class='ident'>ptr</span>::<span class='ident'>null</span>(),
+        <span class='ident'>VariableList</span>{<span class='ident'>head_ptr</span>: <span class='ident'>clone_ptr</span>, <span class='ident'>cur_ptr</span>: <span class='ident'>ptr</span>::<span class='ident'>null</span>(),
                      <span class='ident'>next_ptr</span>: <span class='ident'>clone_ptr</span>, <span class='ident'>marker</span>: <span class='ident'>marker</span>::<span class='ident'>PhantomData</span>}
     }
 }
@@ -1700,9 +1707,8 @@
     <span class='ident'>inner</span>: <span class='kw-2'>&amp;</span><span class='lifetime'>&#39;a</span> <span class='ident'>netsnmp_variable_list</span>,
 }
 
-
 <span class='kw'>impl</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> <span class='ident'>Variable</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> {
-    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>objid</span>(<span class='kw-2'>&amp;</span><span class='lifetime'>&#39;a</span> <span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='kw-2'>&amp;</span><span class='lifetime'>&#39;a</span> [<span class='ident'>oid</span>] { <span class='comment'>// aka name()</span>
+    <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>name</span>(<span class='kw-2'>&amp;</span><span class='lifetime'>&#39;a</span> <span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='kw-2'>&amp;</span><span class='lifetime'>&#39;a</span> [<span class='ident'>oid</span>] { <span class='comment'>// objid better name?</span>
         <span class='kw'>let</span> <span class='ident'>name_ptr</span>    <span class='op'>=</span> <span class='self'>self</span>.<span class='ident'>inner</span>.<span class='ident'>name</span>;
         <span class='kw'>let</span> <span class='ident'>name_length</span> <span class='op'>=</span> <span class='self'>self</span>.<span class='ident'>inner</span>.<span class='ident'>name_length</span>;
         <span class='macro'>assert</span><span class='macro'>!</span>(<span class='op'>!</span><span class='ident'>name_ptr</span>.<span class='ident'>is_null</span>());
@@ -1797,8 +1803,8 @@
 <span class='kw'>impl</span> <span class='ident'>GetTree</span> <span class='kw'>for</span> [<span class='ident'>oid</span>] {
     <span class='kw'>fn</span> <span class='ident'>get_tree</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='prelude-ty'>Option</span><span class='op'>&lt;</span><span class='ident'>Tree</span><span class='op'>&gt;</span> {
         <span class='kw'>unsafe</span> {
-            <span class='kw'>let</span> <span class='ident'>tree_top</span> <span class='op'>=</span> <span class='ident'>get_tree_head</span>();
-            <span class='kw'>let</span> <span class='ident'>tree_ptr</span>  <span class='op'>=</span> <span class='ident'>get_tree</span>(<span class='self'>self</span>.<span class='ident'>as_ptr</span>(), <span class='self'>self</span>.<span class='ident'>len</span>(), <span class='ident'>tree_top</span>);
+            <span class='kw'>let</span> <span class='ident'>tree_top_ptr</span> <span class='op'>=</span> <span class='ident'>get_tree_head</span>();
+            <span class='kw'>let</span> <span class='ident'>tree_ptr</span>  <span class='op'>=</span> <span class='ident'>get_tree</span>(<span class='self'>self</span>.<span class='ident'>as_ptr</span>(), <span class='self'>self</span>.<span class='ident'>len</span>(), <span class='ident'>tree_top_ptr</span>);
             <span class='kw'>if</span> <span class='ident'>tree_ptr</span>.<span class='ident'>is_null</span>() {
                 <span class='kw'>return</span> <span class='prelude-val'>None</span>
             } <span class='kw'>else</span> {
@@ -1816,7 +1822,8 @@
     <span class='kw'>fn</span> <span class='ident'>fmt</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>, <span class='ident'>f</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>fmt</span>::<span class='ident'>Formatter</span>) <span class='op'>-&gt;</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span>(), <span class='ident'>fmt</span>::<span class='ident'>Error</span><span class='op'>&gt;</span> {
         <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>buf</span> <span class='op'>=</span> [<span class='number'>0u8</span>; <span class='number'>255</span>];
         <span class='kw'>let</span> <span class='ident'>len</span> <span class='op'>=</span> <span class='kw'>unsafe</span> {
-            <span class='ident'>snprint_objid</span>(<span class='ident'>buf</span>.<span class='ident'>as_mut_ptr</span>() <span class='kw'>as</span> <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>raw</span>::<span class='ident'>c_char</span>, <span class='ident'>buf</span>.<span class='ident'>len</span>(), <span class='self'>self</span>.<span class='ident'>inner</span>.<span class='ident'>as_ptr</span>(), <span class='self'>self</span>.<span class='ident'>inner</span>.<span class='ident'>len</span>())
+            <span class='ident'>snprint_objid</span>(<span class='ident'>buf</span>.<span class='ident'>as_mut_ptr</span>() <span class='kw'>as</span> <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>raw</span>::<span class='ident'>c_char</span>, <span class='ident'>buf</span>.<span class='ident'>len</span>(),
+                          <span class='self'>self</span>.<span class='ident'>inner</span>.<span class='ident'>as_ptr</span>(), <span class='self'>self</span>.<span class='ident'>inner</span>.<span class='ident'>len</span>())
         };
         <span class='ident'>f</span>.<span class='ident'>write_str</span>(<span class='kw-2'>&amp;</span><span class='ident'>String</span>::<span class='ident'>from_utf8_lossy</span>(<span class='kw-2'>&amp;</span><span class='ident'>buf</span>[..<span class='ident'>len</span> <span class='kw'>as</span> <span class='ident'>usize</span>]))
     }
@@ -1832,14 +1839,14 @@
     }
 }
 
-<span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>VariableIter</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> {
+<span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>VariableList</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> {
     <span class='ident'>head_ptr</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>netsnmp_variable_list</span>,  <span class='comment'>// we own this varlist, unless this is null</span>
     <span class='ident'>cur_ptr</span>: <span class='op'>*</span><span class='kw'>const</span> <span class='ident'>netsnmp_variable_list</span>, <span class='comment'>// pointer on loan</span>
     <span class='ident'>next_ptr</span>: <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>netsnmp_variable_list</span>,
     <span class='ident'>marker</span>: <span class='ident'>marker</span>::<span class='ident'>PhantomData</span><span class='op'>&lt;</span><span class='kw-2'>&amp;</span><span class='lifetime'>&#39;a</span> <span class='ident'>netsnmp_variable_list</span><span class='op'>&gt;</span>,
 }
 
-<span class='kw'>impl</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> <span class='ident'>Drop</span> <span class='kw'>for</span> <span class='ident'>VariableIter</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> {
+<span class='kw'>impl</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> <span class='ident'>Drop</span> <span class='kw'>for</span> <span class='ident'>VariableList</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> {
     <span class='kw'>fn</span> <span class='ident'>drop</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>) {
         <span class='kw'>if</span> <span class='op'>!</span><span class='self'>self</span>.<span class='ident'>head_ptr</span>.<span class='ident'>is_null</span>() {
             <span class='kw'>unsafe</span> {
@@ -1849,7 +1856,7 @@
     }
 }
 
-<span class='kw'>impl</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> <span class='ident'>Iterator</span> <span class='kw'>for</span> <span class='ident'>VariableIter</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> {
+<span class='kw'>impl</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> <span class='ident'>Iterator</span> <span class='kw'>for</span> <span class='ident'>VariableList</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> {
     <span class='kw'>type</span> <span class='ident'>Item</span> <span class='op'>=</span> <span class='kw-2'>&amp;</span><span class='lifetime'>&#39;a</span> <span class='ident'>Variable</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span>;
     <span class='kw'>fn</span> <span class='ident'>next</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='prelude-ty'>Option</span><span class='op'>&lt;</span><span class='kw-2'>&amp;</span><span class='lifetime'>&#39;a</span> <span class='ident'>Variable</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;&gt;</span> {
         <span class='kw'>unsafe</span> {
@@ -1904,17 +1911,24 @@
         }
 
         <span class='kw'>unsafe</span> {
-            <span class='kw'>let</span> <span class='ident'>is_subtree</span> <span class='op'>=</span> <span class='ident'>snmp_oidtree_compare</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>.<span class='ident'>root_buf</span>[<span class='number'>0</span>], <span class='self'>self</span>.<span class='ident'>root_len</span>,
-                                                  (<span class='op'>*</span><span class='self'>self</span>.<span class='ident'>next_var_ptr</span>).<span class='ident'>name</span>,
-                                                  (<span class='op'>*</span><span class='self'>self</span>.<span class='ident'>next_var_ptr</span>).<span class='ident'>name_length</span>) <span class='op'>==</span> <span class='ident'>STAT_SUCCESS</span>;
+            <span class='kw'>let</span> <span class='ident'>next_var</span> <span class='op'>=</span> <span class='op'>*</span><span class='self'>self</span>.<span class='ident'>next_var_ptr</span>;
+
+            <span class='kw'>if</span> <span class='kw-2'>&amp;</span><span class='self'>self</span>.<span class='ident'>root_buf</span>[..<span class='self'>self</span>.<span class='ident'>root_len</span>] <span class='op'>==</span> <span class='ident'>slice</span>::<span class='ident'>from_raw_parts</span>(<span class='ident'>next_var</span>.<span class='ident'>name</span>,
+                                                                        <span class='ident'>next_var</span>.<span class='ident'>name_length</span>) {
+                <span class='kw'>return</span> <span class='prelude-val'>Some</span>(<span class='prelude-val'>Err</span>(<span class='ident'>SnmpError</span>::<span class='ident'>OidNonIncreasing</span>));
+            }
+
+            <span class='kw'>let</span> <span class='ident'>is_subtree</span> <span class='op'>=</span> <span class='ident'>snmp_oidtree_compare</span>(<span class='self'>self</span>.<span class='ident'>root_buf</span>.<span class='ident'>as_ptr</span>(), <span class='self'>self</span>.<span class='ident'>root_len</span>,
+                                                  <span class='ident'>next_var</span>.<span class='ident'>name</span>, <span class='ident'>next_var</span>.<span class='ident'>name_length</span>)
+                <span class='op'>==</span> <span class='ident'>STAT_SUCCESS</span>;
             <span class='kw'>if</span> <span class='ident'>is_subtree</span> {
-                <span class='ident'>ptr</span>::<span class='ident'>copy_nonoverlapping</span>((<span class='op'>*</span><span class='self'>self</span>.<span class='ident'>next_var_ptr</span>).<span class='ident'>name</span>,
-                                         <span class='self'>self</span>.<span class='ident'>name_buf</span>[..].<span class='ident'>as_mut_ptr</span>(),
-                                         (<span class='op'>*</span><span class='self'>self</span>.<span class='ident'>next_var_ptr</span>).<span class='ident'>name_length</span>);
-                <span class='self'>self</span>.<span class='ident'>name_len</span> <span class='op'>=</span> (<span class='op'>*</span><span class='self'>self</span>.<span class='ident'>next_var_ptr</span>).<span class='ident'>name_length</span>;
+                <span class='ident'>ptr</span>::<span class='ident'>copy_nonoverlapping</span>(<span class='ident'>next_var</span>.<span class='ident'>name</span>,
+                                         <span class='self'>self</span>.<span class='ident'>name_buf</span>.<span class='ident'>as_mut_ptr</span>(),
+                                         <span class='ident'>next_var</span>.<span class='ident'>name_length</span>);
+                <span class='self'>self</span>.<span class='ident'>name_len</span> <span class='op'>=</span> <span class='ident'>next_var</span>.<span class='ident'>name_length</span>;
 
                 <span class='self'>self</span>.<span class='ident'>cur_var_ptr</span> <span class='op'>=</span> <span class='self'>self</span>.<span class='ident'>next_var_ptr</span>;
-                <span class='self'>self</span>.<span class='ident'>next_var_ptr</span> <span class='op'>=</span> (<span class='op'>*</span><span class='self'>self</span>.<span class='ident'>cur_var_ptr</span>).<span class='ident'>next_variable</span>;
+                <span class='self'>self</span>.<span class='ident'>next_var_ptr</span> <span class='op'>=</span> <span class='ident'>next_var</span>.<span class='ident'>next_variable</span>;
                 <span class='kw'>if</span> (<span class='op'>*</span><span class='self'>self</span>.<span class='ident'>cur_var_ptr</span>).<span class='ident'>_type</span> <span class='op'>==</span> <span class='ident'>SNMP_ENDOFMIBVIEW</span> {
                     <span class='kw'>return</span> <span class='prelude-val'>None</span>;
                 }
@@ -1958,24 +1972,25 @@
 
 <span class='kw'>impl</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> <span class='ident'>Value</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> {
     <span class='kw'>fn</span> <span class='ident'>from_vardata</span>(<span class='ident'>ty</span>: <span class='ident'>raw</span>::<span class='ident'>c_uchar</span>, <span class='kw-2'>mut</span> <span class='ident'>val</span>: <span class='ident'>netsnmp_vardata</span>, <span class='ident'>val_len</span>: <span class='ident'>usize</span>) <span class='op'>-&gt;</span> <span class='ident'>Value</span><span class='op'>&lt;</span><span class='lifetime'>&#39;a</span><span class='op'>&gt;</span> {
+        <span class='kw'>use</span> <span class='ident'>Value</span>::<span class='op'>*</span>;
         <span class='kw'>unsafe</span> {
             <span class='kw'>match</span> <span class='ident'>ty</span> {
-                <span class='ident'>ASN_INTEGER</span> <span class='op'>=&gt;</span> <span class='ident'>Value</span>::<span class='ident'>Integer</span>(<span class='op'>*</span><span class='op'>*</span><span class='ident'>val</span>.<span class='ident'>integer</span>() <span class='kw'>as</span> <span class='ident'>i32</span>),
-                <span class='ident'>ASN_IPADDRESS</span> <span class='op'>=&gt;</span> <span class='ident'>Value</span>::<span class='ident'>IpAddress</span>(<span class='ident'>net</span>::<span class='ident'>Ipv4Addr</span>::<span class='ident'>from</span>((<span class='op'>*</span><span class='op'>*</span><span class='ident'>val</span>.<span class='ident'>integer</span>() <span class='kw'>as</span> <span class='ident'>u32</span>).<span class='ident'>to_be</span>())),
-                <span class='ident'>ASN_COUNTER</span> <span class='op'>=&gt;</span> <span class='ident'>Value</span>::<span class='ident'>Counter32</span>(<span class='op'>*</span><span class='op'>*</span><span class='ident'>val</span>.<span class='ident'>integer</span>() <span class='kw'>as</span> <span class='ident'>u32</span>),
-                <span class='ident'>ASN_COUNTER64</span> <span class='op'>=&gt;</span> {
+                <span class='ident'>ASN_INTEGER</span>         <span class='op'>=&gt;</span> <span class='ident'>Integer</span>(<span class='op'>*</span><span class='op'>*</span><span class='ident'>val</span>.<span class='ident'>integer</span>() <span class='kw'>as</span> <span class='ident'>i32</span>),
+                <span class='ident'>ASN_IPADDRESS</span>       <span class='op'>=&gt;</span> <span class='ident'>IpAddress</span>(<span class='ident'>net</span>::<span class='ident'>Ipv4Addr</span>::<span class='ident'>from</span>((<span class='op'>*</span><span class='op'>*</span><span class='ident'>val</span>.<span class='ident'>integer</span>() <span class='kw'>as</span> <span class='ident'>u32</span>).<span class='ident'>to_be</span>())),
+                <span class='ident'>ASN_COUNTER</span>         <span class='op'>=&gt;</span> <span class='ident'>Counter32</span>(<span class='op'>*</span><span class='op'>*</span><span class='ident'>val</span>.<span class='ident'>integer</span>() <span class='kw'>as</span> <span class='ident'>u32</span>),
+                <span class='ident'>ASN_COUNTER64</span>       <span class='op'>=&gt;</span> {
                     <span class='kw'>let</span> <span class='ident'>c64</span> <span class='op'>=</span> <span class='op'>*</span><span class='op'>*</span><span class='ident'>val</span>.<span class='ident'>counter64</span>();
-                    <span class='ident'>Value</span>::<span class='ident'>Counter64</span>(<span class='ident'>mem</span>::<span class='ident'>transmute</span>([<span class='ident'>c64</span>.<span class='ident'>low</span> <span class='kw'>as</span> <span class='ident'>u32</span>, <span class='ident'>c64</span>.<span class='ident'>high</span> <span class='kw'>as</span> <span class='ident'>u32</span>]))
+                    <span class='ident'>Counter64</span>(<span class='ident'>mem</span>::<span class='ident'>transmute</span>([<span class='ident'>c64</span>.<span class='ident'>low</span> <span class='kw'>as</span> <span class='ident'>u32</span>, <span class='ident'>c64</span>.<span class='ident'>high</span> <span class='kw'>as</span> <span class='ident'>u32</span>]))
                 }
-                <span class='ident'>ASN_GAUGE</span> <span class='op'>=&gt;</span> <span class='ident'>Value</span>::<span class='ident'>Gauge32</span>(<span class='op'>*</span><span class='op'>*</span><span class='ident'>val</span>.<span class='ident'>integer</span>() <span class='kw'>as</span> <span class='ident'>u32</span>),
-                <span class='ident'>ASN_OCTET_STR</span> <span class='op'>=&gt;</span> <span class='ident'>Value</span>::<span class='ident'>OctetString</span>(<span class='ident'>slice</span>::<span class='ident'>from_raw_parts</span>(<span class='op'>*</span><span class='ident'>val</span>.<span class='ident'>string</span>(), <span class='ident'>val_len</span>)),
-                <span class='ident'>ASN_TIMETICKS</span> <span class='op'>=&gt;</span> <span class='ident'>Value</span>::<span class='ident'>TimeTicks</span>(<span class='op'>*</span><span class='op'>*</span><span class='ident'>val</span>.<span class='ident'>integer</span>() <span class='kw'>as</span> <span class='ident'>u32</span>),
+                <span class='ident'>ASN_GAUGE</span>           <span class='op'>=&gt;</span> <span class='ident'>Gauge32</span>(<span class='op'>*</span><span class='op'>*</span><span class='ident'>val</span>.<span class='ident'>integer</span>() <span class='kw'>as</span> <span class='ident'>u32</span>),
+                <span class='ident'>ASN_OCTET_STR</span>       <span class='op'>=&gt;</span> <span class='ident'>OctetString</span>(<span class='ident'>slice</span>::<span class='ident'>from_raw_parts</span>(<span class='op'>*</span><span class='ident'>val</span>.<span class='ident'>string</span>(), <span class='ident'>val_len</span>)),
+                <span class='ident'>ASN_TIMETICKS</span>       <span class='op'>=&gt;</span> <span class='ident'>TimeTicks</span>(<span class='op'>*</span><span class='op'>*</span><span class='ident'>val</span>.<span class='ident'>integer</span>() <span class='kw'>as</span> <span class='ident'>u32</span>),
 
-                <span class='ident'>SNMP_NOSUCHOBJECT</span> <span class='op'>=&gt;</span> <span class='ident'>Value</span>::<span class='ident'>NoSuchObject</span>,
-                <span class='ident'>SNMP_NOSUCHINSTANCE</span> <span class='op'>=&gt;</span> <span class='ident'>Value</span>::<span class='ident'>NoSuchInstance</span>,
-                <span class='ident'>SNMP_ENDOFMIBVIEW</span> <span class='op'>=&gt;</span> <span class='ident'>Value</span>::<span class='ident'>EndOfMibView</span>,
+                <span class='ident'>SNMP_NOSUCHOBJECT</span>   <span class='op'>=&gt;</span> <span class='ident'>NoSuchObject</span>,
+                <span class='ident'>SNMP_NOSUCHINSTANCE</span> <span class='op'>=&gt;</span> <span class='ident'>NoSuchInstance</span>,
+                <span class='ident'>SNMP_ENDOFMIBVIEW</span>   <span class='op'>=&gt;</span> <span class='ident'>EndOfMibView</span>,
 
-                <span class='ident'>n</span> <span class='op'>=&gt;</span> <span class='ident'>Value</span>::<span class='ident'>UnsupportedType</span>(<span class='ident'>n</span>),
+                <span class='ident'>n</span>                   <span class='op'>=&gt;</span> <span class='ident'>UnsupportedType</span>(<span class='ident'>n</span>),
             }
         }
     }
@@ -2038,7 +2053,7 @@
                 <span class='ident'>variable</span>.<span class='ident'>value</span>().<span class='ident'>get_octetstring</span>().<span class='ident'>map</span>(<span class='op'>|</span><span class='ident'>oct_str</span><span class='op'>|</span> {
                     <span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>str</span>;
                     <span class='macro'>println</span><span class='macro'>!</span>(<span class='string'>&quot;{:?} = {:?}&quot;</span>,
-                             <span class='ident'>variable</span>.<span class='ident'>objid</span>(),
+                             <span class='ident'>variable</span>.<span class='ident'>name</span>(),
                              <span class='ident'>str</span>::<span class='ident'>from_utf8</span>(<span class='kw-2'>&amp;</span><span class='ident'>oct_str</span>[..]).<span class='ident'>unwrap</span>());
                 });
             });
@@ -2051,7 +2066,7 @@
             .<span class='ident'>expect</span>(<span class='string'>&quot;Session::new() failed&quot;</span>);
         <span class='kw'>let</span> <span class='ident'>resp</span> <span class='op'>=</span> <span class='ident'>sess</span>.<span class='ident'>get_bulk</span>(<span class='string'>&quot;IF-MIB::interfaces&quot;</span>).<span class='ident'>unwrap</span>();
         <span class='kw'>for</span> <span class='ident'>var</span> <span class='kw'>in</span> <span class='ident'>resp</span>.<span class='ident'>variables</span>() {
-            <span class='macro'>println</span><span class='macro'>!</span>(<span class='string'>&quot;get_bulk: {:?} -&gt; {:?}&quot;</span>, <span class='ident'>var</span>.<span class='ident'>objid</span>(), <span class='ident'>var</span>.<span class='ident'>value</span>());
+            <span class='macro'>println</span><span class='macro'>!</span>(<span class='string'>&quot;get_bulk: {:?} -&gt; {:?}&quot;</span>, <span class='ident'>var</span>.<span class='ident'>name</span>(), <span class='ident'>var</span>.<span class='ident'>value</span>());
         }
     }
 
@@ -2078,9 +2093,10 @@
 
         <span class='kw'>for</span> <span class='ident'>variable</span> <span class='kw'>in</span> <span class='ident'>sess</span>.<span class='ident'>bulk_walk</span>(<span class='string'>&quot;IF-MIB::interfaces&quot;</span>).<span class='ident'>expect</span>(<span class='string'>&quot;walk() failed&quot;</span>) {
             <span class='ident'>variable</span>.<span class='ident'>map</span>(<span class='op'>|</span><span class='ident'>var</span><span class='op'>|</span> {
-                <span class='kw'>let</span> <span class='ident'>oids</span> <span class='op'>=</span> <span class='ident'>var</span>.<span class='ident'>objid</span>();
+                <span class='kw'>let</span> <span class='ident'>oids</span> <span class='op'>=</span> <span class='ident'>var</span>.<span class='ident'>name</span>();
                 <span class='kw'>match</span> <span class='ident'>var</span>.<span class='ident'>value</span>() {
-                    <span class='ident'>Value</span>::<span class='ident'>OctetString</span>(<span class='ident'>val</span>) <span class='op'>=&gt;</span> <span class='macro'>println</span><span class='macro'>!</span>(<span class='string'>&quot;{}\t=&gt; {}&quot;</span>, <span class='ident'>oids</span>.<span class='ident'>oid_name</span>(), <span class='kw-2'>&amp;</span><span class='ident'>String</span>::<span class='ident'>from_utf8_lossy</span>(<span class='ident'>val</span>)),
+                    <span class='ident'>Value</span>::<span class='ident'>OctetString</span>(<span class='ident'>val</span>) <span class='op'>=&gt;</span>
+                        <span class='macro'>println</span><span class='macro'>!</span>(<span class='string'>&quot;{}\t=&gt; {}&quot;</span>, <span class='ident'>oids</span>.<span class='ident'>oid_name</span>(), <span class='kw-2'>&amp;</span><span class='ident'>String</span>::<span class='ident'>from_utf8_lossy</span>(<span class='ident'>val</span>)),
                     <span class='ident'>val</span> <span class='op'>=&gt;</span> <span class='macro'>println</span><span class='macro'>!</span>(<span class='string'>&quot;{}\t=&gt; {:?}&quot;</span>, <span class='ident'>oids</span>.<span class='ident'>oid_name</span>(), <span class='ident'>val</span>),
                 }
             }).<span class='ident'>expect</span>(<span class='string'>&quot;walk failed&quot;</span>);
