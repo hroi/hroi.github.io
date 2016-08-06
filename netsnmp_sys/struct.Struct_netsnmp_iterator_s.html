@@ -47,7 +47,7 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-333' class='srclink' href='../src/netsnmp_sys/auto.rs.html#220-230' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-356' class='srclink' href='../src/netsnmp_sys/auto.rs.html#244-254' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct Struct_netsnmp_iterator_s {
     pub container: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../netsnmp_sys/type.netsnmp_container.html' title='netsnmp_sys::netsnmp_container'>netsnmp_container</a>,
     pub sync: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_ulong.html' title='std::os::raw::c_ulong'>c_ulong</a>,
@@ -58,26 +58,25 @@
     pub last: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../netsnmp_sys/type.netsnmp_iterator_rtn.html' title='netsnmp_sys::netsnmp_iterator_rtn'>netsnmp_iterator_rtn</a>,
     pub next: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../netsnmp_sys/type.netsnmp_iterator_rtn.html' title='netsnmp_sys::netsnmp_iterator_rtn'>netsnmp_iterator_rtn</a>,
     pub remove: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../netsnmp_sys/type.netsnmp_iterator_rc.html' title='netsnmp_sys::netsnmp_iterator_rc'>netsnmp_iterator_rc</a>,
-}</pre><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                             <td id='structfield.container'><code>container</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.sync'><code>sync</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.reset'><code>reset</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.release'><code>release</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.first'><code>first</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.curr'><code>curr</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.last'><code>last</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.next'><code>next</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.remove'><code>remove</code></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_netsnmp_iterator_s.html' title='netsnmp_sys::Struct_netsnmp_iterator_s'>Struct_netsnmp_iterator_s</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-344' class='srclink' href='../src/netsnmp_sys/auto.rs.html#231-233' title='goto source code'>[src]</a></span></h3>
+}</pre><h2 class='fields'>Fields</h2><span id='structfield.container' class='structfield'><code>container: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../netsnmp_sys/type.netsnmp_container.html' title='netsnmp_sys::netsnmp_container'>netsnmp_container</a></code>
+                           </span><span class='stab '></span><span id='structfield.sync' class='structfield'><code>sync: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_ulong.html' title='std::os::raw::c_ulong'>c_ulong</a></code>
+                           </span><span class='stab '></span><span id='structfield.reset' class='structfield'><code>reset: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../netsnmp_sys/type.netsnmp_iterator_rc.html' title='netsnmp_sys::netsnmp_iterator_rc'>netsnmp_iterator_rc</a></code>
+                           </span><span class='stab '></span><span id='structfield.release' class='structfield'><code>release: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../netsnmp_sys/type.netsnmp_iterator_rc.html' title='netsnmp_sys::netsnmp_iterator_rc'>netsnmp_iterator_rc</a></code>
+                           </span><span class='stab '></span><span id='structfield.first' class='structfield'><code>first: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../netsnmp_sys/type.netsnmp_iterator_rtn.html' title='netsnmp_sys::netsnmp_iterator_rtn'>netsnmp_iterator_rtn</a></code>
+                           </span><span class='stab '></span><span id='structfield.curr' class='structfield'><code>curr: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../netsnmp_sys/type.netsnmp_iterator_rtn.html' title='netsnmp_sys::netsnmp_iterator_rtn'>netsnmp_iterator_rtn</a></code>
+                           </span><span class='stab '></span><span id='structfield.last' class='structfield'><code>last: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../netsnmp_sys/type.netsnmp_iterator_rtn.html' title='netsnmp_sys::netsnmp_iterator_rtn'>netsnmp_iterator_rtn</a></code>
+                           </span><span class='stab '></span><span id='structfield.next' class='structfield'><code>next: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../netsnmp_sys/type.netsnmp_iterator_rtn.html' title='netsnmp_sys::netsnmp_iterator_rtn'>netsnmp_iterator_rtn</a></code>
+                           </span><span class='stab '></span><span id='structfield.remove' class='structfield'><code>remove: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../netsnmp_sys/type.netsnmp_iterator_rc.html' title='netsnmp_sys::netsnmp_iterator_rc'>netsnmp_iterator_rc</a></code>
+                           </span><span class='stab '></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_netsnmp_iterator_s.html' title='netsnmp_sys::Struct_netsnmp_iterator_s'>Struct_netsnmp_iterator_s</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-355' class='srclink' href='../src/netsnmp_sys/auto.rs.html#243' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_netsnmp_iterator_s.html' title='netsnmp_sys::Struct_netsnmp_iterator_s'>Struct_netsnmp_iterator_s</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-366' class='srclink' href='../src/netsnmp_sys/auto.rs.html#255-257' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; Self</code></h4>
 <div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
 </div><h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
 <div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
-</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_netsnmp_iterator_s.html' title='netsnmp_sys::Struct_netsnmp_iterator_s'>Struct_netsnmp_iterator_s</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-347' class='srclink' href='../src/netsnmp_sys/auto.rs.html#234-236' title='goto source code'>[src]</a></span></h3>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_netsnmp_iterator_s.html' title='netsnmp_sys::Struct_netsnmp_iterator_s'>Struct_netsnmp_iterator_s</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-369' class='srclink' href='../src/netsnmp_sys/auto.rs.html#258-260' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; Self</code></h4>
 <div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
-</div></div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_netsnmp_iterator_s.html' title='netsnmp_sys::Struct_netsnmp_iterator_s'>Struct_netsnmp_iterator_s</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-343' class='srclink' href='../src/netsnmp_sys/auto.rs.html#219' title='goto source code'>[src]</a></span></h3>
-<div class='impl-items'></div></section>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -100,6 +99,8 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

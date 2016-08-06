@@ -47,18 +47,18 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-1744' class='srclink' href='../../../../src/bgparse/bgp/update/path_attr/mod.rs.html#182-184' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-1737' class='srclink' href='../../../../src/bgparse/bgp/update/path_attr/mod.rs.html#182-184' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct As4Aggregator&lt;'a&gt; {
     // some fields omitted
 }</pre><div class='docblock'><p>Four-byte ASN version of Aggregator</p>
-</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.As4Aggregator.html' title='bgparse::bgp::update::path_attr::As4Aggregator'>As4Aggregator</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1755' class='srclink' href='../../../../src/bgparse/bgp/update/path_attr/mod.rs.html#773-792' title='goto source code'>[src]</a></span></h3>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.As4Aggregator.html' title='bgparse::bgp::update::path_attr::As4Aggregator'>As4Aggregator</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1748' class='srclink' href='../../../../src/bgparse/bgp/update/path_attr/mod.rs.html#773-792' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.aut_num' class='method'><code>fn <a href='#method.aut_num' class='fnname'>aut_num</a>(&amp;self) -&gt; u32</code></h4>
 <div class='docblock'><p>The last AS number that formed the aggregate route</p>
 </div><h4 id='method.ident' class='method'><code>fn <a href='#method.ident' class='fnname'>ident</a>(&amp;self) -&gt; u32</code></h4>
 <div class='docblock'><p>The IP address of the BGP speaker that formed the aggregate route
 (encoded as 4 octets).  This SHOULD be the same address as
 the one used for the BGP Identifier of the speaker.</p>
-</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='../../../../bgparse/bgp/update/path_attr/trait.Attr.html' title='bgparse::bgp::update::path_attr::Attr'>Attr</a>&lt;'a&gt; for <a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.As4Aggregator.html' title='bgparse::bgp::update::path_attr::As4Aggregator'>As4Aggregator</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1747' class='srclink' href='../../../../src/bgparse/bgp/update/path_attr/mod.rs.html#186-202' title='goto source code'>[src]</a></span></h3>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='../../../../bgparse/bgp/update/path_attr/trait.Attr.html' title='bgparse::bgp::update::path_attr::Attr'>Attr</a>&lt;'a&gt; for <a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.As4Aggregator.html' title='bgparse::bgp::update::path_attr::As4Aggregator'>As4Aggregator</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1740' class='srclink' href='../../../../src/bgparse/bgp/update/path_attr/mod.rs.html#186-202' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.flags' class='method'><code>fn <a href='../../../../bgparse/bgp/update/path_attr/trait.Attr.html#tymethod.flags' class='fnname'>flags</a>(&amp;self) -&gt; u8</code></h4>
 <h4 id='method.code' class='method'><code>fn <a href='../../../../bgparse/bgp/update/path_attr/trait.Attr.html#tymethod.code' class='fnname'>code</a>(&amp;self) -&gt; u8</code></h4>
 <h4 id='method.value' class='method'><code>fn <a href='../../../../bgparse/bgp/update/path_attr/trait.Attr.html#tymethod.value' class='fnname'>value</a>(&amp;self) -&gt; &amp;'a [u8]</code></h4>
@@ -66,7 +66,7 @@ the one used for the BGP Identifier of the speaker.</p>
 <h4 id='method.is_partial' class='method'><code>fn <a href='../../../../bgparse/bgp/update/path_attr/trait.Attr.html#method.is_partial' class='fnname'>is_partial</a>(&amp;self) -&gt; bool</code></h4>
 <h4 id='method.is_transitive' class='method'><code>fn <a href='../../../../bgparse/bgp/update/path_attr/trait.Attr.html#method.is_transitive' class='fnname'>is_transitive</a>(&amp;self) -&gt; bool</code></h4>
 <h4 id='method.is_ext_len' class='method'><code>fn <a href='../../../../bgparse/bgp/update/path_attr/trait.Attr.html#method.is_ext_len' class='fnname'>is_ext_len</a>(&amp;self) -&gt; bool</code></h4>
-</div><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.As4Aggregator.html' title='bgparse::bgp::update::path_attr::As4Aggregator'>As4Aggregator</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1761' class='srclink' href='../../../../src/bgparse/bgp/update/path_attr/mod.rs.html#794-800' title='goto source code'>[src]</a></span></h3>
+</div><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../../../bgparse/bgp/update/path_attr/struct.As4Aggregator.html' title='bgparse::bgp::update::path_attr::As4Aggregator'>As4Aggregator</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1754' class='srclink' href='../../../../src/bgparse/bgp/update/path_attr/mod.rs.html#794-800' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, fmt: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
 <div class='docblock'><p>Formats the value using the given formatter.</p>
 </div></div></section>
@@ -92,6 +92,8 @@ the one used for the BGP Identifier of the speaker.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

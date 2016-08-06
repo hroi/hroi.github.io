@@ -47,7 +47,7 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-206' class='srclink' href='../src/netsnmp_sys/auto.rs.html#72-109' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-229' class='srclink' href='../src/netsnmp_sys/auto.rs.html#96-133' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct Struct_snmp_pdu {
     pub version: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_long.html' title='std::os::raw::c_long'>c_long</a>,
     pub command: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a>,
@@ -73,7 +73,7 @@
     pub enterprise_length: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a>,
     pub trap_type: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_long.html' title='std::os::raw::c_long'>c_long</a>,
     pub specific_type: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_long.html' title='std::os::raw::c_long'>c_long</a>,
-    pub agent_addr: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_uchar.html' title='std::os::raw::c_uchar'>c_uchar</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 4usize]</a>,
+    pub agent_addr: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_uchar.html' title='std::os::raw::c_uchar'>c_uchar</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 4]</a>,
     pub contextEngineID: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_uchar.html' title='std::os::raw::c_uchar'>c_uchar</a>,
     pub contextEngineIDLen: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a>,
     pub contextName: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_char.html' title='std::os::raw::c_char'>c_char</a>,
@@ -85,53 +85,52 @@
     pub priority: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a>,
     pub range_subid: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a>,
     pub securityStateRef: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='https://doc.rust-lang.org/nightly/std/os/raw/enum.c_void.html' title='std::os::raw::c_void'>c_void</a>,
-}</pre><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                             <td id='structfield.version'><code>version</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.command'><code>command</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.reqid'><code>reqid</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.msgid'><code>msgid</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.transid'><code>transid</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.sessid'><code>sessid</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.errstat'><code>errstat</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.errindex'><code>errindex</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.time'><code>time</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.flags'><code>flags</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.securityModel'><code>securityModel</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.securityLevel'><code>securityLevel</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.msgParseModel'><code>msgParseModel</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.transport_data'><code>transport_data</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.transport_data_length'><code>transport_data_length</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.tDomain'><code>tDomain</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.tDomainLen'><code>tDomainLen</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.variables'><code>variables</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.community'><code>community</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.community_len'><code>community_len</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.enterprise'><code>enterprise</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.enterprise_length'><code>enterprise_length</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.trap_type'><code>trap_type</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.specific_type'><code>specific_type</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.agent_addr'><code>agent_addr</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.contextEngineID'><code>contextEngineID</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.contextEngineIDLen'><code>contextEngineIDLen</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.contextName'><code>contextName</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.contextNameLen'><code>contextNameLen</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.securityEngineID'><code>securityEngineID</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.securityEngineIDLen'><code>securityEngineIDLen</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.securityName'><code>securityName</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.securityNameLen'><code>securityNameLen</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.priority'><code>priority</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.range_subid'><code>range_subid</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.securityStateRef'><code>securityStateRef</code></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_snmp_pdu.html' title='netsnmp_sys::Struct_snmp_pdu'>Struct_snmp_pdu</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-245' class='srclink' href='../src/netsnmp_sys/auto.rs.html#110-112' title='goto source code'>[src]</a></span></h3>
+}</pre><h2 class='fields'>Fields</h2><span id='structfield.version' class='structfield'><code>version: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_long.html' title='std::os::raw::c_long'>c_long</a></code>
+                           </span><span class='stab '></span><span id='structfield.command' class='structfield'><code>command: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a></code>
+                           </span><span class='stab '></span><span id='structfield.reqid' class='structfield'><code>reqid: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_long.html' title='std::os::raw::c_long'>c_long</a></code>
+                           </span><span class='stab '></span><span id='structfield.msgid' class='structfield'><code>msgid: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_long.html' title='std::os::raw::c_long'>c_long</a></code>
+                           </span><span class='stab '></span><span id='structfield.transid' class='structfield'><code>transid: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_long.html' title='std::os::raw::c_long'>c_long</a></code>
+                           </span><span class='stab '></span><span id='structfield.sessid' class='structfield'><code>sessid: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_long.html' title='std::os::raw::c_long'>c_long</a></code>
+                           </span><span class='stab '></span><span id='structfield.errstat' class='structfield'><code>errstat: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_long.html' title='std::os::raw::c_long'>c_long</a></code>
+                           </span><span class='stab '></span><span id='structfield.errindex' class='structfield'><code>errindex: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_long.html' title='std::os::raw::c_long'>c_long</a></code>
+                           </span><span class='stab '></span><span id='structfield.time' class='structfield'><code>time: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_ulong.html' title='std::os::raw::c_ulong'>c_ulong</a></code>
+                           </span><span class='stab '></span><span id='structfield.flags' class='structfield'><code>flags: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_ulong.html' title='std::os::raw::c_ulong'>c_ulong</a></code>
+                           </span><span class='stab '></span><span id='structfield.securityModel' class='structfield'><code>securityModel: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a></code>
+                           </span><span class='stab '></span><span id='structfield.securityLevel' class='structfield'><code>securityLevel: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a></code>
+                           </span><span class='stab '></span><span id='structfield.msgParseModel' class='structfield'><code>msgParseModel: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a></code>
+                           </span><span class='stab '></span><span id='structfield.transport_data' class='structfield'><code>transport_data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='https://doc.rust-lang.org/nightly/std/os/raw/enum.c_void.html' title='std::os::raw::c_void'>c_void</a></code>
+                           </span><span class='stab '></span><span id='structfield.transport_data_length' class='structfield'><code>transport_data_length: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a></code>
+                           </span><span class='stab '></span><span id='structfield.tDomain' class='structfield'><code>tDomain: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='type' href='../netsnmp_sys/type.oid.html' title='netsnmp_sys::oid'>oid</a></code>
+                           </span><span class='stab '></span><span id='structfield.tDomainLen' class='structfield'><code>tDomainLen: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a></code>
+                           </span><span class='stab '></span><span id='structfield.variables' class='structfield'><code>variables: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../netsnmp_sys/type.netsnmp_variable_list.html' title='netsnmp_sys::netsnmp_variable_list'>netsnmp_variable_list</a></code>
+                           </span><span class='stab '></span><span id='structfield.community' class='structfield'><code>community: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_uchar.html' title='std::os::raw::c_uchar'>c_uchar</a></code>
+                           </span><span class='stab '></span><span id='structfield.community_len' class='structfield'><code>community_len: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a></code>
+                           </span><span class='stab '></span><span id='structfield.enterprise' class='structfield'><code>enterprise: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../netsnmp_sys/type.oid.html' title='netsnmp_sys::oid'>oid</a></code>
+                           </span><span class='stab '></span><span id='structfield.enterprise_length' class='structfield'><code>enterprise_length: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a></code>
+                           </span><span class='stab '></span><span id='structfield.trap_type' class='structfield'><code>trap_type: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_long.html' title='std::os::raw::c_long'>c_long</a></code>
+                           </span><span class='stab '></span><span id='structfield.specific_type' class='structfield'><code>specific_type: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_long.html' title='std::os::raw::c_long'>c_long</a></code>
+                           </span><span class='stab '></span><span id='structfield.agent_addr' class='structfield'><code>agent_addr: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_uchar.html' title='std::os::raw::c_uchar'>c_uchar</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 4]</a></code>
+                           </span><span class='stab '></span><span id='structfield.contextEngineID' class='structfield'><code>contextEngineID: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_uchar.html' title='std::os::raw::c_uchar'>c_uchar</a></code>
+                           </span><span class='stab '></span><span id='structfield.contextEngineIDLen' class='structfield'><code>contextEngineIDLen: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a></code>
+                           </span><span class='stab '></span><span id='structfield.contextName' class='structfield'><code>contextName: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_char.html' title='std::os::raw::c_char'>c_char</a></code>
+                           </span><span class='stab '></span><span id='structfield.contextNameLen' class='structfield'><code>contextNameLen: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a></code>
+                           </span><span class='stab '></span><span id='structfield.securityEngineID' class='structfield'><code>securityEngineID: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_uchar.html' title='std::os::raw::c_uchar'>c_uchar</a></code>
+                           </span><span class='stab '></span><span id='structfield.securityEngineIDLen' class='structfield'><code>securityEngineIDLen: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a></code>
+                           </span><span class='stab '></span><span id='structfield.securityName' class='structfield'><code>securityName: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_char.html' title='std::os::raw::c_char'>c_char</a></code>
+                           </span><span class='stab '></span><span id='structfield.securityNameLen' class='structfield'><code>securityNameLen: <a class='type' href='../libc/type.size_t.html' title='libc::size_t'>size_t</a></code>
+                           </span><span class='stab '></span><span id='structfield.priority' class='structfield'><code>priority: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a></code>
+                           </span><span class='stab '></span><span id='structfield.range_subid' class='structfield'><code>range_subid: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a></code>
+                           </span><span class='stab '></span><span id='structfield.securityStateRef' class='structfield'><code>securityStateRef: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='https://doc.rust-lang.org/nightly/std/os/raw/enum.c_void.html' title='std::os::raw::c_void'>c_void</a></code>
+                           </span><span class='stab '></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_snmp_pdu.html' title='netsnmp_sys::Struct_snmp_pdu'>Struct_snmp_pdu</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-228' class='srclink' href='../src/netsnmp_sys/auto.rs.html#95' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_snmp_pdu.html' title='netsnmp_sys::Struct_snmp_pdu'>Struct_snmp_pdu</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-267' class='srclink' href='../src/netsnmp_sys/auto.rs.html#134-136' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; Self</code></h4>
 <div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
 </div><h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
 <div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
-</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_snmp_pdu.html' title='netsnmp_sys::Struct_snmp_pdu'>Struct_snmp_pdu</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-248' class='srclink' href='../src/netsnmp_sys/auto.rs.html#113-115' title='goto source code'>[src]</a></span></h3>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_snmp_pdu.html' title='netsnmp_sys::Struct_snmp_pdu'>Struct_snmp_pdu</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-270' class='srclink' href='../src/netsnmp_sys/auto.rs.html#137-139' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; Self</code></h4>
 <div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
-</div></div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_snmp_pdu.html' title='netsnmp_sys::Struct_snmp_pdu'>Struct_snmp_pdu</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-244' class='srclink' href='../src/netsnmp_sys/auto.rs.html#71' title='goto source code'>[src]</a></span></h3>
-<div class='impl-items'></div></section>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -154,6 +153,8 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

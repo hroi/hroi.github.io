@@ -47,7 +47,7 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-2597' class='srclink' href='../../src/bgparse/bmp/mod.rs.html#340-384' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-2625' class='srclink' href='../../src/bgparse/bmp/mod.rs.html#340-384' title='goto source code'>[src]</a></span></h1>
 <pre class='rust enum'>pub enum Statistic&lt;'a&gt; {
     RejectedPrefixCount(u32),
     DuplicatePrefixAdvertisementCount(u32),
@@ -58,42 +58,42 @@
     AsConfedInvalidationCount(u32),
     AdjRibsInSize(u64),
     LocRibSize(u64),
-    PerAfiSafiAdjRibInSize(<a class='struct' href='../../bgparse/types/struct.Afi.html' title='bgparse::types::Afi'>Afi</a>, <a class='struct' href='../../bgparse/types/struct.Safi.html' title='bgparse::types::Safi'>Safi</a>, u64),
-    PerAfiSafiLocRibSize(<a class='struct' href='../../bgparse/types/struct.Afi.html' title='bgparse::types::Afi'>Afi</a>, <a class='struct' href='../../bgparse/types/struct.Safi.html' title='bgparse::types::Safi'>Safi</a>, u64),
+    PerAfiSafiAdjRibInSize(<a class='struct' href='../../bgparse/types/struct.Afi.html' title='bgparse::types::Afi'>Afi</a>,&nbsp;<a class='struct' href='../../bgparse/types/struct.Safi.html' title='bgparse::types::Safi'>Safi</a>,&nbsp;u64),
+    PerAfiSafiLocRibSize(<a class='struct' href='../../bgparse/types/struct.Afi.html' title='bgparse::types::Afi'>Afi</a>,&nbsp;<a class='struct' href='../../bgparse/types/struct.Safi.html' title='bgparse::types::Safi'>Safi</a>,&nbsp;u64),
     UpdatesTreatedAsWithdraws(u32),
     PrefixesTreatedAsWithdraws(u32),
     DuplicateUpdateCount(u32),
     Unknown(<a class='struct' href='../../bgparse/bmp/struct.UnknownStatistic.html' title='bgparse::bmp::UnknownStatistic'>UnknownStatistic</a>&lt;'a&gt;),
 }</pre><h2 class='variants'>Variants</h2>
-<table class='variants_table'><tr><td id='variant.RejectedPrefixCount'><code>RejectedPrefixCount</code></td><td><div class='docblock'><p>Stat Type = 0: (32-bit Counter) Number of prefixes rejected by
+<span id='variant.RejectedPrefixCount' class='variant'><code>RejectedPrefixCount(u32)</code></span><div class='docblock'><p>Stat Type = 0: (32-bit Counter) Number of prefixes rejected by
 inbound policy.</p>
-</div></td><td></td></tr><tr><td id='variant.DuplicatePrefixAdvertisementCount'><code>DuplicatePrefixAdvertisementCount</code></td><td><div class='docblock'><p>Stat Type = 1: (32-bit Counter) Number of (known) duplicate prefix
+</div><span id='variant.DuplicatePrefixAdvertisementCount' class='variant'><code>DuplicatePrefixAdvertisementCount(u32)</code></span><div class='docblock'><p>Stat Type = 1: (32-bit Counter) Number of (known) duplicate prefix
 advertisements.</p>
-</div></td><td></td></tr><tr><td id='variant.DuplicatePrefixWithdrawCount'><code>DuplicatePrefixWithdrawCount</code></td><td><div class='docblock'><p>Stat Type = 2: (32-bit Counter) Number of (known) duplicate
+</div><span id='variant.DuplicatePrefixWithdrawCount' class='variant'><code>DuplicatePrefixWithdrawCount(u32)</code></span><div class='docblock'><p>Stat Type = 2: (32-bit Counter) Number of (known) duplicate
 withdraws.</p>
-</div></td><td></td></tr><tr><td id='variant.ClusterListLoopInvalidationCount'><code>ClusterListLoopInvalidationCount</code></td><td><div class='docblock'><p>Stat Type = 3: (32-bit Counter) Number of updates invalidated due
+</div><span id='variant.ClusterListLoopInvalidationCount' class='variant'><code>ClusterListLoopInvalidationCount(u32)</code></span><div class='docblock'><p>Stat Type = 3: (32-bit Counter) Number of updates invalidated due
 to CLUSTER_LIST loop.</p>
-</div></td><td></td></tr><tr><td id='variant.AsPathLoopInvalidationCount'><code>AsPathLoopInvalidationCount</code></td><td><div class='docblock'><p>Stat Type = 4: (32-bit Counter) Number of updates invalidated due
+</div><span id='variant.AsPathLoopInvalidationCount' class='variant'><code>AsPathLoopInvalidationCount(u32)</code></span><div class='docblock'><p>Stat Type = 4: (32-bit Counter) Number of updates invalidated due
 to AS_PATH loop.</p>
-</div></td><td></td></tr><tr><td id='variant.OriginatorIdInvalidationCount'><code>OriginatorIdInvalidationCount</code></td><td><div class='docblock'><p>Stat Type = 5: (32-bit Counter) Number of updates invalidated due
+</div><span id='variant.OriginatorIdInvalidationCount' class='variant'><code>OriginatorIdInvalidationCount(u32)</code></span><div class='docblock'><p>Stat Type = 5: (32-bit Counter) Number of updates invalidated due
 to ORIGINATOR_ID.</p>
-</div></td><td></td></tr><tr><td id='variant.AsConfedInvalidationCount'><code>AsConfedInvalidationCount</code></td><td><div class='docblock'><p>Stat Type = 6: (32-bit Counter) Number of updates invalidated due
+</div><span id='variant.AsConfedInvalidationCount' class='variant'><code>AsConfedInvalidationCount(u32)</code></span><div class='docblock'><p>Stat Type = 6: (32-bit Counter) Number of updates invalidated due
 to AS_CONFED loop.</p>
-</div></td><td></td></tr><tr><td id='variant.AdjRibsInSize'><code>AdjRibsInSize</code></td><td><div class='docblock'><p>Stat Type = 7: (64-bit Gauge) Number of routes in Adj-RIBs-In.</p>
-</div></td><td></td></tr><tr><td id='variant.LocRibSize'><code>LocRibSize</code></td><td><div class='docblock'><p>Stat Type = 8: (64-bit Gauge) Number of routes in Loc-RIB.</p>
-</div></td><td></td></tr><tr><td id='variant.PerAfiSafiAdjRibInSize'><code>PerAfiSafiAdjRibInSize</code></td><td><div class='docblock'><p>Stat Type = 9: Number of routes in per-AFI/SAFI Adj-RIB-In.  The
+</div><span id='variant.AdjRibsInSize' class='variant'><code>AdjRibsInSize(u64)</code></span><div class='docblock'><p>Stat Type = 7: (64-bit Gauge) Number of routes in Adj-RIBs-In.</p>
+</div><span id='variant.LocRibSize' class='variant'><code>LocRibSize(u64)</code></span><div class='docblock'><p>Stat Type = 8: (64-bit Gauge) Number of routes in Loc-RIB.</p>
+</div><span id='variant.PerAfiSafiAdjRibInSize' class='variant'><code>PerAfiSafiAdjRibInSize(<a class='struct' href='../../bgparse/types/struct.Afi.html' title='bgparse::types::Afi'>Afi</a>,&nbsp;<a class='struct' href='../../bgparse/types/struct.Safi.html' title='bgparse::types::Safi'>Safi</a>,&nbsp;u64)</code></span><div class='docblock'><p>Stat Type = 9: Number of routes in per-AFI/SAFI Adj-RIB-In.  The
 value is structured as: AFI (2 bytes), SAFI (1 byte), followed by
 a 64-bit Gauge.</p>
-</div></td><td></td></tr><tr><td id='variant.PerAfiSafiLocRibSize'><code>PerAfiSafiLocRibSize</code></td><td><div class='docblock'><p>Stat Type = 10: Number of routes in per-AFI/SAFI Loc-RIB.  The
+</div><span id='variant.PerAfiSafiLocRibSize' class='variant'><code>PerAfiSafiLocRibSize(<a class='struct' href='../../bgparse/types/struct.Afi.html' title='bgparse::types::Afi'>Afi</a>,&nbsp;<a class='struct' href='../../bgparse/types/struct.Safi.html' title='bgparse::types::Safi'>Safi</a>,&nbsp;u64)</code></span><div class='docblock'><p>Stat Type = 10: Number of routes in per-AFI/SAFI Loc-RIB.  The
 value is structured as: AFI (2 bytes), SAFI (1 byte), followed by
 a 64-bit Gauge.</p>
-</div></td><td></td></tr><tr><td id='variant.UpdatesTreatedAsWithdraws'><code>UpdatesTreatedAsWithdraws</code></td><td><div class='docblock'><p>Stat Type = 11: (32-bit Counter) Number of updates subjected to
+</div><span id='variant.UpdatesTreatedAsWithdraws' class='variant'><code>UpdatesTreatedAsWithdraws(u32)</code></span><div class='docblock'><p>Stat Type = 11: (32-bit Counter) Number of updates subjected to
 treat-as-withdraw treatment [RFC7606].</p>
-</div></td><td></td></tr><tr><td id='variant.PrefixesTreatedAsWithdraws'><code>PrefixesTreatedAsWithdraws</code></td><td><div class='docblock'><p>Stat Type = 12: (32-bit Counter) Number of prefixes subjected to
+</div><span id='variant.PrefixesTreatedAsWithdraws' class='variant'><code>PrefixesTreatedAsWithdraws(u32)</code></span><div class='docblock'><p>Stat Type = 12: (32-bit Counter) Number of prefixes subjected to
 treat-as-withdraw treatment [RFC7606].</p>
-</div></td><td></td></tr><tr><td id='variant.DuplicateUpdateCount'><code>DuplicateUpdateCount</code></td><td><div class='docblock'><p>Stat Type = 13: (32-bit Counter) Number of duplicate update
+</div><span id='variant.DuplicateUpdateCount' class='variant'><code>DuplicateUpdateCount(u32)</code></span><div class='docblock'><p>Stat Type = 13: (32-bit Counter) Number of duplicate update
 messages received.</p>
-</div></td><td></td></tr><tr><td id='variant.Unknown'><code>Unknown</code></td><td></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../bgparse/bmp/enum.Statistic.html' title='bgparse::bmp::Statistic'>Statistic</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2633' class='srclink' href='../../src/bgparse/bmp/mod.rs.html#339' title='goto source code'>[src]</a></span></h3>
+</div><span id='variant.Unknown' class='variant'><code>Unknown(<a class='struct' href='../../bgparse/bmp/struct.UnknownStatistic.html' title='bgparse::bmp::UnknownStatistic'>UnknownStatistic</a>&lt;'a&gt;)</code></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../bgparse/bmp/enum.Statistic.html' title='bgparse::bmp::Statistic'>Statistic</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2586' class='srclink' href='../../src/bgparse/bmp/mod.rs.html#339' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
 <div class='docblock'><p>Formats the value using the given formatter.</p>
 </div></div></section>
@@ -119,6 +119,8 @@ messages received.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

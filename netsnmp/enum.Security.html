@@ -47,15 +47,21 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-361' class='srclink' href='../src/netsnmp/lib.rs.html#316-321' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-405' class='srclink' href='../src/netsnmp/lib.rs.html#355-360' title='goto source code'>[src]</a></span></h1>
 <pre class='rust enum'>pub enum Security&lt;'a&gt; {
-    NoAuthNoPriv,
-    AuthNoPriv(<a class='enum' href='../netsnmp/enum.AuthProtocol.html' title='netsnmp::AuthProtocol'>AuthProtocol</a>, <a class='type' href='../netsnmp/type.AuthPassword.html' title='netsnmp::AuthPassword'>AuthPassword</a>&lt;'a&gt;),
-    AuthPriv(<a class='enum' href='../netsnmp/enum.AuthProtocol.html' title='netsnmp::AuthProtocol'>AuthProtocol</a>, <a class='enum' href='../netsnmp/enum.PrivProtocol.html' title='netsnmp::PrivProtocol'>PrivProtocol</a>, <a class='type' href='../netsnmp/type.AuthPassword.html' title='netsnmp::AuthPassword'>AuthPassword</a>&lt;'a&gt;, <a class='type' href='../netsnmp/type.PrivPassword.html' title='netsnmp::PrivPassword'>PrivPassword</a>&lt;'a&gt;),
+    None,
+    Auth(<a class='enum' href='../netsnmp/enum.AuthProtocol.html' title='netsnmp::AuthProtocol'>AuthProtocol</a>,&nbsp;&amp;'a <a class='type' href='../netsnmp/type.AuthPassword.html' title='netsnmp::AuthPassword'>AuthPassword</a>),
+    AuthPriv(<a class='enum' href='../netsnmp/enum.AuthProtocol.html' title='netsnmp::AuthProtocol'>AuthProtocol</a>,&nbsp;<a class='enum' href='../netsnmp/enum.PrivProtocol.html' title='netsnmp::PrivProtocol'>PrivProtocol</a>,&nbsp;&amp;'a <a class='type' href='../netsnmp/type.AuthPassword.html' title='netsnmp::AuthPassword'>AuthPassword</a>,&nbsp;&amp;'a <a class='type' href='../netsnmp/type.PrivPassword.html' title='netsnmp::PrivPassword'>PrivPassword</a>),
 }</pre><h2 class='variants'>Variants</h2>
-<table class='variants_table'><tr><td id='variant.NoAuthNoPriv'><code>NoAuthNoPriv</code></td><td></td><td></td></tr><tr><td id='variant.AuthNoPriv'><code>AuthNoPriv</code></td><td></td><td></td></tr><tr><td id='variant.AuthPriv'><code>AuthPriv</code></td><td></td><td></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='enum' href='../netsnmp/enum.Security.html' title='netsnmp::Security'>Security</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-372' class='srclink' href='../src/netsnmp/lib.rs.html#323-332' title='goto source code'>[src]</a></span></h3>
+<span id='variant.None' class='variant'><code>None</code></span><span id='variant.Auth' class='variant'><code>Auth(<a class='enum' href='../netsnmp/enum.AuthProtocol.html' title='netsnmp::AuthProtocol'>AuthProtocol</a>,&nbsp;&amp;'a <a class='type' href='../netsnmp/type.AuthPassword.html' title='netsnmp::AuthPassword'>AuthPassword</a>)</code></span><span id='variant.AuthPriv' class='variant'><code>AuthPriv(<a class='enum' href='../netsnmp/enum.AuthProtocol.html' title='netsnmp::AuthProtocol'>AuthProtocol</a>,&nbsp;<a class='enum' href='../netsnmp/enum.PrivProtocol.html' title='netsnmp::PrivProtocol'>PrivProtocol</a>,&nbsp;&amp;'a <a class='type' href='../netsnmp/type.AuthPassword.html' title='netsnmp::AuthPassword'>AuthPassword</a>,&nbsp;&amp;'a <a class='type' href='../netsnmp/type.PrivPassword.html' title='netsnmp::PrivPassword'>PrivPassword</a>)</code></span><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='enum' href='../netsnmp/enum.Security.html' title='netsnmp::Security'>Security</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-416' class='srclink' href='../src/netsnmp/lib.rs.html#362-371' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.level_as_int' class='method'><code>fn <a href='#method.level_as_int' class='fnname'>level_as_int</a>(&amp;self) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a></code></h4>
-</div></section>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../netsnmp/enum.Security.html' title='netsnmp::Security'>Security</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-393' class='srclink' href='../src/netsnmp/lib.rs.html#354' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../netsnmp/enum.Security.html' title='netsnmp::Security'>Security</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-395' class='srclink' href='../src/netsnmp/lib.rs.html#354' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../netsnmp/enum.Security.html' title='netsnmp::Security'>Security</a>&lt;'a&gt;</code></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -78,6 +84,8 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

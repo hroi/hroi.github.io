@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `RecordFieldLengths` struct in crate `netflowv9`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, RecordFieldLengths">
+
+    <title>netflowv9::RecordFieldLengths - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>netflowv9</a></p><script>window.sidebarCurrent = {name: 'RecordFieldLengths', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>netflowv9</a>::<wbr><a class='struct' href=''>RecordFieldLengths</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-1552' class='srclink' href='../src/netflowv9/lib.rs.html#478-481' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct RecordFieldLengths {
+    pub octet_delta_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub packet_delta_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub delta_flow_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub ingress_interface: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub egress_interface: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub bgp_source_as_number: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub bgp_destination_as_number: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub post_mcast_packet_delta_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub post_mcast_octet_delta_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub post_octet_delta_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub post_packet_delta_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub exported_octet_total_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub exported_message_total_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub exported_flow_record_total_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub sampler_id: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub mpls_top_label_stack_section: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub mpls_label_stack_section2: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub mpls_label_stack_section3: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub mpls_label_stack_section4: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub mpls_label_stack_section5: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub mpls_label_stack_section6: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub mpls_label_stack_section7: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub mpls_label_stack_section8: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub mpls_label_stack_section9: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub mpls_label_stack_section10: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub interface_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub interface_description: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub sampler_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub octet_total_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub packet_total_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub mpls_vpn_route_distinguisher: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub application_description: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub application_id: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub application_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub class_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub layer2packet_section_data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub wlan_ssid: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub flow_start_seconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub flow_end_seconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub flow_start_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub flow_end_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub flow_start_microseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub flow_end_microseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub flow_start_nanoseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub flow_end_nanoseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub system_init_time_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub padding_octets: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub vr_fname: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub metro_evc_id: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub collection_time_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub max_export_seconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub max_flow_end_seconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub message_md5_checksum: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub min_export_seconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub min_flow_start_seconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub opaque_octets: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub max_flow_end_microseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub max_flow_end_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub max_flow_end_nanoseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub min_flow_start_microseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub min_flow_start_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub min_flow_start_nanoseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub collector_certificate: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub exporter_certificate: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub nat_pool_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub p2p_technology: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub tunnel_technology: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub encrypted_technology: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub basic_list: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub sub_template_list: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub sub_template_multi_list: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub observation_domain_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub ip_header_packet_section: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub ip_payload_packet_section: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub data_link_frame_section: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub mpls_label_stack_section: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub mpls_payload_packet_section: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub observation_time_seconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub observation_time_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub observation_time_microseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub observation_time_nanoseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub selector_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub information_element_description: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub information_element_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub virtual_station_interface_id: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub virtual_station_interface_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub virtual_station_uuid: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub virtual_station_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub monitoring_interval_start_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub monitoring_interval_end_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub user_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub application_category_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub application_sub_category_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub application_group_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub dot1q_service_instance_tag: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+}</pre><h2 class='fields'>Fields</h2><span id='structfield.octet_delta_count' class='structfield'><code>octet_delta_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.packet_delta_count' class='structfield'><code>packet_delta_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.delta_flow_count' class='structfield'><code>delta_flow_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.ingress_interface' class='structfield'><code>ingress_interface: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.egress_interface' class='structfield'><code>egress_interface: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.bgp_source_as_number' class='structfield'><code>bgp_source_as_number: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.bgp_destination_as_number' class='structfield'><code>bgp_destination_as_number: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.post_mcast_packet_delta_count' class='structfield'><code>post_mcast_packet_delta_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.post_mcast_octet_delta_count' class='structfield'><code>post_mcast_octet_delta_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.post_octet_delta_count' class='structfield'><code>post_octet_delta_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.post_packet_delta_count' class='structfield'><code>post_packet_delta_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.exported_octet_total_count' class='structfield'><code>exported_octet_total_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.exported_message_total_count' class='structfield'><code>exported_message_total_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.exported_flow_record_total_count' class='structfield'><code>exported_flow_record_total_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.sampler_id' class='structfield'><code>sampler_id: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.mpls_top_label_stack_section' class='structfield'><code>mpls_top_label_stack_section: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.mpls_label_stack_section2' class='structfield'><code>mpls_label_stack_section2: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.mpls_label_stack_section3' class='structfield'><code>mpls_label_stack_section3: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.mpls_label_stack_section4' class='structfield'><code>mpls_label_stack_section4: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.mpls_label_stack_section5' class='structfield'><code>mpls_label_stack_section5: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.mpls_label_stack_section6' class='structfield'><code>mpls_label_stack_section6: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.mpls_label_stack_section7' class='structfield'><code>mpls_label_stack_section7: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.mpls_label_stack_section8' class='structfield'><code>mpls_label_stack_section8: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.mpls_label_stack_section9' class='structfield'><code>mpls_label_stack_section9: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.mpls_label_stack_section10' class='structfield'><code>mpls_label_stack_section10: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.interface_name' class='structfield'><code>interface_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.interface_description' class='structfield'><code>interface_description: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.sampler_name' class='structfield'><code>sampler_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.octet_total_count' class='structfield'><code>octet_total_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.packet_total_count' class='structfield'><code>packet_total_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.mpls_vpn_route_distinguisher' class='structfield'><code>mpls_vpn_route_distinguisher: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.application_description' class='structfield'><code>application_description: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.application_id' class='structfield'><code>application_id: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.application_name' class='structfield'><code>application_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.class_name' class='structfield'><code>class_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.layer2packet_section_data' class='structfield'><code>layer2packet_section_data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.wlan_ssid' class='structfield'><code>wlan_ssid: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.flow_start_seconds' class='structfield'><code>flow_start_seconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.flow_end_seconds' class='structfield'><code>flow_end_seconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.flow_start_milliseconds' class='structfield'><code>flow_start_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.flow_end_milliseconds' class='structfield'><code>flow_end_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.flow_start_microseconds' class='structfield'><code>flow_start_microseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.flow_end_microseconds' class='structfield'><code>flow_end_microseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.flow_start_nanoseconds' class='structfield'><code>flow_start_nanoseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.flow_end_nanoseconds' class='structfield'><code>flow_end_nanoseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.system_init_time_milliseconds' class='structfield'><code>system_init_time_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.padding_octets' class='structfield'><code>padding_octets: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.vr_fname' class='structfield'><code>vr_fname: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.metro_evc_id' class='structfield'><code>metro_evc_id: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.collection_time_milliseconds' class='structfield'><code>collection_time_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.max_export_seconds' class='structfield'><code>max_export_seconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.max_flow_end_seconds' class='structfield'><code>max_flow_end_seconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.message_md5_checksum' class='structfield'><code>message_md5_checksum: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.min_export_seconds' class='structfield'><code>min_export_seconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.min_flow_start_seconds' class='structfield'><code>min_flow_start_seconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.opaque_octets' class='structfield'><code>opaque_octets: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.max_flow_end_microseconds' class='structfield'><code>max_flow_end_microseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.max_flow_end_milliseconds' class='structfield'><code>max_flow_end_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.max_flow_end_nanoseconds' class='structfield'><code>max_flow_end_nanoseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.min_flow_start_microseconds' class='structfield'><code>min_flow_start_microseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.min_flow_start_milliseconds' class='structfield'><code>min_flow_start_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.min_flow_start_nanoseconds' class='structfield'><code>min_flow_start_nanoseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.collector_certificate' class='structfield'><code>collector_certificate: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.exporter_certificate' class='structfield'><code>exporter_certificate: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.nat_pool_name' class='structfield'><code>nat_pool_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.p2p_technology' class='structfield'><code>p2p_technology: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.tunnel_technology' class='structfield'><code>tunnel_technology: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.encrypted_technology' class='structfield'><code>encrypted_technology: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.basic_list' class='structfield'><code>basic_list: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.sub_template_list' class='structfield'><code>sub_template_list: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.sub_template_multi_list' class='structfield'><code>sub_template_multi_list: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.observation_domain_name' class='structfield'><code>observation_domain_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.ip_header_packet_section' class='structfield'><code>ip_header_packet_section: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.ip_payload_packet_section' class='structfield'><code>ip_payload_packet_section: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.data_link_frame_section' class='structfield'><code>data_link_frame_section: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.mpls_label_stack_section' class='structfield'><code>mpls_label_stack_section: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.mpls_payload_packet_section' class='structfield'><code>mpls_payload_packet_section: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.observation_time_seconds' class='structfield'><code>observation_time_seconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.observation_time_milliseconds' class='structfield'><code>observation_time_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.observation_time_microseconds' class='structfield'><code>observation_time_microseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.observation_time_nanoseconds' class='structfield'><code>observation_time_nanoseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.selector_name' class='structfield'><code>selector_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.information_element_description' class='structfield'><code>information_element_description: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.information_element_name' class='structfield'><code>information_element_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.virtual_station_interface_id' class='structfield'><code>virtual_station_interface_id: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.virtual_station_interface_name' class='structfield'><code>virtual_station_interface_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.virtual_station_uuid' class='structfield'><code>virtual_station_uuid: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.virtual_station_name' class='structfield'><code>virtual_station_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.monitoring_interval_start_milliseconds' class='structfield'><code>monitoring_interval_start_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.monitoring_interval_end_milliseconds' class='structfield'><code>monitoring_interval_end_milliseconds: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.user_name' class='structfield'><code>user_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.application_category_name' class='structfield'><code>application_category_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.application_sub_category_name' class='structfield'><code>application_sub_category_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.application_group_name' class='structfield'><code>application_group_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.dot1q_service_instance_tag' class='structfield'><code>dot1q_service_instance_tag: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../netflowv9/struct.RecordFieldLengths.html' title='netflowv9::RecordFieldLengths'>RecordFieldLengths</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1450' class='srclink' href='../src/netflowv9/lib.rs.html#477' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../netflowv9/struct.RecordFieldLengths.html' title='netflowv9::RecordFieldLengths'>RecordFieldLengths</a></code></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../netflowv9/struct.RecordFieldLengths.html' title='netflowv9::RecordFieldLengths'>RecordFieldLengths</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1452' class='srclink' href='../src/netflowv9/lib.rs.html#477' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "netflowv9";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

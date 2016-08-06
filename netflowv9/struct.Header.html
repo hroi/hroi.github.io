@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Header` struct in crate `netflowv9`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Header">
+
+    <title>netflowv9::Header - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>netflowv9</a></p><script>window.sidebarCurrent = {name: 'Header', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>netflowv9</a>::<wbr><a class='struct' href=''>Header</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-29' class='srclink' href='../src/netflowv9/lib.rs.html#63-65' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Header&lt;'bytes&gt; {
+    // some fields omitted
+}</pre><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'bytes&gt; <a class='struct' href='../netflowv9/struct.Header.html' title='netflowv9::Header'>Header</a>&lt;'bytes&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-32' class='srclink' href='../src/netflowv9/lib.rs.html#67-108' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.version' class='method'><code>fn <a href='#method.version' class='fnname'>version</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a></code></h4>
+<div class='docblock'><p>Version of Flow Record format exported in this packet.  The
+value of this field is 9 for the current version.</p>
+</div><h4 id='method.count' class='method'><code>fn <a href='#method.count' class='fnname'>count</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a></code></h4>
+<div class='docblock'><p>The total number of records in the Export Packet, which is the
+sum of Options FlowSet records, Template FlowSet records, and
+Data FlowSet records.</p>
+</div><h4 id='method.sys_uptime' class='method'><code>fn <a href='#method.sys_uptime' class='fnname'>sys_uptime</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
+<div class='docblock'><p>Time in milliseconds since this device was first booted.</p>
+</div><h4 id='method.seconds' class='method'><code>fn <a href='#method.seconds' class='fnname'>seconds</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
+<div class='docblock'><p>Time in seconds since 0000 UTC 1970, at which the Export Packet
+leaves the Exporter.</p>
+</div><h4 id='method.seq_num' class='method'><code>fn <a href='#method.seq_num' class='fnname'>seq_num</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
+<div class='docblock'><p>Incremental sequence counter of all Export Packets sent from
+the current Observation Domain by the Exporter.  This value
+MUST be cumulative, and SHOULD be used by the Collector to
+identify whether any Export Packets have been missed.</p>
+</div><h4 id='method.source_id' class='method'><code>fn <a href='#method.source_id' class='fnname'>source_id</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></h4>
+<div class='docblock'><p>A 32-bit value that identifies the Exporter Observation Domain.
+NetFlow Collectors SHOULD use the combination of the source IP
+address and the Source ID field to separate different export
+streams originating from the same Exporter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "netflowv9";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

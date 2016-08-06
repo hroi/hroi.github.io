@@ -47,27 +47,26 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-722' class='srclink' href='../src/netsnmp_sys/auto.rs.html#707-712' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-745' class='srclink' href='../src/netsnmp_sys/auto.rs.html#731-736' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct Struct_snmp_gen_callback {
     pub sc_callback: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../netsnmp_sys/type.SNMPCallback.html' title='netsnmp_sys::SNMPCallback'>SNMPCallback</a>,
     pub sc_client_arg: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='https://doc.rust-lang.org/nightly/std/os/raw/enum.c_void.html' title='std::os::raw::c_void'>c_void</a>,
     pub priority: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a>,
     pub next: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../netsnmp_sys/struct.Struct_snmp_gen_callback.html' title='netsnmp_sys::Struct_snmp_gen_callback'>Struct_snmp_gen_callback</a>,
-}</pre><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                             <td id='structfield.sc_callback'><code>sc_callback</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.sc_client_arg'><code>sc_client_arg</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.priority'><code>priority</code></td><td></td></tr><tr class='stab '>
-                             <td id='structfield.next'><code>next</code></td><td></td></tr></table><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_snmp_gen_callback.html' title='netsnmp_sys::Struct_snmp_gen_callback'>Struct_snmp_gen_callback</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-728' class='srclink' href='../src/netsnmp_sys/auto.rs.html#713-715' title='goto source code'>[src]</a></span></h3>
+}</pre><h2 class='fields'>Fields</h2><span id='structfield.sc_callback' class='structfield'><code>sc_callback: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='type' href='../netsnmp_sys/type.SNMPCallback.html' title='netsnmp_sys::SNMPCallback'>SNMPCallback</a></code>
+                           </span><span class='stab '></span><span id='structfield.sc_client_arg' class='structfield'><code>sc_client_arg: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='enum' href='https://doc.rust-lang.org/nightly/std/os/raw/enum.c_void.html' title='std::os::raw::c_void'>c_void</a></code>
+                           </span><span class='stab '></span><span id='structfield.priority' class='structfield'><code>priority: <a class='type' href='https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html' title='std::os::raw::c_int'>c_int</a></code>
+                           </span><span class='stab '></span><span id='structfield.next' class='structfield'><code>next: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../netsnmp_sys/struct.Struct_snmp_gen_callback.html' title='netsnmp_sys::Struct_snmp_gen_callback'>Struct_snmp_gen_callback</a></code>
+                           </span><span class='stab '></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_snmp_gen_callback.html' title='netsnmp_sys::Struct_snmp_gen_callback'>Struct_snmp_gen_callback</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-744' class='srclink' href='../src/netsnmp_sys/auto.rs.html#730' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_snmp_gen_callback.html' title='netsnmp_sys::Struct_snmp_gen_callback'>Struct_snmp_gen_callback</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-750' class='srclink' href='../src/netsnmp_sys/auto.rs.html#737-739' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; Self</code></h4>
 <div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
 </div><h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
 <div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
-</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_snmp_gen_callback.html' title='netsnmp_sys::Struct_snmp_gen_callback'>Struct_snmp_gen_callback</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-731' class='srclink' href='../src/netsnmp_sys/auto.rs.html#716-718' title='goto source code'>[src]</a></span></h3>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_snmp_gen_callback.html' title='netsnmp_sys::Struct_snmp_gen_callback'>Struct_snmp_gen_callback</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-753' class='srclink' href='../src/netsnmp_sys/auto.rs.html#740-742' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; Self</code></h4>
 <div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
-</div></div><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../netsnmp_sys/struct.Struct_snmp_gen_callback.html' title='netsnmp_sys::Struct_snmp_gen_callback'>Struct_snmp_gen_callback</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-727' class='srclink' href='../src/netsnmp_sys/auto.rs.html#706' title='goto source code'>[src]</a></span></h3>
-<div class='impl-items'></div></section>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -90,6 +89,8 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

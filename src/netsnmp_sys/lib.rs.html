@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="Source to the Rust file `/Users/hroi/.cargo/registry/src/github.com-1ecc6299db9ec823/netsnmp-sys-0.1.1/src/lib.rs`.">
+    <meta name="description" content="Source to the Rust file `/Users/hroi/code/rust/netsnmp-sys/src/lib.rs`.">
     <meta name="keywords" content="rust, rustlang, rust-lang">
 
     <title>lib.rs.html -- source</title>
@@ -218,6 +218,20 @@
 <span id="174">174</span>
 <span id="175">175</span>
 <span id="176">176</span>
+<span id="177">177</span>
+<span id="178">178</span>
+<span id="179">179</span>
+<span id="180">180</span>
+<span id="181">181</span>
+<span id="182">182</span>
+<span id="183">183</span>
+<span id="184">184</span>
+<span id="185">185</span>
+<span id="186">186</span>
+<span id="187">187</span>
+<span id="188">188</span>
+<span id="189">189</span>
+<span id="190">190</span>
 </pre><pre class='rust '>
 <span class='attribute'>#<span class='op'>!</span>[<span class='ident'>allow</span>(<span class='ident'>non_camel_case_types</span>,<span class='ident'>non_snake_case</span>,<span class='ident'>non_upper_case_globals</span>)]</span>
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>libc</span>;
@@ -234,6 +248,13 @@
 <span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SNMP_VERSION_1</span>:    <span class='ident'>raw</span>::<span class='ident'>c_long</span> <span class='op'>=</span> <span class='number'>0</span>;
 <span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SNMP_VERSION_2c</span>:   <span class='ident'>raw</span>::<span class='ident'>c_long</span> <span class='op'>=</span> <span class='number'>1</span>;
 <span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SNMP_VERSION_3</span>:    <span class='ident'>raw</span>::<span class='ident'>c_long</span> <span class='op'>=</span> <span class='number'>3</span>;
+
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SNMP_SEC_MODEL_ANY</span>:        <span class='ident'>raw</span>::<span class='ident'>c_int</span> <span class='op'>=</span> <span class='number'>0</span>;
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SNMP_SEC_MODEL_SNMPv1</span>:     <span class='ident'>raw</span>::<span class='ident'>c_int</span> <span class='op'>=</span> <span class='number'>1</span>;
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SNMP_SEC_MODEL_SNMPv2c</span>:    <span class='ident'>raw</span>::<span class='ident'>c_int</span> <span class='op'>=</span> <span class='number'>2</span>;
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SNMP_SEC_MODEL_USM</span>:        <span class='ident'>raw</span>::<span class='ident'>c_int</span> <span class='op'>=</span> <span class='number'>3</span>;
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SNMP_SEC_MODEL_TSM</span>:        <span class='ident'>raw</span>::<span class='ident'>c_int</span> <span class='op'>=</span> <span class='number'>4</span>;
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SNMP_SEC_MODEL_SNMPv2p</span>:    <span class='ident'>raw</span>::<span class='ident'>c_int</span> <span class='op'>=</span> <span class='number'>256</span>;
 
 <span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SNMP_SEC_LEVEL_NOAUTH</span>:     <span class='ident'>raw</span>::<span class='ident'>c_int</span> <span class='op'>=</span> <span class='number'>1</span>;
 <span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>SNMP_SEC_LEVEL_AUTHNOPRIV</span>: <span class='ident'>raw</span>::<span class='ident'>c_int</span> <span class='op'>=</span> <span class='number'>2</span>;
@@ -377,14 +398,21 @@
 <span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>USM_AUTH_KU_LEN</span>: <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>32</span>;
 <span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>USM_PRIV_KU_LEN</span>: <span class='ident'>usize</span> <span class='op'>=</span> <span class='number'>32</span>;
 
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>NETSNMP_CALLBACK_OP_RECEIVED_MESSAGE</span>: <span class='ident'>raw</span>::<span class='ident'>c_int</span> <span class='op'>=</span> <span class='number'>1</span>;
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>NETSNMP_CALLBACK_OP_TIMED_OUT</span>:        <span class='ident'>raw</span>::<span class='ident'>c_int</span> <span class='op'>=</span> <span class='number'>2</span>;
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>NETSNMP_CALLBACK_OP_SEND_FAILED</span>:      <span class='ident'>raw</span>::<span class='ident'>c_int</span> <span class='op'>=</span> <span class='number'>3</span>;
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>NETSNMP_CALLBACK_OP_CONNECT</span>:          <span class='ident'>raw</span>::<span class='ident'>c_int</span> <span class='op'>=</span> <span class='number'>4</span>;
+<span class='kw'>pub</span> <span class='kw'>const</span> <span class='ident'>NETSNMP_CALLBACK_OP_DISCONNECT</span>:       <span class='ident'>raw</span>::<span class='ident'>c_int</span> <span class='op'>=</span> <span class='number'>5</span>;
+
 <span class='kw'>mod</span> <span class='ident'>auto</span>;
 <span class='kw'>pub</span> <span class='kw'>use</span> <span class='ident'>auto</span>::<span class='op'>*</span>;
 
-<span class='kw'>static</span> <span class='ident'>INIT</span>: <span class='ident'>Once</span> <span class='op'>=</span> <span class='ident'>ONCE_INIT</span>;
 
 <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>init</span>(<span class='ident'>typ</span>: <span class='kw-2'>&amp;</span>[<span class='ident'>u8</span>]) {
+    <span class='kw'>static</span> <span class='ident'>INIT</span>: <span class='ident'>Once</span> <span class='op'>=</span> <span class='ident'>ONCE_INIT</span>;
+
     <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>type_dup</span> <span class='op'>=</span> [<span class='number'>0u8</span>; <span class='number'>256</span>];
-    <span class='ident'>type_dup</span>[..<span class='ident'>typ</span>.<span class='ident'>len</span>()].<span class='ident'>clone_from_slice</span>(<span class='ident'>typ</span>);
+    <span class='ident'>type_dup</span>[..<span class='ident'>typ</span>.<span class='ident'>len</span>()].<span class='ident'>copy_from_slice</span>(<span class='ident'>typ</span>);
     <span class='kw'>unsafe</span> {
         <span class='ident'>INIT</span>.<span class='ident'>call_once</span>(<span class='op'>||</span>{
             <span class='ident'>init_snmp</span>(<span class='ident'>type_dup</span>.<span class='ident'>as_ptr</span>() <span class='kw'>as</span> <span class='op'>*</span><span class='kw-2'>mut</span> <span class='ident'>raw</span>::<span class='ident'>c_char</span>);
@@ -419,6 +447,8 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

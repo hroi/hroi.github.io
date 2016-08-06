@@ -47,13 +47,19 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-382' class='srclink' href='../src/netsnmp/lib.rs.html#337-341' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-434' class='srclink' href='../src/netsnmp/lib.rs.html#377-381' title='goto source code'>[src]</a></span></h1>
 <pre class='rust enum'>pub enum SessOpts&lt;'a&gt; {
-    V1(<a class='type' href='../netsnmp/type.Community.html' title='netsnmp::Community'>Community</a>&lt;'a&gt;),
-    V2c(<a class='type' href='../netsnmp/type.Community.html' title='netsnmp::Community'>Community</a>&lt;'a&gt;),
-    V3(<a class='enum' href='../netsnmp/enum.Security.html' title='netsnmp::Security'>Security</a>&lt;'a&gt;, <a class='type' href='../netsnmp/type.SecurityName.html' title='netsnmp::SecurityName'>SecurityName</a>&lt;'a&gt;),
+    V1(&amp;'a <a class='type' href='../netsnmp/type.Community.html' title='netsnmp::Community'>Community</a>),
+    V2c(&amp;'a <a class='type' href='../netsnmp/type.Community.html' title='netsnmp::Community'>Community</a>),
+    V3(&amp;'a <a class='type' href='../netsnmp/type.SecurityName.html' title='netsnmp::SecurityName'>SecurityName</a>,&nbsp;<a class='enum' href='../netsnmp/enum.Security.html' title='netsnmp::Security'>Security</a>&lt;'a&gt;),
 }</pre><h2 class='variants'>Variants</h2>
-<table class='variants_table'><tr><td id='variant.V1'><code>V1</code></td><td></td><td></td></tr><tr><td id='variant.V2c'><code>V2c</code></td><td></td><td></td></tr><tr><td id='variant.V3'><code>V3</code></td><td></td><td></td></tr></table></section>
+<span id='variant.V1' class='variant'><code>V1(&amp;'a <a class='type' href='../netsnmp/type.Community.html' title='netsnmp::Community'>Community</a>)</code></span><span id='variant.V2c' class='variant'><code>V2c(&amp;'a <a class='type' href='../netsnmp/type.Community.html' title='netsnmp::Community'>Community</a>)</code></span><span id='variant.V3' class='variant'><code>V3(&amp;'a <a class='type' href='../netsnmp/type.SecurityName.html' title='netsnmp::SecurityName'>SecurityName</a>,&nbsp;<a class='enum' href='../netsnmp/enum.Security.html' title='netsnmp::Security'>Security</a>&lt;'a&gt;)</code></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../netsnmp/enum.SessOpts.html' title='netsnmp::SessOpts'>SessOpts</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-424' class='srclink' href='../src/netsnmp/lib.rs.html#376' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../netsnmp/enum.SessOpts.html' title='netsnmp::SessOpts'>SessOpts</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-426' class='srclink' href='../src/netsnmp/lib.rs.html#376' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../netsnmp/enum.SessOpts.html' title='netsnmp::SessOpts'>SessOpts</a>&lt;'a&gt;</code></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -76,6 +82,8 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

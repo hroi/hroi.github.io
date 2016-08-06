@@ -1,5 +1,5 @@
 (function() {var implementors = {};
-implementors["libc"] = [];implementors["bgparse"] = [];
+implementors["libc"] = [];implementors["lazy_static"] = [];implementors["bgparse"] = [];
 
             if (window.register_implementors) {
                 window.register_implementors(implementors);

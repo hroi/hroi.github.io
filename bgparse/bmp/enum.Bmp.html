@@ -47,7 +47,7 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-2525' class='srclink' href='../../src/bgparse/bmp/mod.rs.html#231-261' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-2533' class='srclink' href='../../src/bgparse/bmp/mod.rs.html#231-261' title='goto source code'>[src]</a></span></h1>
 <pre class='rust enum'>pub enum Bmp&lt;'a&gt; {
     RouteMonitoring(<a class='struct' href='../../bgparse/bmp/struct.RouteMonitoring.html' title='bgparse::bmp::RouteMonitoring'>RouteMonitoring</a>&lt;'a&gt;),
     StatisticsReport(<a class='struct' href='../../bgparse/bmp/struct.StatisticsReport.html' title='bgparse::bmp::StatisticsReport'>StatisticsReport</a>&lt;'a&gt;),
@@ -57,31 +57,31 @@
     Termination(<a class='struct' href='../../bgparse/bmp/struct.Termination.html' title='bgparse::bmp::Termination'>Termination</a>&lt;'a&gt;),
     RouteMirroring(<a class='struct' href='../../bgparse/bmp/struct.RouteMirroring.html' title='bgparse::bmp::RouteMirroring'>RouteMirroring</a>&lt;'a&gt;),
 }</pre><h2 class='variants'>Variants</h2>
-<table class='variants_table'><tr><td id='variant.RouteMonitoring'><code>RouteMonitoring</code></td><td><div class='docblock'><p>Route Monitoring (RM): Used to provide an initial dump of all
+<span id='variant.RouteMonitoring' class='variant'><code>RouteMonitoring(<a class='struct' href='../../bgparse/bmp/struct.RouteMonitoring.html' title='bgparse::bmp::RouteMonitoring'>RouteMonitoring</a>&lt;'a&gt;)</code></span><div class='docblock'><p>Route Monitoring (RM): Used to provide an initial dump of all
 routes received from a peer as well as an ongoing mechanism that
 sends the incremental routes advertised and withdrawn by a peer to
 the monitoring station.</p>
-</div></td><td></td></tr><tr><td id='variant.StatisticsReport'><code>StatisticsReport</code></td><td><div class='docblock'><p>Stats Reports (SR): An ongoing dump of statistics that can be used
+</div><span id='variant.StatisticsReport' class='variant'><code>StatisticsReport(<a class='struct' href='../../bgparse/bmp/struct.StatisticsReport.html' title='bgparse::bmp::StatisticsReport'>StatisticsReport</a>&lt;'a&gt;)</code></span><div class='docblock'><p>Stats Reports (SR): An ongoing dump of statistics that can be used
 by the monitoring station as a high level indication of the
 activity going on in the router.</p>
-</div></td><td></td></tr><tr><td id='variant.PeerDownNotification'><code>PeerDownNotification</code></td><td></td><td></td></tr><tr><td id='variant.PeerUpNotification'><code>PeerUpNotification</code></td><td><div class='docblock'><p>Peer Up Notification: A message sent to indicate a peering session
+</div><span id='variant.PeerDownNotification' class='variant'><code>PeerDownNotification(<a class='struct' href='../../bgparse/bmp/struct.PeerDownNotification.html' title='bgparse::bmp::PeerDownNotification'>PeerDownNotification</a>&lt;'a&gt;)</code></span><span id='variant.PeerUpNotification' class='variant'><code>PeerUpNotification(<a class='struct' href='../../bgparse/bmp/struct.PeerUpNotification.html' title='bgparse::bmp::PeerUpNotification'>PeerUpNotification</a>&lt;'a&gt;)</code></span><div class='docblock'><p>Peer Up Notification: A message sent to indicate a peering session
 has come up.  The message includes information regarding the data
 exchanged between the peers in their OPEN messages as well as
 information about the peering TCP session itself.  In addition to
 being sent whenever a peer transitions to ESTABLISHED state, a
 Peer Up Notification is sent for each peer in ESTABLISHED state
 when the BMP session itself comes up.</p>
-</div></td><td></td></tr><tr><td id='variant.Initiation'><code>Initiation</code></td><td><div class='docblock'><p>Initiation: A means for the monitored router to inform the
+</div><span id='variant.Initiation' class='variant'><code>Initiation(<a class='struct' href='../../bgparse/bmp/struct.Initiation.html' title='bgparse::bmp::Initiation'>Initiation</a>&lt;'a&gt;)</code></span><div class='docblock'><p>Initiation: A means for the monitored router to inform the
 monitoring station of its vendor, software version, and so on.</p>
-</div></td><td></td></tr><tr><td id='variant.Termination'><code>Termination</code></td><td><div class='docblock'><p>Termination: A means for the monitored router to inform the
+</div><span id='variant.Termination' class='variant'><code>Termination(<a class='struct' href='../../bgparse/bmp/struct.Termination.html' title='bgparse::bmp::Termination'>Termination</a>&lt;'a&gt;)</code></span><div class='docblock'><p>Termination: A means for the monitored router to inform the
 monitoring station of why it is closing a BMP session.</p>
-</div></td><td></td></tr><tr><td id='variant.RouteMirroring'><code>RouteMirroring</code></td><td><div class='docblock'><p>Route Mirroring: a means for the monitored router to send verbatim
+</div><span id='variant.RouteMirroring' class='variant'><code>RouteMirroring(<a class='struct' href='../../bgparse/bmp/struct.RouteMirroring.html' title='bgparse::bmp::RouteMirroring'>RouteMirroring</a>&lt;'a&gt;)</code></span><div class='docblock'><p>Route Mirroring: a means for the monitored router to send verbatim
 duplicates of messages as received.  Can be used to exactly mirror
 a monitored BGP session.  Can also be used to report malformed BGP
 PDUs.</p>
-</div></td><td></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='enum' href='../../bgparse/bmp/enum.Bmp.html' title='bgparse::bmp::Bmp'>Bmp</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2573' class='srclink' href='../../src/bgparse/bmp/mod.rs.html#298-332' title='goto source code'>[src]</a></span></h3>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='enum' href='../../bgparse/bmp/enum.Bmp.html' title='bgparse::bmp::Bmp'>Bmp</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2562' class='srclink' href='../../src/bgparse/bmp/mod.rs.html#298-332' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.from_bytes' class='method'><code>fn <a href='#method.from_bytes' class='fnname'>from_bytes</a>(bytes: &amp;'a [u8]) -&gt; <a class='type' href='../../bgparse/types/type.Result.html' title='bgparse::types::Result'>Result</a>&lt;<a class='enum' href='../../bgparse/bmp/enum.Bmp.html' title='bgparse::bmp::Bmp'>Bmp</a>&lt;'a&gt;&gt;</code></h4>
-</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../bgparse/bmp/enum.Bmp.html' title='bgparse::bmp::Bmp'>Bmp</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2541' class='srclink' href='../../src/bgparse/bmp/mod.rs.html#230' title='goto source code'>[src]</a></span></h3>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../bgparse/bmp/enum.Bmp.html' title='bgparse::bmp::Bmp'>Bmp</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-2514' class='srclink' href='../../src/bgparse/bmp/mod.rs.html#230' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
 <div class='docblock'><p>Formats the value using the given formatter.</p>
 </div></div></section>
@@ -107,6 +107,8 @@ PDUs.</p>
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `TemplateField` enum in crate `netflowv9`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, TemplateField">
+
+    <title>netflowv9::TemplateField - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>netflowv9</a></p><script>window.sidebarCurrent = {name: 'TemplateField', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>netflowv9</a>::<wbr><a class='enum' href=''>TemplateField</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a id='src-636' class='srclink' href='../src/netflowv9/lib.rs.html#589-592' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum TemplateField {
+    Unknown,
+    OctetDeltaCount,
+    PacketDeltaCount,
+    DeltaFlowCount,
+    ProtocolIdentifier,
+    IpClassOfService,
+    TcpControlBits,
+    SourceTransportPort,
+    SourceIpv4Address,
+    SourceIpv4PrefixLength,
+    IngressInterface,
+    DestinationTransportPort,
+    DestinationIpv4Address,
+    DestinationIpv4PrefixLength,
+    EgressInterface,
+    IpNextHopIpv4Address,
+    BgpSourceAsNumber,
+    BgpDestinationAsNumber,
+    BgpNextHopIpv4Address,
+    PostMcastPacketDeltaCount,
+    PostMcastOctetDeltaCount,
+    FlowEndSysUptime,
+    FlowStartSysUptime,
+    PostOctetDeltaCount,
+    PostPacketDeltaCount,
+    MinimumIpTotalLength,
+    MaximumIpTotalLength,
+    SourceIpv6Address,
+    DestinationIpv6Address,
+    SourceIpv6PrefixLength,
+    DestinationIpv6PrefixLength,
+    FlowLabelIpv6,
+    IcmpTypeCodeIpv4,
+    IgmpType,
+    SamplingInterval,
+    SamplingAlgorithm,
+    FlowActiveTimeout,
+    FlowIdleTimeout,
+    EngineType,
+    EngineId,
+    ExportedOctetTotalCount,
+    ExportedMessageTotalCount,
+    ExportedFlowRecordTotalCount,
+    Ipv4RouterSc,
+    SourceIpv4Prefix,
+    DestinationIpv4Prefix,
+    MplsTopLabelType,
+    MplsTopLabelIpv4Address,
+    SamplerId,
+    SamplerMode,
+    SamplerRandomInterval,
+    ClassId,
+    MinimumTTL,
+    MaximumTTL,
+    FragmentIdentification,
+    PostIpClassOfService,
+    SourceMacAddress,
+    PostDestinationMacAddress,
+    VlanId,
+    PostVlanId,
+    IpVersion,
+    FlowDirection,
+    IpNextHopIpv6Address,
+    BgpNextHopIpv6Address,
+    Ipv6ExtensionHeaders,
+    MplsTopLabelStackSection,
+    MplsLabelStackSection2,
+    MplsLabelStackSection3,
+    MplsLabelStackSection4,
+    MplsLabelStackSection5,
+    MplsLabelStackSection6,
+    MplsLabelStackSection7,
+    MplsLabelStackSection8,
+    MplsLabelStackSection9,
+    MplsLabelStackSection10,
+    DestinationMacAddress,
+    PostSourceMacAddress,
+    InterfaceName,
+    InterfaceDescription,
+    SamplerName,
+    OctetTotalCount,
+    PacketTotalCount,
+    FlagsAndSamplerId,
+    FragmentOffset,
+    ForwardingStatus,
+    MplsVpnRouteDistinguisher,
+    MplsTopLabelPrefixLength,
+    SrcTrafficIndex,
+    DstTrafficIndex,
+    ApplicationDescription,
+    ApplicationId,
+    ApplicationName,
+    PostIpDiffservCodepoint,
+    MulticastReplicationFactor,
+    ClassName,
+    ClassificationEngineId,
+    Layer2packetSectionOffset,
+    Layer2packetSectionSize,
+    Layer2packetSectionData,
+    BgpNextAdjacentAsNumber,
+    BgpPrevAdjacentAsNumber,
+    ExporterIpv4Address,
+    ExporterIpv6Address,
+    DroppedOctetDeltaCount,
+    DroppedPacketDeltaCount,
+    DroppedOctetTotalCount,
+    DroppedPacketTotalCount,
+    FlowEndReason,
+    CommonPropertiesId,
+    ObservationPointId,
+    IcmpTypeCodeIpv6,
+    MplsTopLabelIpv6Address,
+    LineCardId,
+    PortId,
+    MeteringProcessId,
+    ExportingProcessId,
+    TemplateId,
+    WlanChannelId,
+    WlanSSID,
+    FlowId,
+    ObservationDomainId,
+    FlowStartSeconds,
+    FlowEndSeconds,
+    FlowStartMilliseconds,
+    FlowEndMilliseconds,
+    FlowStartMicroseconds,
+    FlowEndMicroseconds,
+    FlowStartNanoseconds,
+    FlowEndNanoseconds,
+    FlowStartDeltaMicroseconds,
+    FlowEndDeltaMicroseconds,
+    SystemInitTimeMilliseconds,
+    FlowDurationMilliseconds,
+    FlowDurationMicroseconds,
+    ObservedFlowTotalCount,
+    IgnoredPacketTotalCount,
+    IgnoredOctetTotalCount,
+    NotSentFlowTotalCount,
+    NotSentPacketTotalCount,
+    NotSentOctetTotalCount,
+    DestinationIpv6Prefix,
+    SourceIpv6Prefix,
+    PostOctetTotalCount,
+    PostPacketTotalCount,
+    FlowKeyIndicator,
+    PostMcastPacketTotalCount,
+    PostMcastOctetTotalCount,
+    IcmpTypeIpv4,
+    IcmpCodeIpv4,
+    IcmpTypeIpv6,
+    IcmpCodeIpv6,
+    UdpSourcePort,
+    UdpDestinationPort,
+    TcpSourcePort,
+    TcpDestinationPort,
+    TcpSequenceNumber,
+    TcpAcknowledgementNumber,
+    TcpWindowSize,
+    TcpUrgentPointer,
+    TcpHeaderLength,
+    IpHeaderLength,
+    TotalLengthIpv4,
+    PayloadLengthIpv6,
+    IpTTL,
+    NextHeaderIpv6,
+    MplsPayloadLength,
+    IpDiffservCodepoint,
+    IpPrecedence,
+    FragmentFlags,
+    OctetDeltaSumOfSquares,
+    OctetTotalSumOfSquares,
+    MplsTopLabelTTL,
+    MplsLabelStackLength,
+    MplsLabelStackDepth,
+    MplsTopLabelExp,
+    IpPayloadLength,
+    UdpMessageLength,
+    IsMulticast,
+    Ipv4IHL,
+    Ipv4Options,
+    TcpOptions,
+    PaddingOctets,
+    CollectorIpv4Address,
+    CollectorIpv6Address,
+    ExportInterface,
+    ExportProtocolVersion,
+    ExportTransportProtocol,
+    CollectorTransportPort,
+    ExporterTransportPort,
+    TcpSynTotalCount,
+    TcpFinTotalCount,
+    TcpRstTotalCount,
+    TcpPshTotalCount,
+    TcpAckTotalCount,
+    TcpUrgTotalCount,
+    IpTotalLength,
+    PostNATSourceIpv4Address,
+    PostNATDestinationIpv4Address,
+    PostNAPTSourceTransportPort,
+    PostNAPTDestinationTransportPort,
+    NatOriginatingAddressRealm,
+    NatEvent,
+    InitiatorOctets,
+    ResponderOctets,
+    FirewallEvent,
+    IngressVRFID,
+    EgressVRFID,
+    VRFname,
+    PostMplsTopLabelExp,
+    TcpWindowScale,
+    BiflowDirection,
+    EthernetHeaderLength,
+    EthernetPayloadLength,
+    EthernetTotalLength,
+    Dot1qVlanId,
+    Dot1qPriority,
+    Dot1qCustomerVlanId,
+    Dot1qCustomerPriority,
+    MetroEvcId,
+    MetroEvcType,
+    PseudoWireId,
+    PseudoWireType,
+    PseudoWireControlWord,
+    IngressPhysicalInterface,
+    EgressPhysicalInterface,
+    PostDot1qVlanId,
+    PostDot1qCustomerVlanId,
+    EthernetType,
+    PostIpPrecedence,
+    CollectionTimeMilliseconds,
+    ExportSctpStreamId,
+    MaxExportSeconds,
+    MaxFlowEndSeconds,
+    MessageMD5Checksum,
+    MessageScope,
+    MinExportSeconds,
+    MinFlowStartSeconds,
+    OpaqueOctets,
+    SessionScope,
+    MaxFlowEndMicroseconds,
+    MaxFlowEndMilliseconds,
+    MaxFlowEndNanoseconds,
+    MinFlowStartMicroseconds,
+    MinFlowStartMilliseconds,
+    MinFlowStartNanoseconds,
+    CollectorCertificate,
+    ExporterCertificate,
+    DataRecordsReliability,
+    ObservationPointType,
+    NewConnectionDeltaCount,
+    ConnectionSumDurationSeconds,
+    ConnectionTransactionId,
+    PostNATSourceIpv6Address,
+    PostNATDestinationIpv6Address,
+    NatPoolId,
+    NatPoolName,
+    AnonymizationFlags,
+    AnonymizationTechnique,
+    InformationElementIndex,
+    P2pTechnology,
+    TunnelTechnology,
+    EncryptedTechnology,
+    BasicList,
+    SubTemplateList,
+    SubTemplateMultiList,
+    BgpValidityState,
+    IPSecSPI,
+    GreKey,
+    NatType,
+    InitiatorPackets,
+    ResponderPackets,
+    ObservationDomainName,
+    SelectionSequenceId,
+    SelectorId,
+    InformationElementId,
+    SelectorAlgorithm,
+    SamplingPacketInterval,
+    SamplingPacketSpace,
+    SamplingTimeInterval,
+    SamplingTimeSpace,
+    SamplingSize,
+    SamplingPopulation,
+    SamplingProbability,
+    DataLinkFrameSize,
+    IpHeaderPacketSection,
+    IpPayloadPacketSection,
+    DataLinkFrameSection,
+    MplsLabelStackSection,
+    MplsPayloadPacketSection,
+    SelectorIdTotalPktsObserved,
+    SelectorIdTotalPktsSelected,
+    AbsoluteError,
+    RelativeError,
+    ObservationTimeSeconds,
+    ObservationTimeMilliseconds,
+    ObservationTimeMicroseconds,
+    ObservationTimeNanoseconds,
+    DigestHashValue,
+    HashIpPayloadOffset,
+    HashIpPayloadSize,
+    HashOutputRangeMin,
+    HashOutputRangeMax,
+    HashSelectedRangeMin,
+    HashSelectedRangeMax,
+    HashDigestOutput,
+    HashInitialiserValue,
+    SelectorName,
+    UpperCILimit,
+    LowerCILimit,
+    ConfidenceLevel,
+    InformationElementDataType,
+    InformationElementDescription,
+    InformationElementName,
+    InformationElementRangeBegin,
+    InformationElementRangeEnd,
+    InformationElementSemantics,
+    InformationElementUnits,
+    PrivateEnterpriseNumber,
+    VirtualStationInterfaceId,
+    VirtualStationInterfaceName,
+    VirtualStationUUID,
+    VirtualStationName,
+    Layer2SegmentId,
+    Layer2OctetDeltaCount,
+    Layer2OctetTotalCount,
+    IngressUnicastPacketTotalCount,
+    IngressMulticastPacketTotalCount,
+    IngressBroadcastPacketTotalCount,
+    EgressUnicastPacketTotalCount,
+    EgressBroadcastPacketTotalCount,
+    MonitoringIntervalStartMilliseconds,
+    MonitoringIntervalEndMilliseconds,
+    PortRangeStart,
+    PortRangeEnd,
+    PortRangeStepSize,
+    PortRangeNumPorts,
+    StaMacAddress,
+    StaIpv4Address,
+    WtpMacAddress,
+    IngressInterfaceType,
+    EgressInterfaceType,
+    RtpSequenceNumber,
+    UserName,
+    ApplicationCategoryName,
+    ApplicationSubCategoryName,
+    ApplicationGroupName,
+    OriginalFlowsPresent,
+    OriginalFlowsInitiated,
+    OriginalFlowsCompleted,
+    DistinctCountOfSourceIPAddress,
+    DistinctCountOfDestinationIPAddress,
+    DistinctCountOfSourceIpv4Address,
+    DistinctCountOfDestinationIpv4Address,
+    DistinctCountOfSourceIpv6Address,
+    DistinctCountOfDestinationIpv6Address,
+    ValueDistributionMethod,
+    Rfc3550JitterMilliseconds,
+    Rfc3550JitterMicroseconds,
+    Rfc3550JitterNanoseconds,
+    Dot1qDEI,
+    Dot1qCustomerDEI,
+    FlowSelectorAlgorithm,
+    FlowSelectedOctetDeltaCount,
+    FlowSelectedPacketDeltaCount,
+    FlowSelectedFlowDeltaCount,
+    SelectorIDTotalFlowsObserved,
+    SelectorIDTotalFlowsSelected,
+    SamplingFlowInterval,
+    SamplingFlowSpacing,
+    FlowSamplingTimeInterval,
+    FlowSamplingTimeSpacing,
+    HashFlowDomain,
+    TransportOctetDeltaCount,
+    TransportPacketDeltaCount,
+    OriginalExporterIpv4Address,
+    OriginalExporterIpv6Address,
+    OriginalObservationDomainId,
+    IntermediateProcessId,
+    IgnoredDataRecordTotalCount,
+    DataLinkFrameType,
+    SectionOffset,
+    SectionExportedOctets,
+    Dot1qServiceInstanceTag,
+    Dot1qServiceInstanceId,
+    Dot1qServiceInstancePriority,
+    Dot1qCustomerSourceMacAddress,
+    Dot1qCustomerDestinationMacAddress,
+    PostLayer2OctetDeltaCount,
+    PostMcastLayer2OctetDeltaCount,
+    PostLayer2OctetTotalCount,
+    PostMcastLayer2OctetTotalCount,
+    MinimumLayer2TotalLength,
+    MaximumLayer2TotalLength,
+    DroppedLayer2OctetDeltaCount,
+    DroppedLayer2OctetTotalCount,
+    IgnoredLayer2OctetTotalCount,
+    NotSentLayer2OctetTotalCount,
+    Layer2OctetDeltaSumOfSquares,
+    Layer2OctetTotalSumOfSquares,
+    Layer2FrameDeltaCount,
+    Layer2FrameTotalCount,
+    PseudoWireDestinationIpv4Address,
+    IgnoredLayer2FrameTotalCount,
+}</pre><h2 class='variants'>Variants</h2>
+<span id='variant.Unknown' class='variant'><code>Unknown</code></span><span id='variant.OctetDeltaCount' class='variant'><code>OctetDeltaCount</code></span><span id='variant.PacketDeltaCount' class='variant'><code>PacketDeltaCount</code></span><span id='variant.DeltaFlowCount' class='variant'><code>DeltaFlowCount</code></span><span id='variant.ProtocolIdentifier' class='variant'><code>ProtocolIdentifier</code></span><span id='variant.IpClassOfService' class='variant'><code>IpClassOfService</code></span><span id='variant.TcpControlBits' class='variant'><code>TcpControlBits</code></span><span id='variant.SourceTransportPort' class='variant'><code>SourceTransportPort</code></span><span id='variant.SourceIpv4Address' class='variant'><code>SourceIpv4Address</code></span><span id='variant.SourceIpv4PrefixLength' class='variant'><code>SourceIpv4PrefixLength</code></span><span id='variant.IngressInterface' class='variant'><code>IngressInterface</code></span><span id='variant.DestinationTransportPort' class='variant'><code>DestinationTransportPort</code></span><span id='variant.DestinationIpv4Address' class='variant'><code>DestinationIpv4Address</code></span><span id='variant.DestinationIpv4PrefixLength' class='variant'><code>DestinationIpv4PrefixLength</code></span><span id='variant.EgressInterface' class='variant'><code>EgressInterface</code></span><span id='variant.IpNextHopIpv4Address' class='variant'><code>IpNextHopIpv4Address</code></span><span id='variant.BgpSourceAsNumber' class='variant'><code>BgpSourceAsNumber</code></span><span id='variant.BgpDestinationAsNumber' class='variant'><code>BgpDestinationAsNumber</code></span><span id='variant.BgpNextHopIpv4Address' class='variant'><code>BgpNextHopIpv4Address</code></span><span id='variant.PostMcastPacketDeltaCount' class='variant'><code>PostMcastPacketDeltaCount</code></span><span id='variant.PostMcastOctetDeltaCount' class='variant'><code>PostMcastOctetDeltaCount</code></span><span id='variant.FlowEndSysUptime' class='variant'><code>FlowEndSysUptime</code></span><span id='variant.FlowStartSysUptime' class='variant'><code>FlowStartSysUptime</code></span><span id='variant.PostOctetDeltaCount' class='variant'><code>PostOctetDeltaCount</code></span><span id='variant.PostPacketDeltaCount' class='variant'><code>PostPacketDeltaCount</code></span><span id='variant.MinimumIpTotalLength' class='variant'><code>MinimumIpTotalLength</code></span><span id='variant.MaximumIpTotalLength' class='variant'><code>MaximumIpTotalLength</code></span><span id='variant.SourceIpv6Address' class='variant'><code>SourceIpv6Address</code></span><span id='variant.DestinationIpv6Address' class='variant'><code>DestinationIpv6Address</code></span><span id='variant.SourceIpv6PrefixLength' class='variant'><code>SourceIpv6PrefixLength</code></span><span id='variant.DestinationIpv6PrefixLength' class='variant'><code>DestinationIpv6PrefixLength</code></span><span id='variant.FlowLabelIpv6' class='variant'><code>FlowLabelIpv6</code></span><span id='variant.IcmpTypeCodeIpv4' class='variant'><code>IcmpTypeCodeIpv4</code></span><span id='variant.IgmpType' class='variant'><code>IgmpType</code></span><span id='variant.SamplingInterval' class='variant'><code>SamplingInterval</code></span><span id='variant.SamplingAlgorithm' class='variant'><code>SamplingAlgorithm</code></span><span id='variant.FlowActiveTimeout' class='variant'><code>FlowActiveTimeout</code></span><span id='variant.FlowIdleTimeout' class='variant'><code>FlowIdleTimeout</code></span><span id='variant.EngineType' class='variant'><code>EngineType</code></span><span id='variant.EngineId' class='variant'><code>EngineId</code></span><span id='variant.ExportedOctetTotalCount' class='variant'><code>ExportedOctetTotalCount</code></span><span id='variant.ExportedMessageTotalCount' class='variant'><code>ExportedMessageTotalCount</code></span><span id='variant.ExportedFlowRecordTotalCount' class='variant'><code>ExportedFlowRecordTotalCount</code></span><span id='variant.Ipv4RouterSc' class='variant'><code>Ipv4RouterSc</code></span><span id='variant.SourceIpv4Prefix' class='variant'><code>SourceIpv4Prefix</code></span><span id='variant.DestinationIpv4Prefix' class='variant'><code>DestinationIpv4Prefix</code></span><span id='variant.MplsTopLabelType' class='variant'><code>MplsTopLabelType</code></span><span id='variant.MplsTopLabelIpv4Address' class='variant'><code>MplsTopLabelIpv4Address</code></span><span id='variant.SamplerId' class='variant'><code>SamplerId</code></span><span id='variant.SamplerMode' class='variant'><code>SamplerMode</code></span><span id='variant.SamplerRandomInterval' class='variant'><code>SamplerRandomInterval</code></span><span id='variant.ClassId' class='variant'><code>ClassId</code></span><span id='variant.MinimumTTL' class='variant'><code>MinimumTTL</code></span><span id='variant.MaximumTTL' class='variant'><code>MaximumTTL</code></span><span id='variant.FragmentIdentification' class='variant'><code>FragmentIdentification</code></span><span id='variant.PostIpClassOfService' class='variant'><code>PostIpClassOfService</code></span><span id='variant.SourceMacAddress' class='variant'><code>SourceMacAddress</code></span><span id='variant.PostDestinationMacAddress' class='variant'><code>PostDestinationMacAddress</code></span><span id='variant.VlanId' class='variant'><code>VlanId</code></span><span id='variant.PostVlanId' class='variant'><code>PostVlanId</code></span><span id='variant.IpVersion' class='variant'><code>IpVersion</code></span><span id='variant.FlowDirection' class='variant'><code>FlowDirection</code></span><span id='variant.IpNextHopIpv6Address' class='variant'><code>IpNextHopIpv6Address</code></span><span id='variant.BgpNextHopIpv6Address' class='variant'><code>BgpNextHopIpv6Address</code></span><span id='variant.Ipv6ExtensionHeaders' class='variant'><code>Ipv6ExtensionHeaders</code></span><span id='variant.MplsTopLabelStackSection' class='variant'><code>MplsTopLabelStackSection</code></span><span id='variant.MplsLabelStackSection2' class='variant'><code>MplsLabelStackSection2</code></span><span id='variant.MplsLabelStackSection3' class='variant'><code>MplsLabelStackSection3</code></span><span id='variant.MplsLabelStackSection4' class='variant'><code>MplsLabelStackSection4</code></span><span id='variant.MplsLabelStackSection5' class='variant'><code>MplsLabelStackSection5</code></span><span id='variant.MplsLabelStackSection6' class='variant'><code>MplsLabelStackSection6</code></span><span id='variant.MplsLabelStackSection7' class='variant'><code>MplsLabelStackSection7</code></span><span id='variant.MplsLabelStackSection8' class='variant'><code>MplsLabelStackSection8</code></span><span id='variant.MplsLabelStackSection9' class='variant'><code>MplsLabelStackSection9</code></span><span id='variant.MplsLabelStackSection10' class='variant'><code>MplsLabelStackSection10</code></span><span id='variant.DestinationMacAddress' class='variant'><code>DestinationMacAddress</code></span><span id='variant.PostSourceMacAddress' class='variant'><code>PostSourceMacAddress</code></span><span id='variant.InterfaceName' class='variant'><code>InterfaceName</code></span><span id='variant.InterfaceDescription' class='variant'><code>InterfaceDescription</code></span><span id='variant.SamplerName' class='variant'><code>SamplerName</code></span><span id='variant.OctetTotalCount' class='variant'><code>OctetTotalCount</code></span><span id='variant.PacketTotalCount' class='variant'><code>PacketTotalCount</code></span><span id='variant.FlagsAndSamplerId' class='variant'><code>FlagsAndSamplerId</code></span><span id='variant.FragmentOffset' class='variant'><code>FragmentOffset</code></span><span id='variant.ForwardingStatus' class='variant'><code>ForwardingStatus</code></span><span id='variant.MplsVpnRouteDistinguisher' class='variant'><code>MplsVpnRouteDistinguisher</code></span><span id='variant.MplsTopLabelPrefixLength' class='variant'><code>MplsTopLabelPrefixLength</code></span><span id='variant.SrcTrafficIndex' class='variant'><code>SrcTrafficIndex</code></span><span id='variant.DstTrafficIndex' class='variant'><code>DstTrafficIndex</code></span><span id='variant.ApplicationDescription' class='variant'><code>ApplicationDescription</code></span><span id='variant.ApplicationId' class='variant'><code>ApplicationId</code></span><span id='variant.ApplicationName' class='variant'><code>ApplicationName</code></span><span id='variant.PostIpDiffservCodepoint' class='variant'><code>PostIpDiffservCodepoint</code></span><span id='variant.MulticastReplicationFactor' class='variant'><code>MulticastReplicationFactor</code></span><span id='variant.ClassName' class='variant'><code>ClassName</code></span><span id='variant.ClassificationEngineId' class='variant'><code>ClassificationEngineId</code></span><span id='variant.Layer2packetSectionOffset' class='variant'><code>Layer2packetSectionOffset</code></span><span id='variant.Layer2packetSectionSize' class='variant'><code>Layer2packetSectionSize</code></span><span id='variant.Layer2packetSectionData' class='variant'><code>Layer2packetSectionData</code></span><span id='variant.BgpNextAdjacentAsNumber' class='variant'><code>BgpNextAdjacentAsNumber</code></span><span id='variant.BgpPrevAdjacentAsNumber' class='variant'><code>BgpPrevAdjacentAsNumber</code></span><span id='variant.ExporterIpv4Address' class='variant'><code>ExporterIpv4Address</code></span><span id='variant.ExporterIpv6Address' class='variant'><code>ExporterIpv6Address</code></span><span id='variant.DroppedOctetDeltaCount' class='variant'><code>DroppedOctetDeltaCount</code></span><span id='variant.DroppedPacketDeltaCount' class='variant'><code>DroppedPacketDeltaCount</code></span><span id='variant.DroppedOctetTotalCount' class='variant'><code>DroppedOctetTotalCount</code></span><span id='variant.DroppedPacketTotalCount' class='variant'><code>DroppedPacketTotalCount</code></span><span id='variant.FlowEndReason' class='variant'><code>FlowEndReason</code></span><span id='variant.CommonPropertiesId' class='variant'><code>CommonPropertiesId</code></span><span id='variant.ObservationPointId' class='variant'><code>ObservationPointId</code></span><span id='variant.IcmpTypeCodeIpv6' class='variant'><code>IcmpTypeCodeIpv6</code></span><span id='variant.MplsTopLabelIpv6Address' class='variant'><code>MplsTopLabelIpv6Address</code></span><span id='variant.LineCardId' class='variant'><code>LineCardId</code></span><span id='variant.PortId' class='variant'><code>PortId</code></span><span id='variant.MeteringProcessId' class='variant'><code>MeteringProcessId</code></span><span id='variant.ExportingProcessId' class='variant'><code>ExportingProcessId</code></span><span id='variant.TemplateId' class='variant'><code>TemplateId</code></span><span id='variant.WlanChannelId' class='variant'><code>WlanChannelId</code></span><span id='variant.WlanSSID' class='variant'><code>WlanSSID</code></span><span id='variant.FlowId' class='variant'><code>FlowId</code></span><span id='variant.ObservationDomainId' class='variant'><code>ObservationDomainId</code></span><span id='variant.FlowStartSeconds' class='variant'><code>FlowStartSeconds</code></span><span id='variant.FlowEndSeconds' class='variant'><code>FlowEndSeconds</code></span><span id='variant.FlowStartMilliseconds' class='variant'><code>FlowStartMilliseconds</code></span><span id='variant.FlowEndMilliseconds' class='variant'><code>FlowEndMilliseconds</code></span><span id='variant.FlowStartMicroseconds' class='variant'><code>FlowStartMicroseconds</code></span><span id='variant.FlowEndMicroseconds' class='variant'><code>FlowEndMicroseconds</code></span><span id='variant.FlowStartNanoseconds' class='variant'><code>FlowStartNanoseconds</code></span><span id='variant.FlowEndNanoseconds' class='variant'><code>FlowEndNanoseconds</code></span><span id='variant.FlowStartDeltaMicroseconds' class='variant'><code>FlowStartDeltaMicroseconds</code></span><span id='variant.FlowEndDeltaMicroseconds' class='variant'><code>FlowEndDeltaMicroseconds</code></span><span id='variant.SystemInitTimeMilliseconds' class='variant'><code>SystemInitTimeMilliseconds</code></span><span id='variant.FlowDurationMilliseconds' class='variant'><code>FlowDurationMilliseconds</code></span><span id='variant.FlowDurationMicroseconds' class='variant'><code>FlowDurationMicroseconds</code></span><span id='variant.ObservedFlowTotalCount' class='variant'><code>ObservedFlowTotalCount</code></span><span id='variant.IgnoredPacketTotalCount' class='variant'><code>IgnoredPacketTotalCount</code></span><span id='variant.IgnoredOctetTotalCount' class='variant'><code>IgnoredOctetTotalCount</code></span><span id='variant.NotSentFlowTotalCount' class='variant'><code>NotSentFlowTotalCount</code></span><span id='variant.NotSentPacketTotalCount' class='variant'><code>NotSentPacketTotalCount</code></span><span id='variant.NotSentOctetTotalCount' class='variant'><code>NotSentOctetTotalCount</code></span><span id='variant.DestinationIpv6Prefix' class='variant'><code>DestinationIpv6Prefix</code></span><span id='variant.SourceIpv6Prefix' class='variant'><code>SourceIpv6Prefix</code></span><span id='variant.PostOctetTotalCount' class='variant'><code>PostOctetTotalCount</code></span><span id='variant.PostPacketTotalCount' class='variant'><code>PostPacketTotalCount</code></span><span id='variant.FlowKeyIndicator' class='variant'><code>FlowKeyIndicator</code></span><span id='variant.PostMcastPacketTotalCount' class='variant'><code>PostMcastPacketTotalCount</code></span><span id='variant.PostMcastOctetTotalCount' class='variant'><code>PostMcastOctetTotalCount</code></span><span id='variant.IcmpTypeIpv4' class='variant'><code>IcmpTypeIpv4</code></span><span id='variant.IcmpCodeIpv4' class='variant'><code>IcmpCodeIpv4</code></span><span id='variant.IcmpTypeIpv6' class='variant'><code>IcmpTypeIpv6</code></span><span id='variant.IcmpCodeIpv6' class='variant'><code>IcmpCodeIpv6</code></span><span id='variant.UdpSourcePort' class='variant'><code>UdpSourcePort</code></span><span id='variant.UdpDestinationPort' class='variant'><code>UdpDestinationPort</code></span><span id='variant.TcpSourcePort' class='variant'><code>TcpSourcePort</code></span><span id='variant.TcpDestinationPort' class='variant'><code>TcpDestinationPort</code></span><span id='variant.TcpSequenceNumber' class='variant'><code>TcpSequenceNumber</code></span><span id='variant.TcpAcknowledgementNumber' class='variant'><code>TcpAcknowledgementNumber</code></span><span id='variant.TcpWindowSize' class='variant'><code>TcpWindowSize</code></span><span id='variant.TcpUrgentPointer' class='variant'><code>TcpUrgentPointer</code></span><span id='variant.TcpHeaderLength' class='variant'><code>TcpHeaderLength</code></span><span id='variant.IpHeaderLength' class='variant'><code>IpHeaderLength</code></span><span id='variant.TotalLengthIpv4' class='variant'><code>TotalLengthIpv4</code></span><span id='variant.PayloadLengthIpv6' class='variant'><code>PayloadLengthIpv6</code></span><span id='variant.IpTTL' class='variant'><code>IpTTL</code></span><span id='variant.NextHeaderIpv6' class='variant'><code>NextHeaderIpv6</code></span><span id='variant.MplsPayloadLength' class='variant'><code>MplsPayloadLength</code></span><span id='variant.IpDiffservCodepoint' class='variant'><code>IpDiffservCodepoint</code></span><span id='variant.IpPrecedence' class='variant'><code>IpPrecedence</code></span><span id='variant.FragmentFlags' class='variant'><code>FragmentFlags</code></span><span id='variant.OctetDeltaSumOfSquares' class='variant'><code>OctetDeltaSumOfSquares</code></span><span id='variant.OctetTotalSumOfSquares' class='variant'><code>OctetTotalSumOfSquares</code></span><span id='variant.MplsTopLabelTTL' class='variant'><code>MplsTopLabelTTL</code></span><span id='variant.MplsLabelStackLength' class='variant'><code>MplsLabelStackLength</code></span><span id='variant.MplsLabelStackDepth' class='variant'><code>MplsLabelStackDepth</code></span><span id='variant.MplsTopLabelExp' class='variant'><code>MplsTopLabelExp</code></span><span id='variant.IpPayloadLength' class='variant'><code>IpPayloadLength</code></span><span id='variant.UdpMessageLength' class='variant'><code>UdpMessageLength</code></span><span id='variant.IsMulticast' class='variant'><code>IsMulticast</code></span><span id='variant.Ipv4IHL' class='variant'><code>Ipv4IHL</code></span><span id='variant.Ipv4Options' class='variant'><code>Ipv4Options</code></span><span id='variant.TcpOptions' class='variant'><code>TcpOptions</code></span><span id='variant.PaddingOctets' class='variant'><code>PaddingOctets</code></span><span id='variant.CollectorIpv4Address' class='variant'><code>CollectorIpv4Address</code></span><span id='variant.CollectorIpv6Address' class='variant'><code>CollectorIpv6Address</code></span><span id='variant.ExportInterface' class='variant'><code>ExportInterface</code></span><span id='variant.ExportProtocolVersion' class='variant'><code>ExportProtocolVersion</code></span><span id='variant.ExportTransportProtocol' class='variant'><code>ExportTransportProtocol</code></span><span id='variant.CollectorTransportPort' class='variant'><code>CollectorTransportPort</code></span><span id='variant.ExporterTransportPort' class='variant'><code>ExporterTransportPort</code></span><span id='variant.TcpSynTotalCount' class='variant'><code>TcpSynTotalCount</code></span><span id='variant.TcpFinTotalCount' class='variant'><code>TcpFinTotalCount</code></span><span id='variant.TcpRstTotalCount' class='variant'><code>TcpRstTotalCount</code></span><span id='variant.TcpPshTotalCount' class='variant'><code>TcpPshTotalCount</code></span><span id='variant.TcpAckTotalCount' class='variant'><code>TcpAckTotalCount</code></span><span id='variant.TcpUrgTotalCount' class='variant'><code>TcpUrgTotalCount</code></span><span id='variant.IpTotalLength' class='variant'><code>IpTotalLength</code></span><span id='variant.PostNATSourceIpv4Address' class='variant'><code>PostNATSourceIpv4Address</code></span><span id='variant.PostNATDestinationIpv4Address' class='variant'><code>PostNATDestinationIpv4Address</code></span><span id='variant.PostNAPTSourceTransportPort' class='variant'><code>PostNAPTSourceTransportPort</code></span><span id='variant.PostNAPTDestinationTransportPort' class='variant'><code>PostNAPTDestinationTransportPort</code></span><span id='variant.NatOriginatingAddressRealm' class='variant'><code>NatOriginatingAddressRealm</code></span><span id='variant.NatEvent' class='variant'><code>NatEvent</code></span><span id='variant.InitiatorOctets' class='variant'><code>InitiatorOctets</code></span><span id='variant.ResponderOctets' class='variant'><code>ResponderOctets</code></span><span id='variant.FirewallEvent' class='variant'><code>FirewallEvent</code></span><span id='variant.IngressVRFID' class='variant'><code>IngressVRFID</code></span><span id='variant.EgressVRFID' class='variant'><code>EgressVRFID</code></span><span id='variant.VRFname' class='variant'><code>VRFname</code></span><span id='variant.PostMplsTopLabelExp' class='variant'><code>PostMplsTopLabelExp</code></span><span id='variant.TcpWindowScale' class='variant'><code>TcpWindowScale</code></span><span id='variant.BiflowDirection' class='variant'><code>BiflowDirection</code></span><span id='variant.EthernetHeaderLength' class='variant'><code>EthernetHeaderLength</code></span><span id='variant.EthernetPayloadLength' class='variant'><code>EthernetPayloadLength</code></span><span id='variant.EthernetTotalLength' class='variant'><code>EthernetTotalLength</code></span><span id='variant.Dot1qVlanId' class='variant'><code>Dot1qVlanId</code></span><span id='variant.Dot1qPriority' class='variant'><code>Dot1qPriority</code></span><span id='variant.Dot1qCustomerVlanId' class='variant'><code>Dot1qCustomerVlanId</code></span><span id='variant.Dot1qCustomerPriority' class='variant'><code>Dot1qCustomerPriority</code></span><span id='variant.MetroEvcId' class='variant'><code>MetroEvcId</code></span><span id='variant.MetroEvcType' class='variant'><code>MetroEvcType</code></span><span id='variant.PseudoWireId' class='variant'><code>PseudoWireId</code></span><span id='variant.PseudoWireType' class='variant'><code>PseudoWireType</code></span><span id='variant.PseudoWireControlWord' class='variant'><code>PseudoWireControlWord</code></span><span id='variant.IngressPhysicalInterface' class='variant'><code>IngressPhysicalInterface</code></span><span id='variant.EgressPhysicalInterface' class='variant'><code>EgressPhysicalInterface</code></span><span id='variant.PostDot1qVlanId' class='variant'><code>PostDot1qVlanId</code></span><span id='variant.PostDot1qCustomerVlanId' class='variant'><code>PostDot1qCustomerVlanId</code></span><span id='variant.EthernetType' class='variant'><code>EthernetType</code></span><span id='variant.PostIpPrecedence' class='variant'><code>PostIpPrecedence</code></span><span id='variant.CollectionTimeMilliseconds' class='variant'><code>CollectionTimeMilliseconds</code></span><span id='variant.ExportSctpStreamId' class='variant'><code>ExportSctpStreamId</code></span><span id='variant.MaxExportSeconds' class='variant'><code>MaxExportSeconds</code></span><span id='variant.MaxFlowEndSeconds' class='variant'><code>MaxFlowEndSeconds</code></span><span id='variant.MessageMD5Checksum' class='variant'><code>MessageMD5Checksum</code></span><span id='variant.MessageScope' class='variant'><code>MessageScope</code></span><span id='variant.MinExportSeconds' class='variant'><code>MinExportSeconds</code></span><span id='variant.MinFlowStartSeconds' class='variant'><code>MinFlowStartSeconds</code></span><span id='variant.OpaqueOctets' class='variant'><code>OpaqueOctets</code></span><span id='variant.SessionScope' class='variant'><code>SessionScope</code></span><span id='variant.MaxFlowEndMicroseconds' class='variant'><code>MaxFlowEndMicroseconds</code></span><span id='variant.MaxFlowEndMilliseconds' class='variant'><code>MaxFlowEndMilliseconds</code></span><span id='variant.MaxFlowEndNanoseconds' class='variant'><code>MaxFlowEndNanoseconds</code></span><span id='variant.MinFlowStartMicroseconds' class='variant'><code>MinFlowStartMicroseconds</code></span><span id='variant.MinFlowStartMilliseconds' class='variant'><code>MinFlowStartMilliseconds</code></span><span id='variant.MinFlowStartNanoseconds' class='variant'><code>MinFlowStartNanoseconds</code></span><span id='variant.CollectorCertificate' class='variant'><code>CollectorCertificate</code></span><span id='variant.ExporterCertificate' class='variant'><code>ExporterCertificate</code></span><span id='variant.DataRecordsReliability' class='variant'><code>DataRecordsReliability</code></span><span id='variant.ObservationPointType' class='variant'><code>ObservationPointType</code></span><span id='variant.NewConnectionDeltaCount' class='variant'><code>NewConnectionDeltaCount</code></span><span id='variant.ConnectionSumDurationSeconds' class='variant'><code>ConnectionSumDurationSeconds</code></span><span id='variant.ConnectionTransactionId' class='variant'><code>ConnectionTransactionId</code></span><span id='variant.PostNATSourceIpv6Address' class='variant'><code>PostNATSourceIpv6Address</code></span><span id='variant.PostNATDestinationIpv6Address' class='variant'><code>PostNATDestinationIpv6Address</code></span><span id='variant.NatPoolId' class='variant'><code>NatPoolId</code></span><span id='variant.NatPoolName' class='variant'><code>NatPoolName</code></span><span id='variant.AnonymizationFlags' class='variant'><code>AnonymizationFlags</code></span><span id='variant.AnonymizationTechnique' class='variant'><code>AnonymizationTechnique</code></span><span id='variant.InformationElementIndex' class='variant'><code>InformationElementIndex</code></span><span id='variant.P2pTechnology' class='variant'><code>P2pTechnology</code></span><span id='variant.TunnelTechnology' class='variant'><code>TunnelTechnology</code></span><span id='variant.EncryptedTechnology' class='variant'><code>EncryptedTechnology</code></span><span id='variant.BasicList' class='variant'><code>BasicList</code></span><span id='variant.SubTemplateList' class='variant'><code>SubTemplateList</code></span><span id='variant.SubTemplateMultiList' class='variant'><code>SubTemplateMultiList</code></span><span id='variant.BgpValidityState' class='variant'><code>BgpValidityState</code></span><span id='variant.IPSecSPI' class='variant'><code>IPSecSPI</code></span><span id='variant.GreKey' class='variant'><code>GreKey</code></span><span id='variant.NatType' class='variant'><code>NatType</code></span><span id='variant.InitiatorPackets' class='variant'><code>InitiatorPackets</code></span><span id='variant.ResponderPackets' class='variant'><code>ResponderPackets</code></span><span id='variant.ObservationDomainName' class='variant'><code>ObservationDomainName</code></span><span id='variant.SelectionSequenceId' class='variant'><code>SelectionSequenceId</code></span><span id='variant.SelectorId' class='variant'><code>SelectorId</code></span><span id='variant.InformationElementId' class='variant'><code>InformationElementId</code></span><span id='variant.SelectorAlgorithm' class='variant'><code>SelectorAlgorithm</code></span><span id='variant.SamplingPacketInterval' class='variant'><code>SamplingPacketInterval</code></span><span id='variant.SamplingPacketSpace' class='variant'><code>SamplingPacketSpace</code></span><span id='variant.SamplingTimeInterval' class='variant'><code>SamplingTimeInterval</code></span><span id='variant.SamplingTimeSpace' class='variant'><code>SamplingTimeSpace</code></span><span id='variant.SamplingSize' class='variant'><code>SamplingSize</code></span><span id='variant.SamplingPopulation' class='variant'><code>SamplingPopulation</code></span><span id='variant.SamplingProbability' class='variant'><code>SamplingProbability</code></span><span id='variant.DataLinkFrameSize' class='variant'><code>DataLinkFrameSize</code></span><span id='variant.IpHeaderPacketSection' class='variant'><code>IpHeaderPacketSection</code></span><span id='variant.IpPayloadPacketSection' class='variant'><code>IpPayloadPacketSection</code></span><span id='variant.DataLinkFrameSection' class='variant'><code>DataLinkFrameSection</code></span><span id='variant.MplsLabelStackSection' class='variant'><code>MplsLabelStackSection</code></span><span id='variant.MplsPayloadPacketSection' class='variant'><code>MplsPayloadPacketSection</code></span><span id='variant.SelectorIdTotalPktsObserved' class='variant'><code>SelectorIdTotalPktsObserved</code></span><span id='variant.SelectorIdTotalPktsSelected' class='variant'><code>SelectorIdTotalPktsSelected</code></span><span id='variant.AbsoluteError' class='variant'><code>AbsoluteError</code></span><span id='variant.RelativeError' class='variant'><code>RelativeError</code></span><span id='variant.ObservationTimeSeconds' class='variant'><code>ObservationTimeSeconds</code></span><span id='variant.ObservationTimeMilliseconds' class='variant'><code>ObservationTimeMilliseconds</code></span><span id='variant.ObservationTimeMicroseconds' class='variant'><code>ObservationTimeMicroseconds</code></span><span id='variant.ObservationTimeNanoseconds' class='variant'><code>ObservationTimeNanoseconds</code></span><span id='variant.DigestHashValue' class='variant'><code>DigestHashValue</code></span><span id='variant.HashIpPayloadOffset' class='variant'><code>HashIpPayloadOffset</code></span><span id='variant.HashIpPayloadSize' class='variant'><code>HashIpPayloadSize</code></span><span id='variant.HashOutputRangeMin' class='variant'><code>HashOutputRangeMin</code></span><span id='variant.HashOutputRangeMax' class='variant'><code>HashOutputRangeMax</code></span><span id='variant.HashSelectedRangeMin' class='variant'><code>HashSelectedRangeMin</code></span><span id='variant.HashSelectedRangeMax' class='variant'><code>HashSelectedRangeMax</code></span><span id='variant.HashDigestOutput' class='variant'><code>HashDigestOutput</code></span><span id='variant.HashInitialiserValue' class='variant'><code>HashInitialiserValue</code></span><span id='variant.SelectorName' class='variant'><code>SelectorName</code></span><span id='variant.UpperCILimit' class='variant'><code>UpperCILimit</code></span><span id='variant.LowerCILimit' class='variant'><code>LowerCILimit</code></span><span id='variant.ConfidenceLevel' class='variant'><code>ConfidenceLevel</code></span><span id='variant.InformationElementDataType' class='variant'><code>InformationElementDataType</code></span><span id='variant.InformationElementDescription' class='variant'><code>InformationElementDescription</code></span><span id='variant.InformationElementName' class='variant'><code>InformationElementName</code></span><span id='variant.InformationElementRangeBegin' class='variant'><code>InformationElementRangeBegin</code></span><span id='variant.InformationElementRangeEnd' class='variant'><code>InformationElementRangeEnd</code></span><span id='variant.InformationElementSemantics' class='variant'><code>InformationElementSemantics</code></span><span id='variant.InformationElementUnits' class='variant'><code>InformationElementUnits</code></span><span id='variant.PrivateEnterpriseNumber' class='variant'><code>PrivateEnterpriseNumber</code></span><span id='variant.VirtualStationInterfaceId' class='variant'><code>VirtualStationInterfaceId</code></span><span id='variant.VirtualStationInterfaceName' class='variant'><code>VirtualStationInterfaceName</code></span><span id='variant.VirtualStationUUID' class='variant'><code>VirtualStationUUID</code></span><span id='variant.VirtualStationName' class='variant'><code>VirtualStationName</code></span><span id='variant.Layer2SegmentId' class='variant'><code>Layer2SegmentId</code></span><span id='variant.Layer2OctetDeltaCount' class='variant'><code>Layer2OctetDeltaCount</code></span><span id='variant.Layer2OctetTotalCount' class='variant'><code>Layer2OctetTotalCount</code></span><span id='variant.IngressUnicastPacketTotalCount' class='variant'><code>IngressUnicastPacketTotalCount</code></span><span id='variant.IngressMulticastPacketTotalCount' class='variant'><code>IngressMulticastPacketTotalCount</code></span><span id='variant.IngressBroadcastPacketTotalCount' class='variant'><code>IngressBroadcastPacketTotalCount</code></span><span id='variant.EgressUnicastPacketTotalCount' class='variant'><code>EgressUnicastPacketTotalCount</code></span><span id='variant.EgressBroadcastPacketTotalCount' class='variant'><code>EgressBroadcastPacketTotalCount</code></span><span id='variant.MonitoringIntervalStartMilliseconds' class='variant'><code>MonitoringIntervalStartMilliseconds</code></span><span id='variant.MonitoringIntervalEndMilliseconds' class='variant'><code>MonitoringIntervalEndMilliseconds</code></span><span id='variant.PortRangeStart' class='variant'><code>PortRangeStart</code></span><span id='variant.PortRangeEnd' class='variant'><code>PortRangeEnd</code></span><span id='variant.PortRangeStepSize' class='variant'><code>PortRangeStepSize</code></span><span id='variant.PortRangeNumPorts' class='variant'><code>PortRangeNumPorts</code></span><span id='variant.StaMacAddress' class='variant'><code>StaMacAddress</code></span><span id='variant.StaIpv4Address' class='variant'><code>StaIpv4Address</code></span><span id='variant.WtpMacAddress' class='variant'><code>WtpMacAddress</code></span><span id='variant.IngressInterfaceType' class='variant'><code>IngressInterfaceType</code></span><span id='variant.EgressInterfaceType' class='variant'><code>EgressInterfaceType</code></span><span id='variant.RtpSequenceNumber' class='variant'><code>RtpSequenceNumber</code></span><span id='variant.UserName' class='variant'><code>UserName</code></span><span id='variant.ApplicationCategoryName' class='variant'><code>ApplicationCategoryName</code></span><span id='variant.ApplicationSubCategoryName' class='variant'><code>ApplicationSubCategoryName</code></span><span id='variant.ApplicationGroupName' class='variant'><code>ApplicationGroupName</code></span><span id='variant.OriginalFlowsPresent' class='variant'><code>OriginalFlowsPresent</code></span><span id='variant.OriginalFlowsInitiated' class='variant'><code>OriginalFlowsInitiated</code></span><span id='variant.OriginalFlowsCompleted' class='variant'><code>OriginalFlowsCompleted</code></span><span id='variant.DistinctCountOfSourceIPAddress' class='variant'><code>DistinctCountOfSourceIPAddress</code></span><span id='variant.DistinctCountOfDestinationIPAddress' class='variant'><code>DistinctCountOfDestinationIPAddress</code></span><span id='variant.DistinctCountOfSourceIpv4Address' class='variant'><code>DistinctCountOfSourceIpv4Address</code></span><span id='variant.DistinctCountOfDestinationIpv4Address' class='variant'><code>DistinctCountOfDestinationIpv4Address</code></span><span id='variant.DistinctCountOfSourceIpv6Address' class='variant'><code>DistinctCountOfSourceIpv6Address</code></span><span id='variant.DistinctCountOfDestinationIpv6Address' class='variant'><code>DistinctCountOfDestinationIpv6Address</code></span><span id='variant.ValueDistributionMethod' class='variant'><code>ValueDistributionMethod</code></span><span id='variant.Rfc3550JitterMilliseconds' class='variant'><code>Rfc3550JitterMilliseconds</code></span><span id='variant.Rfc3550JitterMicroseconds' class='variant'><code>Rfc3550JitterMicroseconds</code></span><span id='variant.Rfc3550JitterNanoseconds' class='variant'><code>Rfc3550JitterNanoseconds</code></span><span id='variant.Dot1qDEI' class='variant'><code>Dot1qDEI</code></span><span id='variant.Dot1qCustomerDEI' class='variant'><code>Dot1qCustomerDEI</code></span><span id='variant.FlowSelectorAlgorithm' class='variant'><code>FlowSelectorAlgorithm</code></span><span id='variant.FlowSelectedOctetDeltaCount' class='variant'><code>FlowSelectedOctetDeltaCount</code></span><span id='variant.FlowSelectedPacketDeltaCount' class='variant'><code>FlowSelectedPacketDeltaCount</code></span><span id='variant.FlowSelectedFlowDeltaCount' class='variant'><code>FlowSelectedFlowDeltaCount</code></span><span id='variant.SelectorIDTotalFlowsObserved' class='variant'><code>SelectorIDTotalFlowsObserved</code></span><span id='variant.SelectorIDTotalFlowsSelected' class='variant'><code>SelectorIDTotalFlowsSelected</code></span><span id='variant.SamplingFlowInterval' class='variant'><code>SamplingFlowInterval</code></span><span id='variant.SamplingFlowSpacing' class='variant'><code>SamplingFlowSpacing</code></span><span id='variant.FlowSamplingTimeInterval' class='variant'><code>FlowSamplingTimeInterval</code></span><span id='variant.FlowSamplingTimeSpacing' class='variant'><code>FlowSamplingTimeSpacing</code></span><span id='variant.HashFlowDomain' class='variant'><code>HashFlowDomain</code></span><span id='variant.TransportOctetDeltaCount' class='variant'><code>TransportOctetDeltaCount</code></span><span id='variant.TransportPacketDeltaCount' class='variant'><code>TransportPacketDeltaCount</code></span><span id='variant.OriginalExporterIpv4Address' class='variant'><code>OriginalExporterIpv4Address</code></span><span id='variant.OriginalExporterIpv6Address' class='variant'><code>OriginalExporterIpv6Address</code></span><span id='variant.OriginalObservationDomainId' class='variant'><code>OriginalObservationDomainId</code></span><span id='variant.IntermediateProcessId' class='variant'><code>IntermediateProcessId</code></span><span id='variant.IgnoredDataRecordTotalCount' class='variant'><code>IgnoredDataRecordTotalCount</code></span><span id='variant.DataLinkFrameType' class='variant'><code>DataLinkFrameType</code></span><span id='variant.SectionOffset' class='variant'><code>SectionOffset</code></span><span id='variant.SectionExportedOctets' class='variant'><code>SectionExportedOctets</code></span><span id='variant.Dot1qServiceInstanceTag' class='variant'><code>Dot1qServiceInstanceTag</code></span><span id='variant.Dot1qServiceInstanceId' class='variant'><code>Dot1qServiceInstanceId</code></span><span id='variant.Dot1qServiceInstancePriority' class='variant'><code>Dot1qServiceInstancePriority</code></span><span id='variant.Dot1qCustomerSourceMacAddress' class='variant'><code>Dot1qCustomerSourceMacAddress</code></span><span id='variant.Dot1qCustomerDestinationMacAddress' class='variant'><code>Dot1qCustomerDestinationMacAddress</code></span><span id='variant.PostLayer2OctetDeltaCount' class='variant'><code>PostLayer2OctetDeltaCount</code></span><span id='variant.PostMcastLayer2OctetDeltaCount' class='variant'><code>PostMcastLayer2OctetDeltaCount</code></span><span id='variant.PostLayer2OctetTotalCount' class='variant'><code>PostLayer2OctetTotalCount</code></span><span id='variant.PostMcastLayer2OctetTotalCount' class='variant'><code>PostMcastLayer2OctetTotalCount</code></span><span id='variant.MinimumLayer2TotalLength' class='variant'><code>MinimumLayer2TotalLength</code></span><span id='variant.MaximumLayer2TotalLength' class='variant'><code>MaximumLayer2TotalLength</code></span><span id='variant.DroppedLayer2OctetDeltaCount' class='variant'><code>DroppedLayer2OctetDeltaCount</code></span><span id='variant.DroppedLayer2OctetTotalCount' class='variant'><code>DroppedLayer2OctetTotalCount</code></span><span id='variant.IgnoredLayer2OctetTotalCount' class='variant'><code>IgnoredLayer2OctetTotalCount</code></span><span id='variant.NotSentLayer2OctetTotalCount' class='variant'><code>NotSentLayer2OctetTotalCount</code></span><span id='variant.Layer2OctetDeltaSumOfSquares' class='variant'><code>Layer2OctetDeltaSumOfSquares</code></span><span id='variant.Layer2OctetTotalSumOfSquares' class='variant'><code>Layer2OctetTotalSumOfSquares</code></span><span id='variant.Layer2FrameDeltaCount' class='variant'><code>Layer2FrameDeltaCount</code></span><span id='variant.Layer2FrameTotalCount' class='variant'><code>Layer2FrameTotalCount</code></span><span id='variant.PseudoWireDestinationIpv4Address' class='variant'><code>PseudoWireDestinationIpv4Address</code></span><span id='variant.IgnoredLayer2FrameTotalCount' class='variant'><code>IgnoredLayer2FrameTotalCount</code></span><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='enum' href='../netflowv9/enum.TemplateField.html' title='netflowv9::TemplateField'>TemplateField</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1040' class='srclink' href='../src/netflowv9/lib.rs.html#594-601' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(field_type: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>, field_len: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>) -&gt; <a class='enum' href='../netflowv9/enum.TemplateField.html' title='netflowv9::TemplateField'>TemplateField</a></code></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../netflowv9/enum.TemplateField.html' title='netflowv9::TemplateField'>TemplateField</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-220' class='srclink' href='../src/netflowv9/lib.rs.html#588' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../netflowv9/enum.TemplateField.html' title='netflowv9::TemplateField'>TemplateField</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-223' class='srclink' href='../src/netflowv9/lib.rs.html#588' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../netflowv9/enum.TemplateField.html' title='netflowv9::TemplateField'>TemplateField</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../netflowv9/enum.TemplateField.html' title='netflowv9::TemplateField'>TemplateField</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-229' class='srclink' href='../src/netflowv9/lib.rs.html#588' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "netflowv9";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

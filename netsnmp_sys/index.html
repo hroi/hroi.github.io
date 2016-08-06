@@ -47,7 +47,7 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-0' class='srclink' href='../src/netsnmp_sys/lib.rs.html#1-176' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-0' class='srclink' href='../src/netsnmp_sys/lib.rs.html#1-190' title='goto source code'>[src]</a></span></h1>
 <h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
 <table>
                        <tr class=' module-item'>
@@ -622,6 +622,41 @@
                        <tr class=' module-item'>
                            <td><a class='constant' href='constant.MAX_OID_LEN.html'
                                   title='netsnmp_sys::MAX_OID_LEN'>MAX_OID_LEN</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.NETSNMP_CALLBACK_OP_CONNECT.html'
+                                  title='netsnmp_sys::NETSNMP_CALLBACK_OP_CONNECT'>NETSNMP_CALLBACK_OP_CONNECT</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.NETSNMP_CALLBACK_OP_DISCONNECT.html'
+                                  title='netsnmp_sys::NETSNMP_CALLBACK_OP_DISCONNECT'>NETSNMP_CALLBACK_OP_DISCONNECT</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.NETSNMP_CALLBACK_OP_RECEIVED_MESSAGE.html'
+                                  title='netsnmp_sys::NETSNMP_CALLBACK_OP_RECEIVED_MESSAGE'>NETSNMP_CALLBACK_OP_RECEIVED_MESSAGE</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.NETSNMP_CALLBACK_OP_SEND_FAILED.html'
+                                  title='netsnmp_sys::NETSNMP_CALLBACK_OP_SEND_FAILED'>NETSNMP_CALLBACK_OP_SEND_FAILED</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.NETSNMP_CALLBACK_OP_TIMED_OUT.html'
+                                  title='netsnmp_sys::NETSNMP_CALLBACK_OP_TIMED_OUT'>NETSNMP_CALLBACK_OP_TIMED_OUT</a></td>
                            <td class='docblock short'>
                                 
                            </td>
@@ -1357,6 +1392,48 @@
                        <tr class=' module-item'>
                            <td><a class='constant' href='constant.SNMP_SEC_LEVEL_NOAUTH.html'
                                   title='netsnmp_sys::SNMP_SEC_LEVEL_NOAUTH'>SNMP_SEC_LEVEL_NOAUTH</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SNMP_SEC_MODEL_ANY.html'
+                                  title='netsnmp_sys::SNMP_SEC_MODEL_ANY'>SNMP_SEC_MODEL_ANY</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SNMP_SEC_MODEL_SNMPv1.html'
+                                  title='netsnmp_sys::SNMP_SEC_MODEL_SNMPv1'>SNMP_SEC_MODEL_SNMPv1</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SNMP_SEC_MODEL_SNMPv2c.html'
+                                  title='netsnmp_sys::SNMP_SEC_MODEL_SNMPv2c'>SNMP_SEC_MODEL_SNMPv2c</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SNMP_SEC_MODEL_SNMPv2p.html'
+                                  title='netsnmp_sys::SNMP_SEC_MODEL_SNMPv2p'>SNMP_SEC_MODEL_SNMPv2p</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SNMP_SEC_MODEL_TSM.html'
+                                  title='netsnmp_sys::SNMP_SEC_MODEL_TSM'>SNMP_SEC_MODEL_TSM</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.SNMP_SEC_MODEL_USM.html'
+                                  title='netsnmp_sys::SNMP_SEC_MODEL_USM'>SNMP_SEC_MODEL_USM</a></td>
                            <td class='docblock short'>
                                 
                            </td>
@@ -4423,6 +4500,13 @@
                            </td>
                        </tr>
                        <tr class=' module-item'>
+                           <td><a class='fn' href='fn.snmp_build.html'
+                                  title='netsnmp_sys::snmp_build'>snmp_build</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
                            <td><a class='fn' href='fn.snmp_build_var_op.html'
                                   title='netsnmp_sys::snmp_build_var_op'>snmp_build_var_op</a></td>
                            <td class='docblock short'>
@@ -4537,6 +4621,13 @@
                        <tr class=' module-item'>
                            <td><a class='fn' href='fn.snmp_count_callbacks.html'
                                   title='netsnmp_sys::snmp_count_callbacks'>snmp_count_callbacks</a></td>
+                           <td class='docblock short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.snmp_create_sess_pdu.html'
+                                  title='netsnmp_sys::snmp_create_sess_pdu'>snmp_create_sess_pdu</a></td>
                            <td class='docblock short'>
                                 
                            </td>
@@ -6951,6 +7042,8 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 

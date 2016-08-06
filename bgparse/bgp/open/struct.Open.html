@@ -47,12 +47,11 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-400' class='srclink' href='../../../src/bgparse/bgp/open/mod.rs.html#12-14' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-403' class='srclink' href='../../../src/bgparse/bgp/open/mod.rs.html#12-14' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct Open&lt;'a&gt; {
     pub inner: &amp;'a [u8],
-}</pre><h2 class='fields'>Fields</h2>
-<table><tr class='stab '>
-                             <td id='structfield.inner'><code>inner</code></td><td></td></tr></table><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='struct' href='../../../bgparse/bgp/open/struct.Open.html' title='bgparse::bgp::open::Open'>Open</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-410' class='srclink' href='../../../src/bgparse/bgp/open/mod.rs.html#16-52' title='goto source code'>[src]</a></span></h3>
+}</pre><h2 class='fields'>Fields</h2><span id='structfield.inner' class='structfield'><code>inner: &amp;'a [u8]</code>
+                           </span><span class='stab '></span><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='struct' href='../../../bgparse/bgp/open/struct.Open.html' title='bgparse::bgp::open::Open'>Open</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-406' class='srclink' href='../../../src/bgparse/bgp/open/mod.rs.html#16-52' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.from_bytes' class='method'><code>fn <a href='#method.from_bytes' class='fnname'>from_bytes</a>(raw: &amp;'a [u8]) -&gt; <a class='type' href='../../../bgparse/types/type.Result.html' title='bgparse::types::Result'>Result</a>&lt;<a class='struct' href='../../../bgparse/bgp/open/struct.Open.html' title='bgparse::bgp::open::Open'>Open</a>&gt;</code></h4>
 <h4 id='method.value' class='method'><code>fn <a href='#method.value' class='fnname'>value</a>(&amp;self) -&gt; &amp;'a [u8]</code></h4>
 <h4 id='method.version' class='method'><code>fn <a href='#method.version' class='fnname'>version</a>(&amp;self) -&gt; u8</code></h4>
@@ -60,7 +59,7 @@
 <h4 id='method.hold_time' class='method'><code>fn <a href='#method.hold_time' class='fnname'>hold_time</a>(&amp;self) -&gt; u16</code></h4>
 <h4 id='method.ident' class='method'><code>fn <a href='#method.ident' class='fnname'>ident</a>(&amp;self) -&gt; u32</code></h4>
 <h4 id='method.params' class='method'><code>fn <a href='#method.params' class='fnname'>params</a>(&amp;self) -&gt; <a class='struct' href='../../../bgparse/bgp/open/struct.OptionalParams.html' title='bgparse::bgp::open::OptionalParams'>OptionalParams</a></code></h4>
-</div><h2 id='implementations'>Trait Implementations</h2><h3 id='derived_implementations'>Derived Implementations </h3><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../../bgparse/bgp/open/struct.Open.html' title='bgparse::bgp::open::Open'>Open</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-403' class='srclink' href='../../../src/bgparse/bgp/open/mod.rs.html#11' title='goto source code'>[src]</a></span></h3>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../../bgparse/bgp/open/struct.Open.html' title='bgparse::bgp::open::Open'>Open</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a id='src-396' class='srclink' href='../../../src/bgparse/bgp/open/mod.rs.html#11' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
 <div class='docblock'><p>Formats the value using the given formatter.</p>
 </div></div></section>
@@ -86,6 +85,8 @@
                     <dd>Move down in search results</dd>
                     <dt>&#9166;</dt>
                     <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
                 </dl>
             </div>
 
