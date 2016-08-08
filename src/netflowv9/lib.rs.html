@@ -783,6 +783,7 @@
 <span id="739">739</span>
 <span id="740">740</span>
 <span id="741">741</span>
+<span id="742">742</span>
 </pre><pre class='rust '>
 <span class='attribute'>#<span class='op'>!</span>[<span class='ident'>cfg_attr</span>(<span class='ident'>test</span>, <span class='ident'>feature</span>(<span class='ident'>test</span>))]</span>
 <span class='attribute'>#<span class='op'>!</span>[<span class='ident'>feature</span>(<span class='ident'>trace_macros</span>)]</span>
@@ -903,13 +904,14 @@
 
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>DataRecords</span><span class='op'>&lt;</span><span class='lifetime'>&#39;bytes</span><span class='op'>&gt;</span> {
     <span class='kw'>pub</span> <span class='ident'>template_id</span>: <span class='ident'>u16</span>,
-    <span class='ident'>raw</span>: <span class='kw-2'>&amp;</span><span class='lifetime'>&#39;bytes</span> [<span class='ident'>u8</span>],
+    <span class='kw'>pub</span> <span class='ident'>raw</span>: <span class='kw-2'>&amp;</span><span class='lifetime'>&#39;bytes</span> [<span class='ident'>u8</span>],
 }
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>Other</span><span class='op'>&lt;</span><span class='lifetime'>&#39;bytes</span><span class='op'>&gt;</span> {
     <span class='kw'>pub</span> <span class='ident'>flowset_id</span>: <span class='ident'>u16</span>,
     <span class='kw'>pub</span> <span class='ident'>raw</span>: <span class='kw-2'>&amp;</span><span class='lifetime'>&#39;bytes</span> [<span class='ident'>u8</span>],
 }
 <span class='comment'>// DATA</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Clone</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>DataTemplateIter</span><span class='op'>&lt;</span><span class='lifetime'>&#39;bytes</span><span class='op'>&gt;</span> {
     <span class='kw'>pub</span> <span class='ident'>raw</span>: <span class='kw-2'>&amp;</span><span class='lifetime'>&#39;bytes</span> [<span class='ident'>u8</span>],
 }
@@ -932,7 +934,6 @@
             <span class='ident'>template_id</span>: <span class='ident'>template_id</span>,
             <span class='ident'>field_count</span>: <span class='ident'>field_count</span>,
             <span class='ident'>fields</span>: <span class='ident'>TemplateFieldIter</span> {
-                <span class='ident'>offset</span>: <span class='number'>0</span>,
                 <span class='ident'>raw</span>: <span class='kw-2'>&amp;</span><span class='self'>self</span>.<span class='ident'>raw</span>[<span class='number'>4</span>..<span class='ident'>length</span>],
             },
         };
@@ -948,13 +949,14 @@
 }
 <span class='kw'>impl</span><span class='op'>&lt;</span><span class='lifetime'>&#39;fields</span><span class='op'>&gt;</span> <span class='ident'>DataTemplate</span><span class='op'>&lt;</span><span class='lifetime'>&#39;fields</span><span class='op'>&gt;</span> {
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>build_extractor</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>FlowRecordExtractor</span> {
-        <span class='ident'>FlowRecordExtractor</span>::<span class='ident'>new</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>.<span class='ident'>fields</span>)
+        <span class='ident'>FlowRecordExtractor</span>::<span class='ident'>new</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>.<span class='ident'>fields</span>, <span class='number'>0</span>)
     }
 }
 
 <span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Clone</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>TemplateFieldIter</span><span class='op'>&lt;</span><span class='lifetime'>&#39;bytes</span><span class='op'>&gt;</span> {
-    <span class='ident'>offset</span>: <span class='ident'>usize</span>,
+    <span class='doccomment'>/// Where the record fields in a flow set begin. For flow records, this is always 0,</span>
+    <span class='doccomment'>/// for options records this starts after the scope data.</span>
     <span class='kw'>pub</span> <span class='ident'>raw</span>: <span class='kw-2'>&amp;</span><span class='lifetime'>&#39;bytes</span> [<span class='ident'>u8</span>],
 }
 <span class='kw'>impl</span><span class='op'>&lt;</span><span class='lifetime'>&#39;bytes</span><span class='op'>&gt;</span> <span class='ident'>Iterator</span> <span class='kw'>for</span> <span class='ident'>TemplateFieldIter</span><span class='op'>&lt;</span><span class='lifetime'>&#39;bytes</span><span class='op'>&gt;</span> {
@@ -974,6 +976,7 @@
 }
 
 <span class='comment'>// OPTIONS</span>
+<span class='attribute'>#[<span class='ident'>derive</span>(<span class='ident'>Clone</span>)]</span>
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>OptionsTemplateIter</span><span class='op'>&lt;</span><span class='lifetime'>&#39;bytes</span><span class='op'>&gt;</span> {
     <span class='kw'>pub</span> <span class='ident'>raw</span>: <span class='kw-2'>&amp;</span><span class='lifetime'>&#39;bytes</span> [<span class='ident'>u8</span>],
 }
@@ -1000,7 +1003,6 @@
             <span class='ident'>option_length</span>: <span class='ident'>option_length</span>,
             <span class='ident'>scopes</span>: <span class='ident'>ScopeIter</span> { <span class='ident'>raw</span>: <span class='ident'>scopes</span> },
             <span class='ident'>fields</span>: <span class='ident'>TemplateFieldIter</span> {
-                <span class='ident'>offset</span>: <span class='ident'>option_scope_length</span> <span class='kw'>as</span> <span class='ident'>usize</span>,
                 <span class='ident'>raw</span>: <span class='kw-2'>&amp;</span><span class='ident'>options</span>[..<span class='ident'>option_length</span> <span class='kw'>as</span> <span class='ident'>usize</span>],
             },
         };
@@ -1018,7 +1020,7 @@
 }
 <span class='kw'>impl</span><span class='op'>&lt;</span><span class='lifetime'>&#39;fields</span><span class='op'>&gt;</span> <span class='ident'>OptionsTemplate</span><span class='op'>&lt;</span><span class='lifetime'>&#39;fields</span><span class='op'>&gt;</span> {
     <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>build_extractor</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>) <span class='op'>-&gt;</span> <span class='ident'>FlowRecordExtractor</span> {
-        <span class='ident'>FlowRecordExtractor</span>::<span class='ident'>new</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>.<span class='ident'>fields</span>)
+        <span class='ident'>FlowRecordExtractor</span>::<span class='ident'>new</span>(<span class='kw-2'>&amp;</span><span class='self'>self</span>.<span class='ident'>fields</span>, <span class='self'>self</span>.<span class='ident'>option_scope_length</span> <span class='kw'>as</span> <span class='ident'>usize</span>)
     }
 }
 
@@ -1402,9 +1404,9 @@
 
         <span class='kw'>impl</span> <span class='ident'>FlowRecordExtractor</span> {
 
-            <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>new</span>(<span class='ident'>fields</span>: <span class='kw-2'>&amp;</span><span class='ident'>TemplateFieldIter</span>) <span class='op'>-&gt;</span> <span class='ident'>FlowRecordExtractor</span> {
+            <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>new</span>(<span class='ident'>fields</span>: <span class='kw-2'>&amp;</span><span class='ident'>TemplateFieldIter</span>, <span class='ident'>start_offset</span>: <span class='ident'>usize</span>) <span class='op'>-&gt;</span> <span class='ident'>FlowRecordExtractor</span> {
                 <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>ret</span>: <span class='ident'>FlowRecordExtractor</span> <span class='op'>=</span> <span class='ident'>Default</span>::<span class='ident'>default</span>();
-                <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>offset</span> <span class='op'>=</span> <span class='ident'>fields</span>.<span class='ident'>offset</span>;
+                <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>offset</span> <span class='op'>=</span> <span class='ident'>start_offset</span>;
 
                 <span class='kw'>for</span> (<span class='ident'>len</span>, <span class='ident'>field</span>) <span class='kw'>in</span> <span class='ident'>fields</span>.<span class='ident'>clone</span>() {
                     <span class='kw'>use</span> <span class='ident'>TemplateField</span>::<span class='op'>*</span>;

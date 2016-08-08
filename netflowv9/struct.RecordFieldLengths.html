@@ -47,11 +47,12 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a id='src-1552' class='srclink' href='../src/netflowv9/lib.rs.html#478-481' title='goto source code'>[src]</a></span></h1>
+               </span><a id='src-1562' class='srclink' href='../src/netflowv9/lib.rs.html#479-482' title='goto source code'>[src]</a></span></h1>
 <pre class='rust struct'>pub struct RecordFieldLengths {
     pub octet_delta_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
     pub packet_delta_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
     pub delta_flow_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub tcp_control_bits: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
     pub ingress_interface: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
     pub egress_interface: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
     pub bgp_source_as_number: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
@@ -79,6 +80,7 @@
     pub sampler_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
     pub octet_total_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
     pub packet_total_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+    pub forwarding_status: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
     pub mpls_vpn_route_distinguisher: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
     pub application_description: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
     pub application_id: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
@@ -147,6 +149,7 @@
 }</pre><h2 class='fields'>Fields</h2><span id='structfield.octet_delta_count' class='structfield'><code>octet_delta_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
                            </span><span class='stab '></span><span id='structfield.packet_delta_count' class='structfield'><code>packet_delta_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
                            </span><span class='stab '></span><span id='structfield.delta_flow_count' class='structfield'><code>delta_flow_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.tcp_control_bits' class='structfield'><code>tcp_control_bits: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
                            </span><span class='stab '></span><span id='structfield.ingress_interface' class='structfield'><code>ingress_interface: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
                            </span><span class='stab '></span><span id='structfield.egress_interface' class='structfield'><code>egress_interface: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
                            </span><span class='stab '></span><span id='structfield.bgp_source_as_number' class='structfield'><code>bgp_source_as_number: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
@@ -174,6 +177,7 @@
                            </span><span class='stab '></span><span id='structfield.sampler_name' class='structfield'><code>sampler_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
                            </span><span class='stab '></span><span id='structfield.octet_total_count' class='structfield'><code>octet_total_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
                            </span><span class='stab '></span><span id='structfield.packet_total_count' class='structfield'><code>packet_total_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span><span class='stab '></span><span id='structfield.forwarding_status' class='structfield'><code>forwarding_status: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
                            </span><span class='stab '></span><span id='structfield.mpls_vpn_route_distinguisher' class='structfield'><code>mpls_vpn_route_distinguisher: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
                            </span><span class='stab '></span><span id='structfield.application_description' class='structfield'><code>application_description: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
                            </span><span class='stab '></span><span id='structfield.application_id' class='structfield'><code>application_id: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
@@ -239,10 +243,10 @@
                            </span><span class='stab '></span><span id='structfield.application_sub_category_name' class='structfield'><code>application_sub_category_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
                            </span><span class='stab '></span><span id='structfield.application_group_name' class='structfield'><code>application_group_name: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
                            </span><span class='stab '></span><span id='structfield.dot1q_service_instance_tag' class='structfield'><code>dot1q_service_instance_tag: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
-                           </span><span class='stab '></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../netflowv9/struct.RecordFieldLengths.html' title='netflowv9::RecordFieldLengths'>RecordFieldLengths</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1450' class='srclink' href='../src/netflowv9/lib.rs.html#477' title='goto source code'>[src]</a></span></h3>
+                           </span><span class='stab '></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../netflowv9/struct.RecordFieldLengths.html' title='netflowv9::RecordFieldLengths'>RecordFieldLengths</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1458' class='srclink' href='../src/netflowv9/lib.rs.html#478' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.default' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../netflowv9/struct.RecordFieldLengths.html' title='netflowv9::RecordFieldLengths'>RecordFieldLengths</a></code></h4>
 <div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
-</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../netflowv9/struct.RecordFieldLengths.html' title='netflowv9::RecordFieldLengths'>RecordFieldLengths</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1452' class='srclink' href='../src/netflowv9/lib.rs.html#477' title='goto source code'>[src]</a></span></h3>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../netflowv9/struct.RecordFieldLengths.html' title='netflowv9::RecordFieldLengths'>RecordFieldLengths</a></code></span><span class='out-of-band'><div class='ghost'></div><a id='src-1460' class='srclink' href='../src/netflowv9/lib.rs.html#478' title='goto source code'>[src]</a></span></h3>
 <div class='impl-items'><h4 id='method.fmt' class='method'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></h4>
 <div class='docblock'><p>Formats the value using the given formatter.</p>
 </div></div></section>

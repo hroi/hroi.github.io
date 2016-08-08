@@ -3161,7 +3161,7 @@ header of the packet.&quot;</span>),
 <span class='number'>5</span> <span class='op'>=&gt;</span> (<span class='ident'>IpClassOfService</span>, <span class='ident'>ip_class_of_service</span>, <span class='ident'>u8</span>, (), <span class='ident'>doc</span><span class='op'>=</span><span class='string'>&quot;For IPv4 packets, this is the value of the TOS field in
 the IPv4 packet header.  For IPv6 packets, this is the
 value of the Traffic Class field in the IPv6 packet header.&quot;</span>),
-<span class='number'>6</span> <span class='op'>=&gt;</span> (<span class='ident'>TcpControlBits</span>, <span class='ident'>tcp_control_bits</span>, <span class='ident'>u16</span>, (), <span class='ident'>doc</span><span class='op'>=</span><span class='string'>&quot;TCP control bits observed for the packets of this Flow.
+<span class='number'>6</span> <span class='op'>=&gt;</span> (<span class='ident'>TcpControlBits</span>, <span class='ident'>tcp_control_bits</span>, <span class='ident'>u16</span>, (<span class='number'>1</span>, <span class='number'>2</span>), <span class='ident'>doc</span><span class='op'>=</span><span class='string'>&quot;TCP control bits observed for the packets of this Flow.
 This information is encoded as a bit field; for each TCP control
 bit, there is a bit in this set.  The bit is set to 1 if any
 observed packet of this Flow has the corresponding TCP control bit
@@ -3622,7 +3622,7 @@ one bitmapped field.  Reserved for internal use on the Collector.&quot;</span>),
 IPv4 packet header or the IPv6 Fragment header,
 respectively.  The value is 0 for IPv6 if there is
 no fragment header.&quot;</span>),
-<span class='number'>89</span> <span class='op'>=&gt;</span> (<span class='ident'>ForwardingStatus</span>, <span class='ident'>forwarding_status</span>, <span class='ident'>u32</span>, (), <span class='ident'>doc</span><span class='op'>=</span><span class='string'>&quot;This Information Element describes the forwarding status of the
+<span class='number'>89</span> <span class='op'>=&gt;</span> (<span class='ident'>ForwardingStatus</span>, <span class='ident'>forwarding_status</span>, <span class='ident'>u32</span>, (<span class='number'>1</span>, <span class='number'>4</span>), <span class='ident'>doc</span><span class='op'>=</span><span class='string'>&quot;This Information Element describes the forwarding status of the
 flow and any attached reasons.  The reduced-size encoding rules as
 per [RFC7011] apply.
 
